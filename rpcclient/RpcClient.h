@@ -1,7 +1,8 @@
 ﻿#include <any>
 #include "../util/yi_type.h"
 #include "../serialization/PackageParser.h"
-#include "noBuffer/network_io.h"
+#include "../network/Net.h"
+#include "../network/socket/Socket.h"
 namespace yi
 {
     class RpcClient
@@ -9,33 +10,36 @@ namespace yi
     private:
         /* data */
         yi::PackageParser _package_parser;
+        yi::Net _net;
+        yi::Socket _sock;
+
     public:
-        RpcClient(/* args */);
-        ~RpcClient();
-        bool connect(int port, std::string ip)
+        RpcClient(int domain, int type) : _sock(domain, type)
         {
+             
+        }
+        ~RpcClient()
+        {
+
+        }
+        // 下面的函数是交给线程
+        bool Connect(const std::string& ip, int port)
+        {
+            struct sockaddr_in addr;
+            _net.Connect(ip, port, _sock);
         }
 
-        template<typename... Args>
-        FunctionRet CallFunction(const std::string& function_name, Args&&... args)
+        template <typename... Args>
+        void CallFunction(const std::string &function_name, Args &&...args)
         {
             // 先解包参数
             _package_parser.ParseParams(function_name, std::forward<Args>(args)...);
             // 序列化 function name and parameters
-            _package_parser.serialize();
+            auto package = _package_parser.Serialize();
             // send package
-            char usrbuf[8*(1<<10)];
-            network_io_writen()
-            // wait return 
+            _sock.SendPackage(package);
+            // wait return
         }
     };
-
-    RpcClient::RpcClient(/* args */)
-    {
-    }
-
-    RpcClient::~RpcClient()
-    {
-    }
 
 } // namespace yi

@@ -1,8 +1,19 @@
 ﻿#include "../include/rapidjson/prettywriter.h"
 #include <typeinfo>
-
+#include "PackageParser.h"
 #include <iostream>
 using namespace rapidjson;
+
+double add(double lhs, double rhs)
+{
+    return lhs + rhs;
+}
+
+double multiple(double lhs, double rhs)
+{
+    return lhs * rhs;
+}
+
 int main(int argc, char const *argv[])
 {
     // StringBuffer sb;
@@ -16,7 +27,8 @@ int main(int argc, char const *argv[])
 
     // function params
 
-    std::cout << typeid("hello").name() << '\n';
-
+    yi::PackageParser parser;
+    parser.ParseParams("add", 100, 200, 400.5);
+    std::cout << parser.serialize() << '\n';
     return 0;
 }

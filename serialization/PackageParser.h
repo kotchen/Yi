@@ -56,7 +56,7 @@ namespace yi
             _parseParams(std::forward<Args>(params)...);
         }
 
-        const char *serialize()
+        const char *Serialize()
         {
             return _sb.GetString();
         }

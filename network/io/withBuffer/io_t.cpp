@@ -35,6 +35,11 @@ ssize_t io_t::_read(char* usrbuf, size_t n)
     return cnt;
 }
 
+ssize_t io_t::_write(const char* package, size_t n)
+{
+    
+}
+
 ssize_t io_t::readn(std::any usrbuf, size_t n)
 {
     size_t nleft = n;
@@ -83,5 +88,9 @@ ssize_t io_t::readLine(std::any usrbuf, size_t maxlen)
     return n-1;
 }
 
+ssize_t sendn(std::any package, size_t n)
+{
+
+}
 
 };
