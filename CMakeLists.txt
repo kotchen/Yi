@@ -12,9 +12,10 @@ set(CXX_FLAGS
  -fPIC
  -lstdc++
  -pipe
+ -latomic
  )
 
-add_subdirectory(network_io)
+add_subdirectory(network)
 add_subdirectory(timer)
 
 add_library(${PROJECT_NAME} STATIC ${network_io_src} ${timer_src})
