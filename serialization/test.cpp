@@ -1,4 +1,6 @@
 ﻿#include "../include/rapidjson/prettywriter.h"
+#include "../include/rapidjson/reader.h"
+#include <sstream>
 #include <typeinfo>
 #include "PackageParser.h"
 #include <iostream>
@@ -13,6 +15,33 @@ double multiple(double lhs, double rhs)
 {
     return lhs * rhs;
 }
+using namespace std;
+
+struct MyHandler {
+    bool Null() { cout << "Null()" << endl; return true; }
+    bool Bool(bool b) { cout << "Bool(" << boolalpha << b << ")" << endl; return true; }
+    bool Int(int i) { cout << "Int(" << i << ")" << endl; return true; }
+    bool Uint(unsigned u) { cout << "Uint(" << u << ")" << endl; return true; }
+    bool Int64(int64_t i) { cout << "Int64(" << i << ")" << endl; return true; }
+    bool Uint64(uint64_t u) { cout << "Uint64(" << u << ")" << endl; return true; }
+    bool Double(double d) { cout << "Double(" << d << ")" << endl; return true; }
+    bool RawNumber(const char* str, SizeType length, bool copy) { 
+        cout << "Number(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
+        return true;
+    }
+    bool String(const char* str, SizeType length, bool copy) { 
+        cout << "String(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
+        return true;
+    }
+    bool StartObject() { cout << "StartObject()" << endl; return true; }
+    bool Key(const char* str, SizeType length, bool copy) {
+        cout << "Key(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
+        return true;
+    }
+    bool EndObject(SizeType memberCount) { cout << "EndObject(" << memberCount << ")" << endl; return true; }
+    bool StartArray() { cout << "StartArray()" << endl; return true; }
+    bool EndArray(SizeType elementCount) { cout << "EndArray(" << elementCount << ")" << endl; return true; }
+};
 
 int main(int argc, char const *argv[])
 {
@@ -27,8 +56,39 @@ int main(int argc, char const *argv[])
 
     // function params
 
-    yi::PackageParser parser;
-    parser.ParseParams("add", 100, 200, 400.5);
-    std::cout << parser.serialize() << '\n';
+    // double d
+    // int    i
+    
+    // const char* PKc
+    // char        c
+
+    // bool        b
+
+    // yi::PackageParser parser;
+    // parser.ParseParams("add", 100, 200, 400.5);
+    // std::cout << parser.Serialize() << '\n';;
+    // auto str = parser.Serialize();
+    
+    // const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
+    // MyHandler handler;
+    // Reader reader;
+    // stringstream ss(json);
+    // reader.Parse(ss,handler);
+
+    const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
+    MyHandler handler;
+    Reader reader;
+    StringStream ss(json);
+    reader.Parse(ss, handler);
+
+    // std::string name1("123");
+    // std::string name2("123");
+    // std::string name3("abc");
+    // bool a  = true;
+    // std::cout << typeid(name1).name() << '\n'; 
+    // std::cout << typeid(name2).name() << '\n'; 
+    // std::cout << typeid(name3.c_str()).name() << '\n'; 
+    // std::cout << typeid(a).name() << '\n'; 
+
     return 0;
 }
