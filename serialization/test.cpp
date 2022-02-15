@@ -3,7 +3,9 @@
 #include <sstream>
 #include <typeinfo>
 #include "PackageParser.h"
+#include <vector>
 #include <iostream>
+#include <any>
 using namespace rapidjson;
 
 double add(double lhs, double rhs)
@@ -64,22 +66,24 @@ int main(int argc, char const *argv[])
 
     // bool        b
 
-    // yi::PackageParser parser;
-    // parser.ParseParams("add", 100, 200, 400.5);
+    yi::PackageParser parser;
+    parser.ParseParams("add", 100, 200, 400.5);
     // std::cout << parser.Serialize() << '\n';;
-    // auto str = parser.Serialize();
-    
+    auto str = parser.Serialize();
+    std::cout << str << '\n';
+
+    auto [function_name, param_list] = parser.DeSerialize(str);
+
+    std::cout << std::any_cast<std::string>(function_name) << '\n';
+    std::cout << std::any_cast<int>(param_list[0]) << '\n';
+    std::cout << std::any_cast<int>(param_list[1]) << '\n';
+    std::cout << std::any_cast<double>(param_list[2]) << '\n';
+
     // const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
     // MyHandler handler;
     // Reader reader;
-    // stringstream ss(json);
-    // reader.Parse(ss,handler);
-
-    const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
-    MyHandler handler;
-    Reader reader;
-    StringStream ss(json);
-    reader.Parse(ss, handler);
+    // StringStream ss(str);
+    // reader.Parse(ss, handler);
 
     // std::string name1("123");
     // std::string name2("123");
