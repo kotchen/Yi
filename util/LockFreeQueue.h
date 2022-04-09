@@ -75,6 +75,11 @@ namespace yi
                 }
             }
         }
+
+        bool Empty()
+        {
+            return !_node_head[_head.load()]._used;
+        }
     };
 
 };
