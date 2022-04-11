@@ -18,7 +18,7 @@ namespace yi
     {
 
     public:
-        LockFreeThreadPool(size_t);
+        LockFreeThreadPool(size_t, size_t);
         template <class F, class... Args>
         auto enqueue(F &&f, Args &&...args) -> std::future<typename std::result_of<F(Args...)>::type>;
         ~LockFreeThreadPool();
@@ -34,9 +34,9 @@ namespace yi
         bool stop;
     };
 
-    LockFreeThreadPool::LockFreeThreadPool(size_t threads)
+    LockFreeThreadPool::LockFreeThreadPool(size_t threads, size_t queue_size)
         : stop(false),
-          tasks(1024)
+          tasks(queue_size)
     {
         for (size_t i = 0; i < threads; ++i)
             workers.emplace_back([this]
