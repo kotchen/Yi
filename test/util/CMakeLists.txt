@@ -1,0 +1,5 @@
+﻿include_directories(${CMAKE_SOURCE_DIR}/util)
+find_package(Threads)
+project(LockFreeQueue)
+add_executable(LockFreeQueue test_lock_free_queue.cpp)
+target_link_libraries(LockFreeQueue ${CMAKE_THREAD_LIBS_INIT})
