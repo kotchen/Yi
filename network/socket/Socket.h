@@ -1,10 +1,13 @@
-﻿#include <sys/socket.h>
+﻿#ifndef __YI_SOCKET__
+#define __YI_SOCKET__
+#include <sys/socket.h>
 #include <arpa/inet.h>
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
 #include <string>
-#include "../network/io/noBuffer/network_io.h"
+#include <unistd.h>
+// #include "../network/io/noBuffer/network_io.h"
 namespace yi
 {
     class Socket
@@ -47,10 +50,12 @@ namespace yi
 
         bool SendPackage(const char* package)
         {
-            network_io_writen(_sockfd, package, sizeof(package));
+            // network_io_writen(_sockfd, package, sizeof(package));
+            write(_sockfd, package, strlen(package));
         }
 
     };
     
      
 } // namespace yi
+#endif
