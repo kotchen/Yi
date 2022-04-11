@@ -1,0 +1,10 @@
+﻿这个文件夹下面的线程是为了 调用函数而写的
+
+workthread 对象中有一个std::thread的指针，我们需要实现它的run方法
+run是和我们要执行的函数bind在一起的。那么问题来了
+1 什么时候bind?
+server启动的时候，先创建一个线程池，其实就是一个vector中装了n个workthread
+就是在这个时候bind其实这里是一个多态，先有一个thread基类，然后一个队列继承了thread
+然后workthread继承了那个队列，但是感觉这里有设计的缺陷，这样就是不同的workthread有不同的queue，这样就
+不存在竞争的问题了，我感觉就workthread中有一个队列的指针，所有的workthread都从这个队列中拿数据
+workthread的run函数就是从queue中拿到数据，然后从function_call_map中找到函数，然后调用函数，
