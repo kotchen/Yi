@@ -60,6 +60,23 @@ namespace yi
             }
         }
 
+        template<typename... Args>
+        bool Emplace(Args&&... args)
+        {
+            while (true)
+            {
+                auto tail = _tail.load();
+                if (_node_head[tail]._used)
+                    return false;
+                if (_tail.compare_exchange_weak(tail, (tail + 1) % _capacity))
+                {
+                    _node_head[tail]._used = true;
+                    new (&_node_head[tail]._data) ValueType(std::forward<Args>(args)...);
+                    return true;
+                }
+            }
+        }
+
         bool Pop(ValueType &ret)
         {
             while (true)
@@ -79,6 +96,16 @@ namespace yi
         bool Empty()
         {
             return !_node_head[_head.load()]._used;
+        }
+
+        void print()
+        {
+            Node* ptr = _node_head;
+            for (int i = 0; i < _capacity; i++)
+            {
+                std::cout << "used: " << ptr->_used << " data: " << ptr->_data << std::endl;
+                ptr++;
+            }
         }
     };
 
