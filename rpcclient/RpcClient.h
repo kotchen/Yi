@@ -1,4 +1,5 @@
 ﻿#include <any>
+#include <memory>
 #include "../util/yi_type.h"
 #include "../serialization/PackageParser.h"
 #include "../network/Net.h"
@@ -10,13 +11,19 @@ namespace yi
     private:
         /* data */
         yi::PackageParser _package_parser;
-        yi::Net _net;
-        yi::Socket _sock;
+        std::shared_ptr<yi::Net> _net;
+        std::shared_ptr<yi::Socket> _listen_sock;
 
     public:
-        RpcClient(int domain, int type) : _sock(domain, type)
+        RpcClient()
         {
-             
+            _listen_sock = std::make_shared<yi::Socket> (AF_INET, SOCK_STREAM);
+            _net = std::make_shared<yi::Net> (_listen_sock); 
+        }
+        RpcClient(int domain, int type)
+        {
+            _listen_sock = std::make_shared<yi::Socket> (domain, type);
+            _net = std::make_shared<yi::Net> (_listen_sock); 
         }
         ~RpcClient()
         {
@@ -26,7 +33,7 @@ namespace yi
         bool Connect(const std::string& ip, int port)
         {
             struct sockaddr_in addr;
-            _net.Connect(ip, port, _sock);
+            _net->Connect(ip, port);
         }
 
         template <typename... Args>
@@ -37,7 +44,7 @@ namespace yi
             // 序列化 function name and parameters
             auto package = _package_parser.Serialize();
             // send package
-            _sock.SendPackage(package);
+            _listen_sock->SendPackage(package);
             // wait return
         }
     };

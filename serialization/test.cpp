@@ -67,25 +67,38 @@ int main(int argc, char const *argv[])
     // bool        b
 
     yi::PackageParser parser;
-    parser.ParseParams("add", 100, 200, 400.5);
+    parser.ParseParams("add", -100, 200, 400.5);
     // std::cout << parser.Serialize() << '\n';;
     auto str = parser.Serialize();
     std::cout << str << '\n';
 
-    auto [function_name, param_list] = parser.DeSerialize(str);
+    Document d;
+    d.Parse(str);
+    std::string param_header("param");
+    // auto name = d["function_name"].GetString();
+    // std::cout << name;
+    // size_t size = 0;
+    // auto temp = (param_header+std::to_string(size+1));
+    // std::cout << temp.c_str() << '\n';
+    // std::cout << d[temp.c_str()].GetDouble() << '\n';
+    MyHandler handler;
+    Reader reader;
+    StringStream ss(str);
+    reader.Parse(ss, handler);
 
-    std::cout << std::any_cast<std::string>(function_name) << '\n';
-    std::cout << std::any_cast<int>(param_list[0]) << '\n';
-    std::cout << std::any_cast<int>(param_list[1]) << '\n';
-    std::cout << std::any_cast<double>(param_list[2]) << '\n';
+    auto ite = d.FindMember("param3");
+    std::cout << ite->value.GetType() << '\n';
+    std::cout << ite->value.GetInt() << '\n';
+
+    // auto [function_name, param_list] = parser.DeSerialize(str);
+
+    // std::cout << std::any_cast<const char*>(function_name) << '\n';
+    // std::cout << std::any_cast<int>(param_list[0]) << '\n';
+    // std::cout << std::any_cast<uint>(param_list[1]) << '\n';
+    // std::cout << std::any_cast<double>(param_list[2]) << '\n';
 
     // const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
-    // MyHandler handler;
-    // Reader reader;
-    // StringStream ss(str);
-    // reader.Parse(ss, handler);
-
-    // std::string name1("123");
+        // std::string name1("123");
     // std::string name2("123");
     // std::string name3("abc");
     // bool a  = true;

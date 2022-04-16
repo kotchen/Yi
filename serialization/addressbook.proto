@@ -24,9 +24,3 @@ message Person {
 message AddressBook {
   repeated Person people = 1;
 }
-
-message FunctionCall
-{
-  required string function_name;
-  
-}

@@ -5,32 +5,32 @@
 #include <set>
 #include "RpcServer.h"
 
-//
-// 这里的函数不能使用模板来设计，因为在编译期的时候是不知道函数的存在的
-// 没有实例化函数
-std::vector<std::any> add(std::vector<std::any> params)
+int add_int(int a, int b)
 {
-    std::vector<std::any> ret_v;
-    int ret = 0;
-    for (int i = 0; i < params.size(); i++)
-    {
-        ret += std::any_cast<int>(params[i]);
-    }
-    ret_v.push_back(ret);
-    return ret_v;
+    return a + b;
 }
 
-std::map<std::string, std::string> func_map;
-std::set<std::string> func_set;
+double add_double(double a, double b)
+{
+    return a + b;
+}
+
+std::string add_string(const std::string& a, const std::string& b)
+{
+    return a + b;
+}
+
 
 int main(int argc, char const *argv[])
 {
     // 创建服务对象
-    yi::RpcServer server;
+    yi::RpcServer server(4);
 
     // 登记服务函数
-    server.register_function("add", add);
+    server.register_function("add", [](){
+        std::bind(add_int, std::placeholders::_1, std::placeholders::_2);
+    });
     // 启动服务，给出port and ip
-    server.start(2000, "127.0.0.1");
+    server.start("127.0.0.1", 2000);
     return 0;
 }

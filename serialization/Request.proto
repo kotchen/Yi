@@ -1,0 +1,88 @@
+﻿syntax = "proto2";
+package yi;
+
+message ConnectionReq
+{
+
+}
+
+message FunctionCall
+{
+    required string function_name = 1;
+
+    message add_int
+    {
+        required int32 left = 1;
+        required int32 right = 2;
+    }
+
+    message add_double
+    {
+        required double left = 1;
+        required double right = 2;
+    }
+
+    message add_string
+    {
+        required string left = 1;
+        required string right = 2;
+    }
+
+    message player_move
+    {
+        required double x = 1;
+        required double y = 2;
+        required double speed = 3;
+        required double acceleration = 4;
+        required double aspect = 5;
+        required double angle = 6;
+    }
+
+    optional add_int add_int_params = 2;
+    optional add_double add_double_params = 3;
+    optional add_string add_string_params = 4;
+    optional player_move player_move_params = 5;
+    
+}
+
+message FunctionRet
+{
+    required string function_name = 1;
+    message add_int_ret
+    {
+        required int32 ret = 1;
+    }
+
+    message add_double_ret
+    {
+        required double ret = 1;
+    }
+
+    message add_string_ret
+    {
+        required string ret = 1;
+    }
+
+    message player_move_ret
+    {
+        required double x = 1;
+        required double y = 2;
+        required double speed = 3;
+        required double aspect = 5;
+    }
+
+    optional add_int_ret add_int_ret_params = 2;
+    optional add_double_ret add_double_ret_params = 3;
+    optional add_string_ret add_string_ret_params = 4;
+    optional player_move_ret player_move_ret_params = 5;
+}
+
+
+message Request
+{
+    required string call_type = 1;
+    optional ConnectionReq connection_req = 2;
+    optional FunctionCall function_call = 3;
+    optional FunctionRet function_ret = 4;
+}
+
