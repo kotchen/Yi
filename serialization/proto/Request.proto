@@ -1,0 +1,106 @@
+﻿syntax = "proto2";
+package yi;
+
+message ConnectionReq
+{
+
+}
+
+message ConnectionRet
+{
+    message FuncInfo
+    {
+        required string func_name = 1;
+        required string params_type = 2;
+        required string return_type = 3;
+    }
+    repeated FuncInfo func_info = 1;
+}
+
+message FunctionCall
+{
+    required string function_name = 1;
+    message AddIntParams
+    {
+        required int32 left = 1;
+        required int32 right = 2;
+    }
+
+    message AddDoubleParams
+    {
+        required double left = 1;
+        required double right = 2;
+    }
+
+    message AddStringParams
+    {
+        required string left = 1;
+        required string right = 2;
+    }
+
+    message PlayerMoveParams
+    {
+        required double x = 1;
+        required double y = 2;
+        required double speed = 3;
+        required double acceleration = 4;
+        required double aspect = 5;
+        required double angle = 6;
+    }
+
+    optional AddIntParams add_int_params = 2;
+    optional AddDoubleParams add_double_params = 3;
+    optional AddStringParams add_string_params = 4;
+    optional PlayerMoveParams player_move_params = 5;
+    
+}
+
+message FunctionRet
+{
+    required string function_name = 1;
+    message AddIntRet
+    {
+        required int32 ret = 1;
+    }
+
+    message AddDoubleRet
+    {
+        required double ret = 1;
+    }
+
+    message AddStringRet
+    {
+        required string ret = 1;
+    }
+    
+    message PlayerMoveRet
+    {
+        required double x = 1;
+        required double y = 2;
+        required double speed = 3;
+        required double aspect = 5;
+    }
+
+    optional AddIntRet add_int_ret_params = 2;
+    optional AddDoubleRet add_double_ret_params = 3;
+    optional AddStringRet add_string_ret_params = 4;
+    optional PlayerMoveRet player_move_ret_params = 5;
+}
+
+
+message Request
+{
+    enum RequestType
+    {
+        ConnectionReq = 0;
+        ConnectionRet = 1;
+        FunctionCall = 2;
+        FunctionRet = 3;
+    }
+    required RequestType call_type = 1;
+    optional ConnectionReq connection_req = 2;
+    optional ConnectionRet connection_ret = 3;
+    optional FunctionCall function_call = 4;
+    optional FunctionRet function_ret = 5;
+}
+

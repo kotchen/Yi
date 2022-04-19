@@ -2,6 +2,7 @@
 #include <memory>
 #include "../util/yi_type.h"
 #include "../serialization/PackageParser.h"
+#include "../serialization/Parser.h"
 #include "../network/Net.h"
 #include "../network/socket/Socket.h"
 namespace yi

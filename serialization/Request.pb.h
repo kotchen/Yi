@@ -31,6 +31,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -47,7 +48,7 @@ struct TableStruct_Request_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[14]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,56 +59,89 @@ namespace yi {
 class ConnectionReq;
 struct ConnectionReqDefaultTypeInternal;
 extern ConnectionReqDefaultTypeInternal _ConnectionReq_default_instance_;
+class ConnectionRet;
+struct ConnectionRetDefaultTypeInternal;
+extern ConnectionRetDefaultTypeInternal _ConnectionRet_default_instance_;
+class ConnectionRet_FuncInfo;
+struct ConnectionRet_FuncInfoDefaultTypeInternal;
+extern ConnectionRet_FuncInfoDefaultTypeInternal _ConnectionRet_FuncInfo_default_instance_;
 class FunctionCall;
 struct FunctionCallDefaultTypeInternal;
 extern FunctionCallDefaultTypeInternal _FunctionCall_default_instance_;
-class FunctionCall_add_double;
-struct FunctionCall_add_doubleDefaultTypeInternal;
-extern FunctionCall_add_doubleDefaultTypeInternal _FunctionCall_add_double_default_instance_;
-class FunctionCall_add_int;
-struct FunctionCall_add_intDefaultTypeInternal;
-extern FunctionCall_add_intDefaultTypeInternal _FunctionCall_add_int_default_instance_;
-class FunctionCall_add_string;
-struct FunctionCall_add_stringDefaultTypeInternal;
-extern FunctionCall_add_stringDefaultTypeInternal _FunctionCall_add_string_default_instance_;
-class FunctionCall_player_move;
-struct FunctionCall_player_moveDefaultTypeInternal;
-extern FunctionCall_player_moveDefaultTypeInternal _FunctionCall_player_move_default_instance_;
+class FunctionCall_AddDoubleParams;
+struct FunctionCall_AddDoubleParamsDefaultTypeInternal;
+extern FunctionCall_AddDoubleParamsDefaultTypeInternal _FunctionCall_AddDoubleParams_default_instance_;
+class FunctionCall_AddIntParams;
+struct FunctionCall_AddIntParamsDefaultTypeInternal;
+extern FunctionCall_AddIntParamsDefaultTypeInternal _FunctionCall_AddIntParams_default_instance_;
+class FunctionCall_AddStringParams;
+struct FunctionCall_AddStringParamsDefaultTypeInternal;
+extern FunctionCall_AddStringParamsDefaultTypeInternal _FunctionCall_AddStringParams_default_instance_;
+class FunctionCall_PlayerMoveParams;
+struct FunctionCall_PlayerMoveParamsDefaultTypeInternal;
+extern FunctionCall_PlayerMoveParamsDefaultTypeInternal _FunctionCall_PlayerMoveParams_default_instance_;
 class FunctionRet;
 struct FunctionRetDefaultTypeInternal;
 extern FunctionRetDefaultTypeInternal _FunctionRet_default_instance_;
-class FunctionRet_add_double_ret;
-struct FunctionRet_add_double_retDefaultTypeInternal;
-extern FunctionRet_add_double_retDefaultTypeInternal _FunctionRet_add_double_ret_default_instance_;
-class FunctionRet_add_int_ret;
-struct FunctionRet_add_int_retDefaultTypeInternal;
-extern FunctionRet_add_int_retDefaultTypeInternal _FunctionRet_add_int_ret_default_instance_;
-class FunctionRet_add_string_ret;
-struct FunctionRet_add_string_retDefaultTypeInternal;
-extern FunctionRet_add_string_retDefaultTypeInternal _FunctionRet_add_string_ret_default_instance_;
-class FunctionRet_player_move_ret;
-struct FunctionRet_player_move_retDefaultTypeInternal;
-extern FunctionRet_player_move_retDefaultTypeInternal _FunctionRet_player_move_ret_default_instance_;
+class FunctionRet_AddDoubleRet;
+struct FunctionRet_AddDoubleRetDefaultTypeInternal;
+extern FunctionRet_AddDoubleRetDefaultTypeInternal _FunctionRet_AddDoubleRet_default_instance_;
+class FunctionRet_AddIntRet;
+struct FunctionRet_AddIntRetDefaultTypeInternal;
+extern FunctionRet_AddIntRetDefaultTypeInternal _FunctionRet_AddIntRet_default_instance_;
+class FunctionRet_AddStringRet;
+struct FunctionRet_AddStringRetDefaultTypeInternal;
+extern FunctionRet_AddStringRetDefaultTypeInternal _FunctionRet_AddStringRet_default_instance_;
+class FunctionRet_PlayerMoveRet;
+struct FunctionRet_PlayerMoveRetDefaultTypeInternal;
+extern FunctionRet_PlayerMoveRetDefaultTypeInternal _FunctionRet_PlayerMoveRet_default_instance_;
 class Request;
 struct RequestDefaultTypeInternal;
 extern RequestDefaultTypeInternal _Request_default_instance_;
 }  // namespace yi
 PROTOBUF_NAMESPACE_OPEN
 template<> ::yi::ConnectionReq* Arena::CreateMaybeMessage<::yi::ConnectionReq>(Arena*);
+template<> ::yi::ConnectionRet* Arena::CreateMaybeMessage<::yi::ConnectionRet>(Arena*);
+template<> ::yi::ConnectionRet_FuncInfo* Arena::CreateMaybeMessage<::yi::ConnectionRet_FuncInfo>(Arena*);
 template<> ::yi::FunctionCall* Arena::CreateMaybeMessage<::yi::FunctionCall>(Arena*);
-template<> ::yi::FunctionCall_add_double* Arena::CreateMaybeMessage<::yi::FunctionCall_add_double>(Arena*);
-template<> ::yi::FunctionCall_add_int* Arena::CreateMaybeMessage<::yi::FunctionCall_add_int>(Arena*);
-template<> ::yi::FunctionCall_add_string* Arena::CreateMaybeMessage<::yi::FunctionCall_add_string>(Arena*);
-template<> ::yi::FunctionCall_player_move* Arena::CreateMaybeMessage<::yi::FunctionCall_player_move>(Arena*);
+template<> ::yi::FunctionCall_AddDoubleParams* Arena::CreateMaybeMessage<::yi::FunctionCall_AddDoubleParams>(Arena*);
+template<> ::yi::FunctionCall_AddIntParams* Arena::CreateMaybeMessage<::yi::FunctionCall_AddIntParams>(Arena*);
+template<> ::yi::FunctionCall_AddStringParams* Arena::CreateMaybeMessage<::yi::FunctionCall_AddStringParams>(Arena*);
+template<> ::yi::FunctionCall_PlayerMoveParams* Arena::CreateMaybeMessage<::yi::FunctionCall_PlayerMoveParams>(Arena*);
 template<> ::yi::FunctionRet* Arena::CreateMaybeMessage<::yi::FunctionRet>(Arena*);
-template<> ::yi::FunctionRet_add_double_ret* Arena::CreateMaybeMessage<::yi::FunctionRet_add_double_ret>(Arena*);
-template<> ::yi::FunctionRet_add_int_ret* Arena::CreateMaybeMessage<::yi::FunctionRet_add_int_ret>(Arena*);
-template<> ::yi::FunctionRet_add_string_ret* Arena::CreateMaybeMessage<::yi::FunctionRet_add_string_ret>(Arena*);
-template<> ::yi::FunctionRet_player_move_ret* Arena::CreateMaybeMessage<::yi::FunctionRet_player_move_ret>(Arena*);
+template<> ::yi::FunctionRet_AddDoubleRet* Arena::CreateMaybeMessage<::yi::FunctionRet_AddDoubleRet>(Arena*);
+template<> ::yi::FunctionRet_AddIntRet* Arena::CreateMaybeMessage<::yi::FunctionRet_AddIntRet>(Arena*);
+template<> ::yi::FunctionRet_AddStringRet* Arena::CreateMaybeMessage<::yi::FunctionRet_AddStringRet>(Arena*);
+template<> ::yi::FunctionRet_PlayerMoveRet* Arena::CreateMaybeMessage<::yi::FunctionRet_PlayerMoveRet>(Arena*);
 template<> ::yi::Request* Arena::CreateMaybeMessage<::yi::Request>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace yi {
 
+enum Request_RequestType : int {
+  Request_RequestType_ConnectionReq = 0,
+  Request_RequestType_ConnectionRet = 1,
+  Request_RequestType_FunctionCall = 2,
+  Request_RequestType_FunctionRet = 3
+};
+bool Request_RequestType_IsValid(int value);
+constexpr Request_RequestType Request_RequestType_RequestType_MIN = Request_RequestType_ConnectionReq;
+constexpr Request_RequestType Request_RequestType_RequestType_MAX = Request_RequestType_FunctionRet;
+constexpr int Request_RequestType_RequestType_ARRAYSIZE = Request_RequestType_RequestType_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor();
+template<typename T>
+inline const std::string& Request_RequestType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, Request_RequestType>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function Request_RequestType_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    Request_RequestType_descriptor(), enum_t_value);
+}
+inline bool Request_RequestType_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Request_RequestType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Request_RequestType>(
+    Request_RequestType_descriptor(), name, value);
+}
 // ===================================================================
 
 class ConnectionReq final :
@@ -235,24 +269,24 @@ class ConnectionReq final :
 };
 // -------------------------------------------------------------------
 
-class FunctionCall_add_int final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.add_int) */ {
+class ConnectionRet_FuncInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.ConnectionRet.FuncInfo) */ {
  public:
-  inline FunctionCall_add_int() : FunctionCall_add_int(nullptr) {}
-  ~FunctionCall_add_int() override;
-  explicit constexpr FunctionCall_add_int(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ConnectionRet_FuncInfo() : ConnectionRet_FuncInfo(nullptr) {}
+  ~ConnectionRet_FuncInfo() override;
+  explicit constexpr ConnectionRet_FuncInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionCall_add_int(const FunctionCall_add_int& from);
-  FunctionCall_add_int(FunctionCall_add_int&& from) noexcept
-    : FunctionCall_add_int() {
+  ConnectionRet_FuncInfo(const ConnectionRet_FuncInfo& from);
+  ConnectionRet_FuncInfo(ConnectionRet_FuncInfo&& from) noexcept
+    : ConnectionRet_FuncInfo() {
     *this = ::std::move(from);
   }
 
-  inline FunctionCall_add_int& operator=(const FunctionCall_add_int& from) {
+  inline ConnectionRet_FuncInfo& operator=(const ConnectionRet_FuncInfo& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionCall_add_int& operator=(FunctionCall_add_int&& from) noexcept {
+  inline ConnectionRet_FuncInfo& operator=(ConnectionRet_FuncInfo&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -282,20 +316,20 @@ class FunctionCall_add_int final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionCall_add_int& default_instance() {
+  static const ConnectionRet_FuncInfo& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionCall_add_int* internal_default_instance() {
-    return reinterpret_cast<const FunctionCall_add_int*>(
-               &_FunctionCall_add_int_default_instance_);
+  static inline const ConnectionRet_FuncInfo* internal_default_instance() {
+    return reinterpret_cast<const ConnectionRet_FuncInfo*>(
+               &_ConnectionRet_FuncInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(FunctionCall_add_int& a, FunctionCall_add_int& b) {
+  friend void swap(ConnectionRet_FuncInfo& a, ConnectionRet_FuncInfo& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionCall_add_int* other) {
+  inline void Swap(ConnectionRet_FuncInfo* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -308,7 +342,7 @@ class FunctionCall_add_int final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionCall_add_int* other) {
+  void UnsafeArenaSwap(ConnectionRet_FuncInfo* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -316,13 +350,13 @@ class FunctionCall_add_int final :
 
   // implements Message ----------------------------------------------
 
-  FunctionCall_add_int* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionCall_add_int>(arena);
+  ConnectionRet_FuncInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ConnectionRet_FuncInfo>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionCall_add_int& from);
+  void CopyFrom(const ConnectionRet_FuncInfo& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionCall_add_int& from);
+  void MergeFrom(const ConnectionRet_FuncInfo& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -339,15 +373,385 @@ class FunctionCall_add_int final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionCall_add_int* other);
+  void InternalSwap(ConnectionRet_FuncInfo* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionCall.add_int";
+    return "yi.ConnectionRet.FuncInfo";
   }
   protected:
-  explicit FunctionCall_add_int(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ConnectionRet_FuncInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFuncNameFieldNumber = 1,
+    kParamsTypeFieldNumber = 2,
+    kReturnTypeFieldNumber = 3,
+  };
+  // required string func_name = 1;
+  bool has_func_name() const;
+  private:
+  bool _internal_has_func_name() const;
+  public:
+  void clear_func_name();
+  const std::string& func_name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_func_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_func_name();
+  PROTOBUF_NODISCARD std::string* release_func_name();
+  void set_allocated_func_name(std::string* func_name);
+  private:
+  const std::string& _internal_func_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_func_name(const std::string& value);
+  std::string* _internal_mutable_func_name();
+  public:
+
+  // required string params_type = 2;
+  bool has_params_type() const;
+  private:
+  bool _internal_has_params_type() const;
+  public:
+  void clear_params_type();
+  const std::string& params_type() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_params_type(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_params_type();
+  PROTOBUF_NODISCARD std::string* release_params_type();
+  void set_allocated_params_type(std::string* params_type);
+  private:
+  const std::string& _internal_params_type() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_params_type(const std::string& value);
+  std::string* _internal_mutable_params_type();
+  public:
+
+  // required string return_type = 3;
+  bool has_return_type() const;
+  private:
+  bool _internal_has_return_type() const;
+  public:
+  void clear_return_type();
+  const std::string& return_type() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_return_type(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_return_type();
+  PROTOBUF_NODISCARD std::string* release_return_type();
+  void set_allocated_return_type(std::string* return_type);
+  private:
+  const std::string& _internal_return_type() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_return_type(const std::string& value);
+  std::string* _internal_mutable_return_type();
+  public:
+
+  // @@protoc_insertion_point(class_scope:yi.ConnectionRet.FuncInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr func_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr params_type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr return_type_;
+  friend struct ::TableStruct_Request_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ConnectionRet final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.ConnectionRet) */ {
+ public:
+  inline ConnectionRet() : ConnectionRet(nullptr) {}
+  ~ConnectionRet() override;
+  explicit constexpr ConnectionRet(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ConnectionRet(const ConnectionRet& from);
+  ConnectionRet(ConnectionRet&& from) noexcept
+    : ConnectionRet() {
+    *this = ::std::move(from);
+  }
+
+  inline ConnectionRet& operator=(const ConnectionRet& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ConnectionRet& operator=(ConnectionRet&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ConnectionRet& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ConnectionRet* internal_default_instance() {
+    return reinterpret_cast<const ConnectionRet*>(
+               &_ConnectionRet_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(ConnectionRet& a, ConnectionRet& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ConnectionRet* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ConnectionRet* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ConnectionRet* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ConnectionRet>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ConnectionRet& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ConnectionRet& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ConnectionRet* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "yi.ConnectionRet";
+  }
+  protected:
+  explicit ConnectionRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef ConnectionRet_FuncInfo FuncInfo;
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFuncInfoFieldNumber = 1,
+  };
+  // repeated .yi.ConnectionRet.FuncInfo func_info = 1;
+  int func_info_size() const;
+  private:
+  int _internal_func_info_size() const;
+  public:
+  void clear_func_info();
+  ::yi::ConnectionRet_FuncInfo* mutable_func_info(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::yi::ConnectionRet_FuncInfo >*
+      mutable_func_info();
+  private:
+  const ::yi::ConnectionRet_FuncInfo& _internal_func_info(int index) const;
+  ::yi::ConnectionRet_FuncInfo* _internal_add_func_info();
+  public:
+  const ::yi::ConnectionRet_FuncInfo& func_info(int index) const;
+  ::yi::ConnectionRet_FuncInfo* add_func_info();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::yi::ConnectionRet_FuncInfo >&
+      func_info() const;
+
+  // @@protoc_insertion_point(class_scope:yi.ConnectionRet)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::yi::ConnectionRet_FuncInfo > func_info_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Request_2eproto;
+};
+// -------------------------------------------------------------------
+
+class FunctionCall_AddIntParams final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.AddIntParams) */ {
+ public:
+  inline FunctionCall_AddIntParams() : FunctionCall_AddIntParams(nullptr) {}
+  ~FunctionCall_AddIntParams() override;
+  explicit constexpr FunctionCall_AddIntParams(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  FunctionCall_AddIntParams(const FunctionCall_AddIntParams& from);
+  FunctionCall_AddIntParams(FunctionCall_AddIntParams&& from) noexcept
+    : FunctionCall_AddIntParams() {
+    *this = ::std::move(from);
+  }
+
+  inline FunctionCall_AddIntParams& operator=(const FunctionCall_AddIntParams& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FunctionCall_AddIntParams& operator=(FunctionCall_AddIntParams&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const FunctionCall_AddIntParams& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const FunctionCall_AddIntParams* internal_default_instance() {
+    return reinterpret_cast<const FunctionCall_AddIntParams*>(
+               &_FunctionCall_AddIntParams_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(FunctionCall_AddIntParams& a, FunctionCall_AddIntParams& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FunctionCall_AddIntParams* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FunctionCall_AddIntParams* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  FunctionCall_AddIntParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionCall_AddIntParams>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const FunctionCall_AddIntParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const FunctionCall_AddIntParams& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(FunctionCall_AddIntParams* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "yi.FunctionCall.AddIntParams";
+  }
+  protected:
+  explicit FunctionCall_AddIntParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -393,7 +797,7 @@ class FunctionCall_add_int final :
   void _internal_set_right(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionCall.add_int)
+  // @@protoc_insertion_point(class_scope:yi.FunctionCall.AddIntParams)
  private:
   class _Internal;
 
@@ -411,24 +815,24 @@ class FunctionCall_add_int final :
 };
 // -------------------------------------------------------------------
 
-class FunctionCall_add_double final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.add_double) */ {
+class FunctionCall_AddDoubleParams final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.AddDoubleParams) */ {
  public:
-  inline FunctionCall_add_double() : FunctionCall_add_double(nullptr) {}
-  ~FunctionCall_add_double() override;
-  explicit constexpr FunctionCall_add_double(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionCall_AddDoubleParams() : FunctionCall_AddDoubleParams(nullptr) {}
+  ~FunctionCall_AddDoubleParams() override;
+  explicit constexpr FunctionCall_AddDoubleParams(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionCall_add_double(const FunctionCall_add_double& from);
-  FunctionCall_add_double(FunctionCall_add_double&& from) noexcept
-    : FunctionCall_add_double() {
+  FunctionCall_AddDoubleParams(const FunctionCall_AddDoubleParams& from);
+  FunctionCall_AddDoubleParams(FunctionCall_AddDoubleParams&& from) noexcept
+    : FunctionCall_AddDoubleParams() {
     *this = ::std::move(from);
   }
 
-  inline FunctionCall_add_double& operator=(const FunctionCall_add_double& from) {
+  inline FunctionCall_AddDoubleParams& operator=(const FunctionCall_AddDoubleParams& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionCall_add_double& operator=(FunctionCall_add_double&& from) noexcept {
+  inline FunctionCall_AddDoubleParams& operator=(FunctionCall_AddDoubleParams&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -458,20 +862,20 @@ class FunctionCall_add_double final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionCall_add_double& default_instance() {
+  static const FunctionCall_AddDoubleParams& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionCall_add_double* internal_default_instance() {
-    return reinterpret_cast<const FunctionCall_add_double*>(
-               &_FunctionCall_add_double_default_instance_);
+  static inline const FunctionCall_AddDoubleParams* internal_default_instance() {
+    return reinterpret_cast<const FunctionCall_AddDoubleParams*>(
+               &_FunctionCall_AddDoubleParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
-  friend void swap(FunctionCall_add_double& a, FunctionCall_add_double& b) {
+  friend void swap(FunctionCall_AddDoubleParams& a, FunctionCall_AddDoubleParams& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionCall_add_double* other) {
+  inline void Swap(FunctionCall_AddDoubleParams* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -484,7 +888,7 @@ class FunctionCall_add_double final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionCall_add_double* other) {
+  void UnsafeArenaSwap(FunctionCall_AddDoubleParams* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -492,13 +896,13 @@ class FunctionCall_add_double final :
 
   // implements Message ----------------------------------------------
 
-  FunctionCall_add_double* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionCall_add_double>(arena);
+  FunctionCall_AddDoubleParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionCall_AddDoubleParams>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionCall_add_double& from);
+  void CopyFrom(const FunctionCall_AddDoubleParams& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionCall_add_double& from);
+  void MergeFrom(const FunctionCall_AddDoubleParams& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -515,15 +919,15 @@ class FunctionCall_add_double final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionCall_add_double* other);
+  void InternalSwap(FunctionCall_AddDoubleParams* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionCall.add_double";
+    return "yi.FunctionCall.AddDoubleParams";
   }
   protected:
-  explicit FunctionCall_add_double(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionCall_AddDoubleParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -569,7 +973,7 @@ class FunctionCall_add_double final :
   void _internal_set_right(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionCall.add_double)
+  // @@protoc_insertion_point(class_scope:yi.FunctionCall.AddDoubleParams)
  private:
   class _Internal;
 
@@ -587,24 +991,24 @@ class FunctionCall_add_double final :
 };
 // -------------------------------------------------------------------
 
-class FunctionCall_add_string final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.add_string) */ {
+class FunctionCall_AddStringParams final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.AddStringParams) */ {
  public:
-  inline FunctionCall_add_string() : FunctionCall_add_string(nullptr) {}
-  ~FunctionCall_add_string() override;
-  explicit constexpr FunctionCall_add_string(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionCall_AddStringParams() : FunctionCall_AddStringParams(nullptr) {}
+  ~FunctionCall_AddStringParams() override;
+  explicit constexpr FunctionCall_AddStringParams(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionCall_add_string(const FunctionCall_add_string& from);
-  FunctionCall_add_string(FunctionCall_add_string&& from) noexcept
-    : FunctionCall_add_string() {
+  FunctionCall_AddStringParams(const FunctionCall_AddStringParams& from);
+  FunctionCall_AddStringParams(FunctionCall_AddStringParams&& from) noexcept
+    : FunctionCall_AddStringParams() {
     *this = ::std::move(from);
   }
 
-  inline FunctionCall_add_string& operator=(const FunctionCall_add_string& from) {
+  inline FunctionCall_AddStringParams& operator=(const FunctionCall_AddStringParams& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionCall_add_string& operator=(FunctionCall_add_string&& from) noexcept {
+  inline FunctionCall_AddStringParams& operator=(FunctionCall_AddStringParams&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -634,20 +1038,20 @@ class FunctionCall_add_string final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionCall_add_string& default_instance() {
+  static const FunctionCall_AddStringParams& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionCall_add_string* internal_default_instance() {
-    return reinterpret_cast<const FunctionCall_add_string*>(
-               &_FunctionCall_add_string_default_instance_);
+  static inline const FunctionCall_AddStringParams* internal_default_instance() {
+    return reinterpret_cast<const FunctionCall_AddStringParams*>(
+               &_FunctionCall_AddStringParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
-  friend void swap(FunctionCall_add_string& a, FunctionCall_add_string& b) {
+  friend void swap(FunctionCall_AddStringParams& a, FunctionCall_AddStringParams& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionCall_add_string* other) {
+  inline void Swap(FunctionCall_AddStringParams* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -660,7 +1064,7 @@ class FunctionCall_add_string final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionCall_add_string* other) {
+  void UnsafeArenaSwap(FunctionCall_AddStringParams* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -668,13 +1072,13 @@ class FunctionCall_add_string final :
 
   // implements Message ----------------------------------------------
 
-  FunctionCall_add_string* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionCall_add_string>(arena);
+  FunctionCall_AddStringParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionCall_AddStringParams>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionCall_add_string& from);
+  void CopyFrom(const FunctionCall_AddStringParams& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionCall_add_string& from);
+  void MergeFrom(const FunctionCall_AddStringParams& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -691,15 +1095,15 @@ class FunctionCall_add_string final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionCall_add_string* other);
+  void InternalSwap(FunctionCall_AddStringParams* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionCall.add_string";
+    return "yi.FunctionCall.AddStringParams";
   }
   protected:
-  explicit FunctionCall_add_string(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionCall_AddStringParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -755,7 +1159,7 @@ class FunctionCall_add_string final :
   std::string* _internal_mutable_right();
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionCall.add_string)
+  // @@protoc_insertion_point(class_scope:yi.FunctionCall.AddStringParams)
  private:
   class _Internal;
 
@@ -773,24 +1177,24 @@ class FunctionCall_add_string final :
 };
 // -------------------------------------------------------------------
 
-class FunctionCall_player_move final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.player_move) */ {
+class FunctionCall_PlayerMoveParams final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionCall.PlayerMoveParams) */ {
  public:
-  inline FunctionCall_player_move() : FunctionCall_player_move(nullptr) {}
-  ~FunctionCall_player_move() override;
-  explicit constexpr FunctionCall_player_move(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionCall_PlayerMoveParams() : FunctionCall_PlayerMoveParams(nullptr) {}
+  ~FunctionCall_PlayerMoveParams() override;
+  explicit constexpr FunctionCall_PlayerMoveParams(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionCall_player_move(const FunctionCall_player_move& from);
-  FunctionCall_player_move(FunctionCall_player_move&& from) noexcept
-    : FunctionCall_player_move() {
+  FunctionCall_PlayerMoveParams(const FunctionCall_PlayerMoveParams& from);
+  FunctionCall_PlayerMoveParams(FunctionCall_PlayerMoveParams&& from) noexcept
+    : FunctionCall_PlayerMoveParams() {
     *this = ::std::move(from);
   }
 
-  inline FunctionCall_player_move& operator=(const FunctionCall_player_move& from) {
+  inline FunctionCall_PlayerMoveParams& operator=(const FunctionCall_PlayerMoveParams& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionCall_player_move& operator=(FunctionCall_player_move&& from) noexcept {
+  inline FunctionCall_PlayerMoveParams& operator=(FunctionCall_PlayerMoveParams&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -820,20 +1224,20 @@ class FunctionCall_player_move final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionCall_player_move& default_instance() {
+  static const FunctionCall_PlayerMoveParams& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionCall_player_move* internal_default_instance() {
-    return reinterpret_cast<const FunctionCall_player_move*>(
-               &_FunctionCall_player_move_default_instance_);
+  static inline const FunctionCall_PlayerMoveParams* internal_default_instance() {
+    return reinterpret_cast<const FunctionCall_PlayerMoveParams*>(
+               &_FunctionCall_PlayerMoveParams_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
-  friend void swap(FunctionCall_player_move& a, FunctionCall_player_move& b) {
+  friend void swap(FunctionCall_PlayerMoveParams& a, FunctionCall_PlayerMoveParams& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionCall_player_move* other) {
+  inline void Swap(FunctionCall_PlayerMoveParams* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -846,7 +1250,7 @@ class FunctionCall_player_move final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionCall_player_move* other) {
+  void UnsafeArenaSwap(FunctionCall_PlayerMoveParams* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -854,13 +1258,13 @@ class FunctionCall_player_move final :
 
   // implements Message ----------------------------------------------
 
-  FunctionCall_player_move* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionCall_player_move>(arena);
+  FunctionCall_PlayerMoveParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionCall_PlayerMoveParams>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionCall_player_move& from);
+  void CopyFrom(const FunctionCall_PlayerMoveParams& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionCall_player_move& from);
+  void MergeFrom(const FunctionCall_PlayerMoveParams& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -877,15 +1281,15 @@ class FunctionCall_player_move final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionCall_player_move* other);
+  void InternalSwap(FunctionCall_PlayerMoveParams* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionCall.player_move";
+    return "yi.FunctionCall.PlayerMoveParams";
   }
   protected:
-  explicit FunctionCall_player_move(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionCall_PlayerMoveParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -987,7 +1391,7 @@ class FunctionCall_player_move final :
   void _internal_set_angle(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionCall.player_move)
+  // @@protoc_insertion_point(class_scope:yi.FunctionCall.PlayerMoveParams)
  private:
   class _Internal;
 
@@ -1064,7 +1468,7 @@ class FunctionCall final :
                &_FunctionCall_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   friend void swap(FunctionCall& a, FunctionCall& b) {
     a.Swap(&b);
@@ -1135,10 +1539,10 @@ class FunctionCall final :
 
   // nested types ----------------------------------------------------
 
-  typedef FunctionCall_add_int add_int;
-  typedef FunctionCall_add_double add_double;
-  typedef FunctionCall_add_string add_string;
-  typedef FunctionCall_player_move player_move;
+  typedef FunctionCall_AddIntParams AddIntParams;
+  typedef FunctionCall_AddDoubleParams AddDoubleParams;
+  typedef FunctionCall_AddStringParams AddStringParams;
+  typedef FunctionCall_PlayerMoveParams PlayerMoveParams;
 
   // accessors -------------------------------------------------------
 
@@ -1167,77 +1571,77 @@ class FunctionCall final :
   std::string* _internal_mutable_function_name();
   public:
 
-  // optional .yi.FunctionCall.add_int add_int_params = 2;
+  // optional .yi.FunctionCall.AddIntParams add_int_params = 2;
   bool has_add_int_params() const;
   private:
   bool _internal_has_add_int_params() const;
   public:
   void clear_add_int_params();
-  const ::yi::FunctionCall_add_int& add_int_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionCall_add_int* release_add_int_params();
-  ::yi::FunctionCall_add_int* mutable_add_int_params();
-  void set_allocated_add_int_params(::yi::FunctionCall_add_int* add_int_params);
+  const ::yi::FunctionCall_AddIntParams& add_int_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionCall_AddIntParams* release_add_int_params();
+  ::yi::FunctionCall_AddIntParams* mutable_add_int_params();
+  void set_allocated_add_int_params(::yi::FunctionCall_AddIntParams* add_int_params);
   private:
-  const ::yi::FunctionCall_add_int& _internal_add_int_params() const;
-  ::yi::FunctionCall_add_int* _internal_mutable_add_int_params();
+  const ::yi::FunctionCall_AddIntParams& _internal_add_int_params() const;
+  ::yi::FunctionCall_AddIntParams* _internal_mutable_add_int_params();
   public:
   void unsafe_arena_set_allocated_add_int_params(
-      ::yi::FunctionCall_add_int* add_int_params);
-  ::yi::FunctionCall_add_int* unsafe_arena_release_add_int_params();
+      ::yi::FunctionCall_AddIntParams* add_int_params);
+  ::yi::FunctionCall_AddIntParams* unsafe_arena_release_add_int_params();
 
-  // optional .yi.FunctionCall.add_double add_double_params = 3;
+  // optional .yi.FunctionCall.AddDoubleParams add_double_params = 3;
   bool has_add_double_params() const;
   private:
   bool _internal_has_add_double_params() const;
   public:
   void clear_add_double_params();
-  const ::yi::FunctionCall_add_double& add_double_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionCall_add_double* release_add_double_params();
-  ::yi::FunctionCall_add_double* mutable_add_double_params();
-  void set_allocated_add_double_params(::yi::FunctionCall_add_double* add_double_params);
+  const ::yi::FunctionCall_AddDoubleParams& add_double_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionCall_AddDoubleParams* release_add_double_params();
+  ::yi::FunctionCall_AddDoubleParams* mutable_add_double_params();
+  void set_allocated_add_double_params(::yi::FunctionCall_AddDoubleParams* add_double_params);
   private:
-  const ::yi::FunctionCall_add_double& _internal_add_double_params() const;
-  ::yi::FunctionCall_add_double* _internal_mutable_add_double_params();
+  const ::yi::FunctionCall_AddDoubleParams& _internal_add_double_params() const;
+  ::yi::FunctionCall_AddDoubleParams* _internal_mutable_add_double_params();
   public:
   void unsafe_arena_set_allocated_add_double_params(
-      ::yi::FunctionCall_add_double* add_double_params);
-  ::yi::FunctionCall_add_double* unsafe_arena_release_add_double_params();
+      ::yi::FunctionCall_AddDoubleParams* add_double_params);
+  ::yi::FunctionCall_AddDoubleParams* unsafe_arena_release_add_double_params();
 
-  // optional .yi.FunctionCall.add_string add_string_params = 4;
+  // optional .yi.FunctionCall.AddStringParams add_string_params = 4;
   bool has_add_string_params() const;
   private:
   bool _internal_has_add_string_params() const;
   public:
   void clear_add_string_params();
-  const ::yi::FunctionCall_add_string& add_string_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionCall_add_string* release_add_string_params();
-  ::yi::FunctionCall_add_string* mutable_add_string_params();
-  void set_allocated_add_string_params(::yi::FunctionCall_add_string* add_string_params);
+  const ::yi::FunctionCall_AddStringParams& add_string_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionCall_AddStringParams* release_add_string_params();
+  ::yi::FunctionCall_AddStringParams* mutable_add_string_params();
+  void set_allocated_add_string_params(::yi::FunctionCall_AddStringParams* add_string_params);
   private:
-  const ::yi::FunctionCall_add_string& _internal_add_string_params() const;
-  ::yi::FunctionCall_add_string* _internal_mutable_add_string_params();
+  const ::yi::FunctionCall_AddStringParams& _internal_add_string_params() const;
+  ::yi::FunctionCall_AddStringParams* _internal_mutable_add_string_params();
   public:
   void unsafe_arena_set_allocated_add_string_params(
-      ::yi::FunctionCall_add_string* add_string_params);
-  ::yi::FunctionCall_add_string* unsafe_arena_release_add_string_params();
+      ::yi::FunctionCall_AddStringParams* add_string_params);
+  ::yi::FunctionCall_AddStringParams* unsafe_arena_release_add_string_params();
 
-  // optional .yi.FunctionCall.player_move player_move_params = 5;
+  // optional .yi.FunctionCall.PlayerMoveParams player_move_params = 5;
   bool has_player_move_params() const;
   private:
   bool _internal_has_player_move_params() const;
   public:
   void clear_player_move_params();
-  const ::yi::FunctionCall_player_move& player_move_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionCall_player_move* release_player_move_params();
-  ::yi::FunctionCall_player_move* mutable_player_move_params();
-  void set_allocated_player_move_params(::yi::FunctionCall_player_move* player_move_params);
+  const ::yi::FunctionCall_PlayerMoveParams& player_move_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionCall_PlayerMoveParams* release_player_move_params();
+  ::yi::FunctionCall_PlayerMoveParams* mutable_player_move_params();
+  void set_allocated_player_move_params(::yi::FunctionCall_PlayerMoveParams* player_move_params);
   private:
-  const ::yi::FunctionCall_player_move& _internal_player_move_params() const;
-  ::yi::FunctionCall_player_move* _internal_mutable_player_move_params();
+  const ::yi::FunctionCall_PlayerMoveParams& _internal_player_move_params() const;
+  ::yi::FunctionCall_PlayerMoveParams* _internal_mutable_player_move_params();
   public:
   void unsafe_arena_set_allocated_player_move_params(
-      ::yi::FunctionCall_player_move* player_move_params);
-  ::yi::FunctionCall_player_move* unsafe_arena_release_player_move_params();
+      ::yi::FunctionCall_PlayerMoveParams* player_move_params);
+  ::yi::FunctionCall_PlayerMoveParams* unsafe_arena_release_player_move_params();
 
   // @@protoc_insertion_point(class_scope:yi.FunctionCall)
  private:
@@ -1249,32 +1653,32 @@ class FunctionCall final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr function_name_;
-  ::yi::FunctionCall_add_int* add_int_params_;
-  ::yi::FunctionCall_add_double* add_double_params_;
-  ::yi::FunctionCall_add_string* add_string_params_;
-  ::yi::FunctionCall_player_move* player_move_params_;
+  ::yi::FunctionCall_AddIntParams* add_int_params_;
+  ::yi::FunctionCall_AddDoubleParams* add_double_params_;
+  ::yi::FunctionCall_AddStringParams* add_string_params_;
+  ::yi::FunctionCall_PlayerMoveParams* player_move_params_;
   friend struct ::TableStruct_Request_2eproto;
 };
 // -------------------------------------------------------------------
 
-class FunctionRet_add_int_ret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.add_int_ret) */ {
+class FunctionRet_AddIntRet final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.AddIntRet) */ {
  public:
-  inline FunctionRet_add_int_ret() : FunctionRet_add_int_ret(nullptr) {}
-  ~FunctionRet_add_int_ret() override;
-  explicit constexpr FunctionRet_add_int_ret(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionRet_AddIntRet() : FunctionRet_AddIntRet(nullptr) {}
+  ~FunctionRet_AddIntRet() override;
+  explicit constexpr FunctionRet_AddIntRet(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionRet_add_int_ret(const FunctionRet_add_int_ret& from);
-  FunctionRet_add_int_ret(FunctionRet_add_int_ret&& from) noexcept
-    : FunctionRet_add_int_ret() {
+  FunctionRet_AddIntRet(const FunctionRet_AddIntRet& from);
+  FunctionRet_AddIntRet(FunctionRet_AddIntRet&& from) noexcept
+    : FunctionRet_AddIntRet() {
     *this = ::std::move(from);
   }
 
-  inline FunctionRet_add_int_ret& operator=(const FunctionRet_add_int_ret& from) {
+  inline FunctionRet_AddIntRet& operator=(const FunctionRet_AddIntRet& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionRet_add_int_ret& operator=(FunctionRet_add_int_ret&& from) noexcept {
+  inline FunctionRet_AddIntRet& operator=(FunctionRet_AddIntRet&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1304,20 +1708,20 @@ class FunctionRet_add_int_ret final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionRet_add_int_ret& default_instance() {
+  static const FunctionRet_AddIntRet& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionRet_add_int_ret* internal_default_instance() {
-    return reinterpret_cast<const FunctionRet_add_int_ret*>(
-               &_FunctionRet_add_int_ret_default_instance_);
+  static inline const FunctionRet_AddIntRet* internal_default_instance() {
+    return reinterpret_cast<const FunctionRet_AddIntRet*>(
+               &_FunctionRet_AddIntRet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    8;
 
-  friend void swap(FunctionRet_add_int_ret& a, FunctionRet_add_int_ret& b) {
+  friend void swap(FunctionRet_AddIntRet& a, FunctionRet_AddIntRet& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionRet_add_int_ret* other) {
+  inline void Swap(FunctionRet_AddIntRet* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1330,7 +1734,7 @@ class FunctionRet_add_int_ret final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionRet_add_int_ret* other) {
+  void UnsafeArenaSwap(FunctionRet_AddIntRet* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1338,13 +1742,13 @@ class FunctionRet_add_int_ret final :
 
   // implements Message ----------------------------------------------
 
-  FunctionRet_add_int_ret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionRet_add_int_ret>(arena);
+  FunctionRet_AddIntRet* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionRet_AddIntRet>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionRet_add_int_ret& from);
+  void CopyFrom(const FunctionRet_AddIntRet& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionRet_add_int_ret& from);
+  void MergeFrom(const FunctionRet_AddIntRet& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1361,15 +1765,15 @@ class FunctionRet_add_int_ret final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionRet_add_int_ret* other);
+  void InternalSwap(FunctionRet_AddIntRet* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionRet.add_int_ret";
+    return "yi.FunctionRet.AddIntRet";
   }
   protected:
-  explicit FunctionRet_add_int_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionRet_AddIntRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1401,7 +1805,7 @@ class FunctionRet_add_int_ret final :
   void _internal_set_ret(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionRet.add_int_ret)
+  // @@protoc_insertion_point(class_scope:yi.FunctionRet.AddIntRet)
  private:
   class _Internal;
 
@@ -1415,24 +1819,24 @@ class FunctionRet_add_int_ret final :
 };
 // -------------------------------------------------------------------
 
-class FunctionRet_add_double_ret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.add_double_ret) */ {
+class FunctionRet_AddDoubleRet final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.AddDoubleRet) */ {
  public:
-  inline FunctionRet_add_double_ret() : FunctionRet_add_double_ret(nullptr) {}
-  ~FunctionRet_add_double_ret() override;
-  explicit constexpr FunctionRet_add_double_ret(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionRet_AddDoubleRet() : FunctionRet_AddDoubleRet(nullptr) {}
+  ~FunctionRet_AddDoubleRet() override;
+  explicit constexpr FunctionRet_AddDoubleRet(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionRet_add_double_ret(const FunctionRet_add_double_ret& from);
-  FunctionRet_add_double_ret(FunctionRet_add_double_ret&& from) noexcept
-    : FunctionRet_add_double_ret() {
+  FunctionRet_AddDoubleRet(const FunctionRet_AddDoubleRet& from);
+  FunctionRet_AddDoubleRet(FunctionRet_AddDoubleRet&& from) noexcept
+    : FunctionRet_AddDoubleRet() {
     *this = ::std::move(from);
   }
 
-  inline FunctionRet_add_double_ret& operator=(const FunctionRet_add_double_ret& from) {
+  inline FunctionRet_AddDoubleRet& operator=(const FunctionRet_AddDoubleRet& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionRet_add_double_ret& operator=(FunctionRet_add_double_ret&& from) noexcept {
+  inline FunctionRet_AddDoubleRet& operator=(FunctionRet_AddDoubleRet&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1462,20 +1866,20 @@ class FunctionRet_add_double_ret final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionRet_add_double_ret& default_instance() {
+  static const FunctionRet_AddDoubleRet& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionRet_add_double_ret* internal_default_instance() {
-    return reinterpret_cast<const FunctionRet_add_double_ret*>(
-               &_FunctionRet_add_double_ret_default_instance_);
+  static inline const FunctionRet_AddDoubleRet* internal_default_instance() {
+    return reinterpret_cast<const FunctionRet_AddDoubleRet*>(
+               &_FunctionRet_AddDoubleRet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    9;
 
-  friend void swap(FunctionRet_add_double_ret& a, FunctionRet_add_double_ret& b) {
+  friend void swap(FunctionRet_AddDoubleRet& a, FunctionRet_AddDoubleRet& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionRet_add_double_ret* other) {
+  inline void Swap(FunctionRet_AddDoubleRet* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1488,7 +1892,7 @@ class FunctionRet_add_double_ret final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionRet_add_double_ret* other) {
+  void UnsafeArenaSwap(FunctionRet_AddDoubleRet* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1496,13 +1900,13 @@ class FunctionRet_add_double_ret final :
 
   // implements Message ----------------------------------------------
 
-  FunctionRet_add_double_ret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionRet_add_double_ret>(arena);
+  FunctionRet_AddDoubleRet* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionRet_AddDoubleRet>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionRet_add_double_ret& from);
+  void CopyFrom(const FunctionRet_AddDoubleRet& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionRet_add_double_ret& from);
+  void MergeFrom(const FunctionRet_AddDoubleRet& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1519,15 +1923,15 @@ class FunctionRet_add_double_ret final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionRet_add_double_ret* other);
+  void InternalSwap(FunctionRet_AddDoubleRet* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionRet.add_double_ret";
+    return "yi.FunctionRet.AddDoubleRet";
   }
   protected:
-  explicit FunctionRet_add_double_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionRet_AddDoubleRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1559,7 +1963,7 @@ class FunctionRet_add_double_ret final :
   void _internal_set_ret(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionRet.add_double_ret)
+  // @@protoc_insertion_point(class_scope:yi.FunctionRet.AddDoubleRet)
  private:
   class _Internal;
 
@@ -1573,24 +1977,24 @@ class FunctionRet_add_double_ret final :
 };
 // -------------------------------------------------------------------
 
-class FunctionRet_add_string_ret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.add_string_ret) */ {
+class FunctionRet_AddStringRet final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.AddStringRet) */ {
  public:
-  inline FunctionRet_add_string_ret() : FunctionRet_add_string_ret(nullptr) {}
-  ~FunctionRet_add_string_ret() override;
-  explicit constexpr FunctionRet_add_string_ret(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionRet_AddStringRet() : FunctionRet_AddStringRet(nullptr) {}
+  ~FunctionRet_AddStringRet() override;
+  explicit constexpr FunctionRet_AddStringRet(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionRet_add_string_ret(const FunctionRet_add_string_ret& from);
-  FunctionRet_add_string_ret(FunctionRet_add_string_ret&& from) noexcept
-    : FunctionRet_add_string_ret() {
+  FunctionRet_AddStringRet(const FunctionRet_AddStringRet& from);
+  FunctionRet_AddStringRet(FunctionRet_AddStringRet&& from) noexcept
+    : FunctionRet_AddStringRet() {
     *this = ::std::move(from);
   }
 
-  inline FunctionRet_add_string_ret& operator=(const FunctionRet_add_string_ret& from) {
+  inline FunctionRet_AddStringRet& operator=(const FunctionRet_AddStringRet& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionRet_add_string_ret& operator=(FunctionRet_add_string_ret&& from) noexcept {
+  inline FunctionRet_AddStringRet& operator=(FunctionRet_AddStringRet&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1620,20 +2024,20 @@ class FunctionRet_add_string_ret final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionRet_add_string_ret& default_instance() {
+  static const FunctionRet_AddStringRet& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionRet_add_string_ret* internal_default_instance() {
-    return reinterpret_cast<const FunctionRet_add_string_ret*>(
-               &_FunctionRet_add_string_ret_default_instance_);
+  static inline const FunctionRet_AddStringRet* internal_default_instance() {
+    return reinterpret_cast<const FunctionRet_AddStringRet*>(
+               &_FunctionRet_AddStringRet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
-  friend void swap(FunctionRet_add_string_ret& a, FunctionRet_add_string_ret& b) {
+  friend void swap(FunctionRet_AddStringRet& a, FunctionRet_AddStringRet& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionRet_add_string_ret* other) {
+  inline void Swap(FunctionRet_AddStringRet* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1646,7 +2050,7 @@ class FunctionRet_add_string_ret final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionRet_add_string_ret* other) {
+  void UnsafeArenaSwap(FunctionRet_AddStringRet* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1654,13 +2058,13 @@ class FunctionRet_add_string_ret final :
 
   // implements Message ----------------------------------------------
 
-  FunctionRet_add_string_ret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionRet_add_string_ret>(arena);
+  FunctionRet_AddStringRet* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionRet_AddStringRet>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionRet_add_string_ret& from);
+  void CopyFrom(const FunctionRet_AddStringRet& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionRet_add_string_ret& from);
+  void MergeFrom(const FunctionRet_AddStringRet& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1677,15 +2081,15 @@ class FunctionRet_add_string_ret final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionRet_add_string_ret* other);
+  void InternalSwap(FunctionRet_AddStringRet* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionRet.add_string_ret";
+    return "yi.FunctionRet.AddStringRet";
   }
   protected:
-  explicit FunctionRet_add_string_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionRet_AddStringRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1722,7 +2126,7 @@ class FunctionRet_add_string_ret final :
   std::string* _internal_mutable_ret();
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionRet.add_string_ret)
+  // @@protoc_insertion_point(class_scope:yi.FunctionRet.AddStringRet)
  private:
   class _Internal;
 
@@ -1736,24 +2140,24 @@ class FunctionRet_add_string_ret final :
 };
 // -------------------------------------------------------------------
 
-class FunctionRet_player_move_ret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.player_move_ret) */ {
+class FunctionRet_PlayerMoveRet final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:yi.FunctionRet.PlayerMoveRet) */ {
  public:
-  inline FunctionRet_player_move_ret() : FunctionRet_player_move_ret(nullptr) {}
-  ~FunctionRet_player_move_ret() override;
-  explicit constexpr FunctionRet_player_move_ret(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline FunctionRet_PlayerMoveRet() : FunctionRet_PlayerMoveRet(nullptr) {}
+  ~FunctionRet_PlayerMoveRet() override;
+  explicit constexpr FunctionRet_PlayerMoveRet(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  FunctionRet_player_move_ret(const FunctionRet_player_move_ret& from);
-  FunctionRet_player_move_ret(FunctionRet_player_move_ret&& from) noexcept
-    : FunctionRet_player_move_ret() {
+  FunctionRet_PlayerMoveRet(const FunctionRet_PlayerMoveRet& from);
+  FunctionRet_PlayerMoveRet(FunctionRet_PlayerMoveRet&& from) noexcept
+    : FunctionRet_PlayerMoveRet() {
     *this = ::std::move(from);
   }
 
-  inline FunctionRet_player_move_ret& operator=(const FunctionRet_player_move_ret& from) {
+  inline FunctionRet_PlayerMoveRet& operator=(const FunctionRet_PlayerMoveRet& from) {
     CopyFrom(from);
     return *this;
   }
-  inline FunctionRet_player_move_ret& operator=(FunctionRet_player_move_ret&& from) noexcept {
+  inline FunctionRet_PlayerMoveRet& operator=(FunctionRet_PlayerMoveRet&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1783,20 +2187,20 @@ class FunctionRet_player_move_ret final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const FunctionRet_player_move_ret& default_instance() {
+  static const FunctionRet_PlayerMoveRet& default_instance() {
     return *internal_default_instance();
   }
-  static inline const FunctionRet_player_move_ret* internal_default_instance() {
-    return reinterpret_cast<const FunctionRet_player_move_ret*>(
-               &_FunctionRet_player_move_ret_default_instance_);
+  static inline const FunctionRet_PlayerMoveRet* internal_default_instance() {
+    return reinterpret_cast<const FunctionRet_PlayerMoveRet*>(
+               &_FunctionRet_PlayerMoveRet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
-  friend void swap(FunctionRet_player_move_ret& a, FunctionRet_player_move_ret& b) {
+  friend void swap(FunctionRet_PlayerMoveRet& a, FunctionRet_PlayerMoveRet& b) {
     a.Swap(&b);
   }
-  inline void Swap(FunctionRet_player_move_ret* other) {
+  inline void Swap(FunctionRet_PlayerMoveRet* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1809,7 +2213,7 @@ class FunctionRet_player_move_ret final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(FunctionRet_player_move_ret* other) {
+  void UnsafeArenaSwap(FunctionRet_PlayerMoveRet* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1817,13 +2221,13 @@ class FunctionRet_player_move_ret final :
 
   // implements Message ----------------------------------------------
 
-  FunctionRet_player_move_ret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<FunctionRet_player_move_ret>(arena);
+  FunctionRet_PlayerMoveRet* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FunctionRet_PlayerMoveRet>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const FunctionRet_player_move_ret& from);
+  void CopyFrom(const FunctionRet_PlayerMoveRet& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const FunctionRet_player_move_ret& from);
+  void MergeFrom(const FunctionRet_PlayerMoveRet& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1840,15 +2244,15 @@ class FunctionRet_player_move_ret final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FunctionRet_player_move_ret* other);
+  void InternalSwap(FunctionRet_PlayerMoveRet* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "yi.FunctionRet.player_move_ret";
+    return "yi.FunctionRet.PlayerMoveRet";
   }
   protected:
-  explicit FunctionRet_player_move_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit FunctionRet_PlayerMoveRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1922,7 +2326,7 @@ class FunctionRet_player_move_ret final :
   void _internal_set_aspect(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:yi.FunctionRet.player_move_ret)
+  // @@protoc_insertion_point(class_scope:yi.FunctionRet.PlayerMoveRet)
  private:
   class _Internal;
 
@@ -1997,7 +2401,7 @@ class FunctionRet final :
                &_FunctionRet_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    12;
 
   friend void swap(FunctionRet& a, FunctionRet& b) {
     a.Swap(&b);
@@ -2068,10 +2472,10 @@ class FunctionRet final :
 
   // nested types ----------------------------------------------------
 
-  typedef FunctionRet_add_int_ret add_int_ret;
-  typedef FunctionRet_add_double_ret add_double_ret;
-  typedef FunctionRet_add_string_ret add_string_ret;
-  typedef FunctionRet_player_move_ret player_move_ret;
+  typedef FunctionRet_AddIntRet AddIntRet;
+  typedef FunctionRet_AddDoubleRet AddDoubleRet;
+  typedef FunctionRet_AddStringRet AddStringRet;
+  typedef FunctionRet_PlayerMoveRet PlayerMoveRet;
 
   // accessors -------------------------------------------------------
 
@@ -2100,77 +2504,77 @@ class FunctionRet final :
   std::string* _internal_mutable_function_name();
   public:
 
-  // optional .yi.FunctionRet.add_int_ret add_int_ret_params = 2;
+  // optional .yi.FunctionRet.AddIntRet add_int_ret_params = 2;
   bool has_add_int_ret_params() const;
   private:
   bool _internal_has_add_int_ret_params() const;
   public:
   void clear_add_int_ret_params();
-  const ::yi::FunctionRet_add_int_ret& add_int_ret_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionRet_add_int_ret* release_add_int_ret_params();
-  ::yi::FunctionRet_add_int_ret* mutable_add_int_ret_params();
-  void set_allocated_add_int_ret_params(::yi::FunctionRet_add_int_ret* add_int_ret_params);
+  const ::yi::FunctionRet_AddIntRet& add_int_ret_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionRet_AddIntRet* release_add_int_ret_params();
+  ::yi::FunctionRet_AddIntRet* mutable_add_int_ret_params();
+  void set_allocated_add_int_ret_params(::yi::FunctionRet_AddIntRet* add_int_ret_params);
   private:
-  const ::yi::FunctionRet_add_int_ret& _internal_add_int_ret_params() const;
-  ::yi::FunctionRet_add_int_ret* _internal_mutable_add_int_ret_params();
+  const ::yi::FunctionRet_AddIntRet& _internal_add_int_ret_params() const;
+  ::yi::FunctionRet_AddIntRet* _internal_mutable_add_int_ret_params();
   public:
   void unsafe_arena_set_allocated_add_int_ret_params(
-      ::yi::FunctionRet_add_int_ret* add_int_ret_params);
-  ::yi::FunctionRet_add_int_ret* unsafe_arena_release_add_int_ret_params();
+      ::yi::FunctionRet_AddIntRet* add_int_ret_params);
+  ::yi::FunctionRet_AddIntRet* unsafe_arena_release_add_int_ret_params();
 
-  // optional .yi.FunctionRet.add_double_ret add_double_ret_params = 3;
+  // optional .yi.FunctionRet.AddDoubleRet add_double_ret_params = 3;
   bool has_add_double_ret_params() const;
   private:
   bool _internal_has_add_double_ret_params() const;
   public:
   void clear_add_double_ret_params();
-  const ::yi::FunctionRet_add_double_ret& add_double_ret_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionRet_add_double_ret* release_add_double_ret_params();
-  ::yi::FunctionRet_add_double_ret* mutable_add_double_ret_params();
-  void set_allocated_add_double_ret_params(::yi::FunctionRet_add_double_ret* add_double_ret_params);
+  const ::yi::FunctionRet_AddDoubleRet& add_double_ret_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionRet_AddDoubleRet* release_add_double_ret_params();
+  ::yi::FunctionRet_AddDoubleRet* mutable_add_double_ret_params();
+  void set_allocated_add_double_ret_params(::yi::FunctionRet_AddDoubleRet* add_double_ret_params);
   private:
-  const ::yi::FunctionRet_add_double_ret& _internal_add_double_ret_params() const;
-  ::yi::FunctionRet_add_double_ret* _internal_mutable_add_double_ret_params();
+  const ::yi::FunctionRet_AddDoubleRet& _internal_add_double_ret_params() const;
+  ::yi::FunctionRet_AddDoubleRet* _internal_mutable_add_double_ret_params();
   public:
   void unsafe_arena_set_allocated_add_double_ret_params(
-      ::yi::FunctionRet_add_double_ret* add_double_ret_params);
-  ::yi::FunctionRet_add_double_ret* unsafe_arena_release_add_double_ret_params();
+      ::yi::FunctionRet_AddDoubleRet* add_double_ret_params);
+  ::yi::FunctionRet_AddDoubleRet* unsafe_arena_release_add_double_ret_params();
 
-  // optional .yi.FunctionRet.add_string_ret add_string_ret_params = 4;
+  // optional .yi.FunctionRet.AddStringRet add_string_ret_params = 4;
   bool has_add_string_ret_params() const;
   private:
   bool _internal_has_add_string_ret_params() const;
   public:
   void clear_add_string_ret_params();
-  const ::yi::FunctionRet_add_string_ret& add_string_ret_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionRet_add_string_ret* release_add_string_ret_params();
-  ::yi::FunctionRet_add_string_ret* mutable_add_string_ret_params();
-  void set_allocated_add_string_ret_params(::yi::FunctionRet_add_string_ret* add_string_ret_params);
+  const ::yi::FunctionRet_AddStringRet& add_string_ret_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionRet_AddStringRet* release_add_string_ret_params();
+  ::yi::FunctionRet_AddStringRet* mutable_add_string_ret_params();
+  void set_allocated_add_string_ret_params(::yi::FunctionRet_AddStringRet* add_string_ret_params);
   private:
-  const ::yi::FunctionRet_add_string_ret& _internal_add_string_ret_params() const;
-  ::yi::FunctionRet_add_string_ret* _internal_mutable_add_string_ret_params();
+  const ::yi::FunctionRet_AddStringRet& _internal_add_string_ret_params() const;
+  ::yi::FunctionRet_AddStringRet* _internal_mutable_add_string_ret_params();
   public:
   void unsafe_arena_set_allocated_add_string_ret_params(
-      ::yi::FunctionRet_add_string_ret* add_string_ret_params);
-  ::yi::FunctionRet_add_string_ret* unsafe_arena_release_add_string_ret_params();
+      ::yi::FunctionRet_AddStringRet* add_string_ret_params);
+  ::yi::FunctionRet_AddStringRet* unsafe_arena_release_add_string_ret_params();
 
-  // optional .yi.FunctionRet.player_move_ret player_move_ret_params = 5;
+  // optional .yi.FunctionRet.PlayerMoveRet player_move_ret_params = 5;
   bool has_player_move_ret_params() const;
   private:
   bool _internal_has_player_move_ret_params() const;
   public:
   void clear_player_move_ret_params();
-  const ::yi::FunctionRet_player_move_ret& player_move_ret_params() const;
-  PROTOBUF_NODISCARD ::yi::FunctionRet_player_move_ret* release_player_move_ret_params();
-  ::yi::FunctionRet_player_move_ret* mutable_player_move_ret_params();
-  void set_allocated_player_move_ret_params(::yi::FunctionRet_player_move_ret* player_move_ret_params);
+  const ::yi::FunctionRet_PlayerMoveRet& player_move_ret_params() const;
+  PROTOBUF_NODISCARD ::yi::FunctionRet_PlayerMoveRet* release_player_move_ret_params();
+  ::yi::FunctionRet_PlayerMoveRet* mutable_player_move_ret_params();
+  void set_allocated_player_move_ret_params(::yi::FunctionRet_PlayerMoveRet* player_move_ret_params);
   private:
-  const ::yi::FunctionRet_player_move_ret& _internal_player_move_ret_params() const;
-  ::yi::FunctionRet_player_move_ret* _internal_mutable_player_move_ret_params();
+  const ::yi::FunctionRet_PlayerMoveRet& _internal_player_move_ret_params() const;
+  ::yi::FunctionRet_PlayerMoveRet* _internal_mutable_player_move_ret_params();
   public:
   void unsafe_arena_set_allocated_player_move_ret_params(
-      ::yi::FunctionRet_player_move_ret* player_move_ret_params);
-  ::yi::FunctionRet_player_move_ret* unsafe_arena_release_player_move_ret_params();
+      ::yi::FunctionRet_PlayerMoveRet* player_move_ret_params);
+  ::yi::FunctionRet_PlayerMoveRet* unsafe_arena_release_player_move_ret_params();
 
   // @@protoc_insertion_point(class_scope:yi.FunctionRet)
  private:
@@ -2182,10 +2586,10 @@ class FunctionRet final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr function_name_;
-  ::yi::FunctionRet_add_int_ret* add_int_ret_params_;
-  ::yi::FunctionRet_add_double_ret* add_double_ret_params_;
-  ::yi::FunctionRet_add_string_ret* add_string_ret_params_;
-  ::yi::FunctionRet_player_move_ret* player_move_ret_params_;
+  ::yi::FunctionRet_AddIntRet* add_int_ret_params_;
+  ::yi::FunctionRet_AddDoubleRet* add_double_ret_params_;
+  ::yi::FunctionRet_AddStringRet* add_string_ret_params_;
+  ::yi::FunctionRet_PlayerMoveRet* player_move_ret_params_;
   friend struct ::TableStruct_Request_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2245,7 +2649,7 @@ class Request final :
                &_Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    13;
 
   friend void swap(Request& a, Request& b) {
     a.Swap(&b);
@@ -2316,32 +2720,49 @@ class Request final :
 
   // nested types ----------------------------------------------------
 
+  typedef Request_RequestType RequestType;
+  static constexpr RequestType ConnectionReq =
+    Request_RequestType_ConnectionReq;
+  static constexpr RequestType ConnectionRet =
+    Request_RequestType_ConnectionRet;
+  static constexpr RequestType FunctionCall =
+    Request_RequestType_FunctionCall;
+  static constexpr RequestType FunctionRet =
+    Request_RequestType_FunctionRet;
+  static inline bool RequestType_IsValid(int value) {
+    return Request_RequestType_IsValid(value);
+  }
+  static constexpr RequestType RequestType_MIN =
+    Request_RequestType_RequestType_MIN;
+  static constexpr RequestType RequestType_MAX =
+    Request_RequestType_RequestType_MAX;
+  static constexpr int RequestType_ARRAYSIZE =
+    Request_RequestType_RequestType_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  RequestType_descriptor() {
+    return Request_RequestType_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& RequestType_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, RequestType>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function RequestType_Name.");
+    return Request_RequestType_Name(enum_t_value);
+  }
+  static inline bool RequestType_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      RequestType* value) {
+    return Request_RequestType_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCallTypeFieldNumber = 1,
     kConnectionReqFieldNumber = 2,
-    kFunctionCallFieldNumber = 3,
-    kFunctionRetFieldNumber = 4,
+    kConnectionRetFieldNumber = 3,
+    kFunctionCallFieldNumber = 4,
+    kFunctionRetFieldNumber = 5,
+    kCallTypeFieldNumber = 1,
   };
-  // required string call_type = 1;
-  bool has_call_type() const;
-  private:
-  bool _internal_has_call_type() const;
-  public:
-  void clear_call_type();
-  const std::string& call_type() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_call_type(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_call_type();
-  PROTOBUF_NODISCARD std::string* release_call_type();
-  void set_allocated_call_type(std::string* call_type);
-  private:
-  const std::string& _internal_call_type() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_call_type(const std::string& value);
-  std::string* _internal_mutable_call_type();
-  public:
-
   // optional .yi.ConnectionReq connection_req = 2;
   bool has_connection_req() const;
   private:
@@ -2360,7 +2781,25 @@ class Request final :
       ::yi::ConnectionReq* connection_req);
   ::yi::ConnectionReq* unsafe_arena_release_connection_req();
 
-  // optional .yi.FunctionCall function_call = 3;
+  // optional .yi.ConnectionRet connection_ret = 3;
+  bool has_connection_ret() const;
+  private:
+  bool _internal_has_connection_ret() const;
+  public:
+  void clear_connection_ret();
+  const ::yi::ConnectionRet& connection_ret() const;
+  PROTOBUF_NODISCARD ::yi::ConnectionRet* release_connection_ret();
+  ::yi::ConnectionRet* mutable_connection_ret();
+  void set_allocated_connection_ret(::yi::ConnectionRet* connection_ret);
+  private:
+  const ::yi::ConnectionRet& _internal_connection_ret() const;
+  ::yi::ConnectionRet* _internal_mutable_connection_ret();
+  public:
+  void unsafe_arena_set_allocated_connection_ret(
+      ::yi::ConnectionRet* connection_ret);
+  ::yi::ConnectionRet* unsafe_arena_release_connection_ret();
+
+  // optional .yi.FunctionCall function_call = 4;
   bool has_function_call() const;
   private:
   bool _internal_has_function_call() const;
@@ -2378,7 +2817,7 @@ class Request final :
       ::yi::FunctionCall* function_call);
   ::yi::FunctionCall* unsafe_arena_release_function_call();
 
-  // optional .yi.FunctionRet function_ret = 4;
+  // optional .yi.FunctionRet function_ret = 5;
   bool has_function_ret() const;
   private:
   bool _internal_has_function_ret() const;
@@ -2396,6 +2835,19 @@ class Request final :
       ::yi::FunctionRet* function_ret);
   ::yi::FunctionRet* unsafe_arena_release_function_ret();
 
+  // required .yi.Request.RequestType call_type = 1;
+  bool has_call_type() const;
+  private:
+  bool _internal_has_call_type() const;
+  public:
+  void clear_call_type();
+  ::yi::Request_RequestType call_type() const;
+  void set_call_type(::yi::Request_RequestType value);
+  private:
+  ::yi::Request_RequestType _internal_call_type() const;
+  void _internal_set_call_type(::yi::Request_RequestType value);
+  public:
+
   // @@protoc_insertion_point(class_scope:yi.Request)
  private:
   class _Internal;
@@ -2405,10 +2857,11 @@ class Request final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr call_type_;
   ::yi::ConnectionReq* connection_req_;
+  ::yi::ConnectionRet* connection_ret_;
   ::yi::FunctionCall* function_call_;
   ::yi::FunctionRet* function_ret_;
+  int call_type_;
   friend struct ::TableStruct_Request_2eproto;
 };
 // ===================================================================
@@ -2424,169 +2877,424 @@ class Request final :
 
 // -------------------------------------------------------------------
 
-// FunctionCall_add_int
+// ConnectionRet_FuncInfo
 
-// required int32 left = 1;
-inline bool FunctionCall_add_int::_internal_has_left() const {
+// required string func_name = 1;
+inline bool ConnectionRet_FuncInfo::_internal_has_func_name() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionCall_add_int::has_left() const {
+inline bool ConnectionRet_FuncInfo::has_func_name() const {
+  return _internal_has_func_name();
+}
+inline void ConnectionRet_FuncInfo::clear_func_name() {
+  func_name_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ConnectionRet_FuncInfo::func_name() const {
+  // @@protoc_insertion_point(field_get:yi.ConnectionRet.FuncInfo.func_name)
+  return _internal_func_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ConnectionRet_FuncInfo::set_func_name(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ func_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:yi.ConnectionRet.FuncInfo.func_name)
+}
+inline std::string* ConnectionRet_FuncInfo::mutable_func_name() {
+  std::string* _s = _internal_mutable_func_name();
+  // @@protoc_insertion_point(field_mutable:yi.ConnectionRet.FuncInfo.func_name)
+  return _s;
+}
+inline const std::string& ConnectionRet_FuncInfo::_internal_func_name() const {
+  return func_name_.Get();
+}
+inline void ConnectionRet_FuncInfo::_internal_set_func_name(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  func_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::_internal_mutable_func_name() {
+  _has_bits_[0] |= 0x00000001u;
+  return func_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::release_func_name() {
+  // @@protoc_insertion_point(field_release:yi.ConnectionRet.FuncInfo.func_name)
+  if (!_internal_has_func_name()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = func_name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (func_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    func_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ConnectionRet_FuncInfo::set_allocated_func_name(std::string* func_name) {
+  if (func_name != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  func_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), func_name,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (func_name_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    func_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:yi.ConnectionRet.FuncInfo.func_name)
+}
+
+// required string params_type = 2;
+inline bool ConnectionRet_FuncInfo::_internal_has_params_type() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ConnectionRet_FuncInfo::has_params_type() const {
+  return _internal_has_params_type();
+}
+inline void ConnectionRet_FuncInfo::clear_params_type() {
+  params_type_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& ConnectionRet_FuncInfo::params_type() const {
+  // @@protoc_insertion_point(field_get:yi.ConnectionRet.FuncInfo.params_type)
+  return _internal_params_type();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ConnectionRet_FuncInfo::set_params_type(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000002u;
+ params_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:yi.ConnectionRet.FuncInfo.params_type)
+}
+inline std::string* ConnectionRet_FuncInfo::mutable_params_type() {
+  std::string* _s = _internal_mutable_params_type();
+  // @@protoc_insertion_point(field_mutable:yi.ConnectionRet.FuncInfo.params_type)
+  return _s;
+}
+inline const std::string& ConnectionRet_FuncInfo::_internal_params_type() const {
+  return params_type_.Get();
+}
+inline void ConnectionRet_FuncInfo::_internal_set_params_type(const std::string& value) {
+  _has_bits_[0] |= 0x00000002u;
+  params_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::_internal_mutable_params_type() {
+  _has_bits_[0] |= 0x00000002u;
+  return params_type_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::release_params_type() {
+  // @@protoc_insertion_point(field_release:yi.ConnectionRet.FuncInfo.params_type)
+  if (!_internal_has_params_type()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000002u;
+  auto* p = params_type_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (params_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    params_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ConnectionRet_FuncInfo::set_allocated_params_type(std::string* params_type) {
+  if (params_type != nullptr) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  params_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), params_type,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (params_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    params_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:yi.ConnectionRet.FuncInfo.params_type)
+}
+
+// required string return_type = 3;
+inline bool ConnectionRet_FuncInfo::_internal_has_return_type() const {
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool ConnectionRet_FuncInfo::has_return_type() const {
+  return _internal_has_return_type();
+}
+inline void ConnectionRet_FuncInfo::clear_return_type() {
+  return_type_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& ConnectionRet_FuncInfo::return_type() const {
+  // @@protoc_insertion_point(field_get:yi.ConnectionRet.FuncInfo.return_type)
+  return _internal_return_type();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ConnectionRet_FuncInfo::set_return_type(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000004u;
+ return_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:yi.ConnectionRet.FuncInfo.return_type)
+}
+inline std::string* ConnectionRet_FuncInfo::mutable_return_type() {
+  std::string* _s = _internal_mutable_return_type();
+  // @@protoc_insertion_point(field_mutable:yi.ConnectionRet.FuncInfo.return_type)
+  return _s;
+}
+inline const std::string& ConnectionRet_FuncInfo::_internal_return_type() const {
+  return return_type_.Get();
+}
+inline void ConnectionRet_FuncInfo::_internal_set_return_type(const std::string& value) {
+  _has_bits_[0] |= 0x00000004u;
+  return_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::_internal_mutable_return_type() {
+  _has_bits_[0] |= 0x00000004u;
+  return return_type_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ConnectionRet_FuncInfo::release_return_type() {
+  // @@protoc_insertion_point(field_release:yi.ConnectionRet.FuncInfo.return_type)
+  if (!_internal_has_return_type()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000004u;
+  auto* p = return_type_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (return_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    return_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ConnectionRet_FuncInfo::set_allocated_return_type(std::string* return_type) {
+  if (return_type != nullptr) {
+    _has_bits_[0] |= 0x00000004u;
+  } else {
+    _has_bits_[0] &= ~0x00000004u;
+  }
+  return_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), return_type,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (return_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    return_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:yi.ConnectionRet.FuncInfo.return_type)
+}
+
+// -------------------------------------------------------------------
+
+// ConnectionRet
+
+// repeated .yi.ConnectionRet.FuncInfo func_info = 1;
+inline int ConnectionRet::_internal_func_info_size() const {
+  return func_info_.size();
+}
+inline int ConnectionRet::func_info_size() const {
+  return _internal_func_info_size();
+}
+inline void ConnectionRet::clear_func_info() {
+  func_info_.Clear();
+}
+inline ::yi::ConnectionRet_FuncInfo* ConnectionRet::mutable_func_info(int index) {
+  // @@protoc_insertion_point(field_mutable:yi.ConnectionRet.func_info)
+  return func_info_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::yi::ConnectionRet_FuncInfo >*
+ConnectionRet::mutable_func_info() {
+  // @@protoc_insertion_point(field_mutable_list:yi.ConnectionRet.func_info)
+  return &func_info_;
+}
+inline const ::yi::ConnectionRet_FuncInfo& ConnectionRet::_internal_func_info(int index) const {
+  return func_info_.Get(index);
+}
+inline const ::yi::ConnectionRet_FuncInfo& ConnectionRet::func_info(int index) const {
+  // @@protoc_insertion_point(field_get:yi.ConnectionRet.func_info)
+  return _internal_func_info(index);
+}
+inline ::yi::ConnectionRet_FuncInfo* ConnectionRet::_internal_add_func_info() {
+  return func_info_.Add();
+}
+inline ::yi::ConnectionRet_FuncInfo* ConnectionRet::add_func_info() {
+  ::yi::ConnectionRet_FuncInfo* _add = _internal_add_func_info();
+  // @@protoc_insertion_point(field_add:yi.ConnectionRet.func_info)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::yi::ConnectionRet_FuncInfo >&
+ConnectionRet::func_info() const {
+  // @@protoc_insertion_point(field_list:yi.ConnectionRet.func_info)
+  return func_info_;
+}
+
+// -------------------------------------------------------------------
+
+// FunctionCall_AddIntParams
+
+// required int32 left = 1;
+inline bool FunctionCall_AddIntParams::_internal_has_left() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool FunctionCall_AddIntParams::has_left() const {
   return _internal_has_left();
 }
-inline void FunctionCall_add_int::clear_left() {
+inline void FunctionCall_AddIntParams::clear_left() {
   left_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t FunctionCall_add_int::_internal_left() const {
+inline int32_t FunctionCall_AddIntParams::_internal_left() const {
   return left_;
 }
-inline int32_t FunctionCall_add_int::left() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_int.left)
+inline int32_t FunctionCall_AddIntParams::left() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddIntParams.left)
   return _internal_left();
 }
-inline void FunctionCall_add_int::_internal_set_left(int32_t value) {
+inline void FunctionCall_AddIntParams::_internal_set_left(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   left_ = value;
 }
-inline void FunctionCall_add_int::set_left(int32_t value) {
+inline void FunctionCall_AddIntParams::set_left(int32_t value) {
   _internal_set_left(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_int.left)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddIntParams.left)
 }
 
 // required int32 right = 2;
-inline bool FunctionCall_add_int::_internal_has_right() const {
+inline bool FunctionCall_AddIntParams::_internal_has_right() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FunctionCall_add_int::has_right() const {
+inline bool FunctionCall_AddIntParams::has_right() const {
   return _internal_has_right();
 }
-inline void FunctionCall_add_int::clear_right() {
+inline void FunctionCall_AddIntParams::clear_right() {
   right_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t FunctionCall_add_int::_internal_right() const {
+inline int32_t FunctionCall_AddIntParams::_internal_right() const {
   return right_;
 }
-inline int32_t FunctionCall_add_int::right() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_int.right)
+inline int32_t FunctionCall_AddIntParams::right() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddIntParams.right)
   return _internal_right();
 }
-inline void FunctionCall_add_int::_internal_set_right(int32_t value) {
+inline void FunctionCall_AddIntParams::_internal_set_right(int32_t value) {
   _has_bits_[0] |= 0x00000002u;
   right_ = value;
 }
-inline void FunctionCall_add_int::set_right(int32_t value) {
+inline void FunctionCall_AddIntParams::set_right(int32_t value) {
   _internal_set_right(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_int.right)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddIntParams.right)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionCall_add_double
+// FunctionCall_AddDoubleParams
 
 // required double left = 1;
-inline bool FunctionCall_add_double::_internal_has_left() const {
+inline bool FunctionCall_AddDoubleParams::_internal_has_left() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionCall_add_double::has_left() const {
+inline bool FunctionCall_AddDoubleParams::has_left() const {
   return _internal_has_left();
 }
-inline void FunctionCall_add_double::clear_left() {
+inline void FunctionCall_AddDoubleParams::clear_left() {
   left_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline double FunctionCall_add_double::_internal_left() const {
+inline double FunctionCall_AddDoubleParams::_internal_left() const {
   return left_;
 }
-inline double FunctionCall_add_double::left() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_double.left)
+inline double FunctionCall_AddDoubleParams::left() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddDoubleParams.left)
   return _internal_left();
 }
-inline void FunctionCall_add_double::_internal_set_left(double value) {
+inline void FunctionCall_AddDoubleParams::_internal_set_left(double value) {
   _has_bits_[0] |= 0x00000001u;
   left_ = value;
 }
-inline void FunctionCall_add_double::set_left(double value) {
+inline void FunctionCall_AddDoubleParams::set_left(double value) {
   _internal_set_left(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_double.left)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddDoubleParams.left)
 }
 
 // required double right = 2;
-inline bool FunctionCall_add_double::_internal_has_right() const {
+inline bool FunctionCall_AddDoubleParams::_internal_has_right() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FunctionCall_add_double::has_right() const {
+inline bool FunctionCall_AddDoubleParams::has_right() const {
   return _internal_has_right();
 }
-inline void FunctionCall_add_double::clear_right() {
+inline void FunctionCall_AddDoubleParams::clear_right() {
   right_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double FunctionCall_add_double::_internal_right() const {
+inline double FunctionCall_AddDoubleParams::_internal_right() const {
   return right_;
 }
-inline double FunctionCall_add_double::right() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_double.right)
+inline double FunctionCall_AddDoubleParams::right() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddDoubleParams.right)
   return _internal_right();
 }
-inline void FunctionCall_add_double::_internal_set_right(double value) {
+inline void FunctionCall_AddDoubleParams::_internal_set_right(double value) {
   _has_bits_[0] |= 0x00000002u;
   right_ = value;
 }
-inline void FunctionCall_add_double::set_right(double value) {
+inline void FunctionCall_AddDoubleParams::set_right(double value) {
   _internal_set_right(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_double.right)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddDoubleParams.right)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionCall_add_string
+// FunctionCall_AddStringParams
 
 // required string left = 1;
-inline bool FunctionCall_add_string::_internal_has_left() const {
+inline bool FunctionCall_AddStringParams::_internal_has_left() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionCall_add_string::has_left() const {
+inline bool FunctionCall_AddStringParams::has_left() const {
   return _internal_has_left();
 }
-inline void FunctionCall_add_string::clear_left() {
+inline void FunctionCall_AddStringParams::clear_left() {
   left_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FunctionCall_add_string::left() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_string.left)
+inline const std::string& FunctionCall_AddStringParams::left() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddStringParams.left)
   return _internal_left();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FunctionCall_add_string::set_left(ArgT0&& arg0, ArgT... args) {
+void FunctionCall_AddStringParams::set_left(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  left_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_string.left)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddStringParams.left)
 }
-inline std::string* FunctionCall_add_string::mutable_left() {
+inline std::string* FunctionCall_AddStringParams::mutable_left() {
   std::string* _s = _internal_mutable_left();
-  // @@protoc_insertion_point(field_mutable:yi.FunctionCall.add_string.left)
+  // @@protoc_insertion_point(field_mutable:yi.FunctionCall.AddStringParams.left)
   return _s;
 }
-inline const std::string& FunctionCall_add_string::_internal_left() const {
+inline const std::string& FunctionCall_AddStringParams::_internal_left() const {
   return left_.Get();
 }
-inline void FunctionCall_add_string::_internal_set_left(const std::string& value) {
+inline void FunctionCall_AddStringParams::_internal_set_left(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   left_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* FunctionCall_add_string::_internal_mutable_left() {
+inline std::string* FunctionCall_AddStringParams::_internal_mutable_left() {
   _has_bits_[0] |= 0x00000001u;
   return left_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* FunctionCall_add_string::release_left() {
-  // @@protoc_insertion_point(field_release:yi.FunctionCall.add_string.left)
+inline std::string* FunctionCall_AddStringParams::release_left() {
+  // @@protoc_insertion_point(field_release:yi.FunctionCall.AddStringParams.left)
   if (!_internal_has_left()) {
     return nullptr;
   }
@@ -2599,7 +3307,7 @@ inline std::string* FunctionCall_add_string::release_left() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FunctionCall_add_string::set_allocated_left(std::string* left) {
+inline void FunctionCall_AddStringParams::set_allocated_left(std::string* left) {
   if (left != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -2612,50 +3320,50 @@ inline void FunctionCall_add_string::set_allocated_left(std::string* left) {
     left_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.add_string.left)
+  // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.AddStringParams.left)
 }
 
 // required string right = 2;
-inline bool FunctionCall_add_string::_internal_has_right() const {
+inline bool FunctionCall_AddStringParams::_internal_has_right() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FunctionCall_add_string::has_right() const {
+inline bool FunctionCall_AddStringParams::has_right() const {
   return _internal_has_right();
 }
-inline void FunctionCall_add_string::clear_right() {
+inline void FunctionCall_AddStringParams::clear_right() {
   right_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FunctionCall_add_string::right() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.add_string.right)
+inline const std::string& FunctionCall_AddStringParams::right() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.AddStringParams.right)
   return _internal_right();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FunctionCall_add_string::set_right(ArgT0&& arg0, ArgT... args) {
+void FunctionCall_AddStringParams::set_right(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000002u;
  right_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.add_string.right)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.AddStringParams.right)
 }
-inline std::string* FunctionCall_add_string::mutable_right() {
+inline std::string* FunctionCall_AddStringParams::mutable_right() {
   std::string* _s = _internal_mutable_right();
-  // @@protoc_insertion_point(field_mutable:yi.FunctionCall.add_string.right)
+  // @@protoc_insertion_point(field_mutable:yi.FunctionCall.AddStringParams.right)
   return _s;
 }
-inline const std::string& FunctionCall_add_string::_internal_right() const {
+inline const std::string& FunctionCall_AddStringParams::_internal_right() const {
   return right_.Get();
 }
-inline void FunctionCall_add_string::_internal_set_right(const std::string& value) {
+inline void FunctionCall_AddStringParams::_internal_set_right(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
   right_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* FunctionCall_add_string::_internal_mutable_right() {
+inline std::string* FunctionCall_AddStringParams::_internal_mutable_right() {
   _has_bits_[0] |= 0x00000002u;
   return right_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* FunctionCall_add_string::release_right() {
-  // @@protoc_insertion_point(field_release:yi.FunctionCall.add_string.right)
+inline std::string* FunctionCall_AddStringParams::release_right() {
+  // @@protoc_insertion_point(field_release:yi.FunctionCall.AddStringParams.right)
   if (!_internal_has_right()) {
     return nullptr;
   }
@@ -2668,7 +3376,7 @@ inline std::string* FunctionCall_add_string::release_right() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FunctionCall_add_string::set_allocated_right(std::string* right) {
+inline void FunctionCall_AddStringParams::set_allocated_right(std::string* right) {
   if (right != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
@@ -2681,179 +3389,179 @@ inline void FunctionCall_add_string::set_allocated_right(std::string* right) {
     right_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.add_string.right)
+  // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.AddStringParams.right)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionCall_player_move
+// FunctionCall_PlayerMoveParams
 
 // required double x = 1;
-inline bool FunctionCall_player_move::_internal_has_x() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_x() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_x() const {
+inline bool FunctionCall_PlayerMoveParams::has_x() const {
   return _internal_has_x();
 }
-inline void FunctionCall_player_move::clear_x() {
+inline void FunctionCall_PlayerMoveParams::clear_x() {
   x_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline double FunctionCall_player_move::_internal_x() const {
+inline double FunctionCall_PlayerMoveParams::_internal_x() const {
   return x_;
 }
-inline double FunctionCall_player_move::x() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.x)
+inline double FunctionCall_PlayerMoveParams::x() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.x)
   return _internal_x();
 }
-inline void FunctionCall_player_move::_internal_set_x(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_x(double value) {
   _has_bits_[0] |= 0x00000001u;
   x_ = value;
 }
-inline void FunctionCall_player_move::set_x(double value) {
+inline void FunctionCall_PlayerMoveParams::set_x(double value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.x)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.x)
 }
 
 // required double y = 2;
-inline bool FunctionCall_player_move::_internal_has_y() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_y() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_y() const {
+inline bool FunctionCall_PlayerMoveParams::has_y() const {
   return _internal_has_y();
 }
-inline void FunctionCall_player_move::clear_y() {
+inline void FunctionCall_PlayerMoveParams::clear_y() {
   y_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double FunctionCall_player_move::_internal_y() const {
+inline double FunctionCall_PlayerMoveParams::_internal_y() const {
   return y_;
 }
-inline double FunctionCall_player_move::y() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.y)
+inline double FunctionCall_PlayerMoveParams::y() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.y)
   return _internal_y();
 }
-inline void FunctionCall_player_move::_internal_set_y(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_y(double value) {
   _has_bits_[0] |= 0x00000002u;
   y_ = value;
 }
-inline void FunctionCall_player_move::set_y(double value) {
+inline void FunctionCall_PlayerMoveParams::set_y(double value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.y)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.y)
 }
 
 // required double speed = 3;
-inline bool FunctionCall_player_move::_internal_has_speed() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_speed() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_speed() const {
+inline bool FunctionCall_PlayerMoveParams::has_speed() const {
   return _internal_has_speed();
 }
-inline void FunctionCall_player_move::clear_speed() {
+inline void FunctionCall_PlayerMoveParams::clear_speed() {
   speed_ = 0;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline double FunctionCall_player_move::_internal_speed() const {
+inline double FunctionCall_PlayerMoveParams::_internal_speed() const {
   return speed_;
 }
-inline double FunctionCall_player_move::speed() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.speed)
+inline double FunctionCall_PlayerMoveParams::speed() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.speed)
   return _internal_speed();
 }
-inline void FunctionCall_player_move::_internal_set_speed(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_speed(double value) {
   _has_bits_[0] |= 0x00000004u;
   speed_ = value;
 }
-inline void FunctionCall_player_move::set_speed(double value) {
+inline void FunctionCall_PlayerMoveParams::set_speed(double value) {
   _internal_set_speed(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.speed)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.speed)
 }
 
 // required double acceleration = 4;
-inline bool FunctionCall_player_move::_internal_has_acceleration() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_acceleration() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_acceleration() const {
+inline bool FunctionCall_PlayerMoveParams::has_acceleration() const {
   return _internal_has_acceleration();
 }
-inline void FunctionCall_player_move::clear_acceleration() {
+inline void FunctionCall_PlayerMoveParams::clear_acceleration() {
   acceleration_ = 0;
   _has_bits_[0] &= ~0x00000008u;
 }
-inline double FunctionCall_player_move::_internal_acceleration() const {
+inline double FunctionCall_PlayerMoveParams::_internal_acceleration() const {
   return acceleration_;
 }
-inline double FunctionCall_player_move::acceleration() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.acceleration)
+inline double FunctionCall_PlayerMoveParams::acceleration() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.acceleration)
   return _internal_acceleration();
 }
-inline void FunctionCall_player_move::_internal_set_acceleration(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_acceleration(double value) {
   _has_bits_[0] |= 0x00000008u;
   acceleration_ = value;
 }
-inline void FunctionCall_player_move::set_acceleration(double value) {
+inline void FunctionCall_PlayerMoveParams::set_acceleration(double value) {
   _internal_set_acceleration(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.acceleration)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.acceleration)
 }
 
 // required double aspect = 5;
-inline bool FunctionCall_player_move::_internal_has_aspect() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_aspect() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_aspect() const {
+inline bool FunctionCall_PlayerMoveParams::has_aspect() const {
   return _internal_has_aspect();
 }
-inline void FunctionCall_player_move::clear_aspect() {
+inline void FunctionCall_PlayerMoveParams::clear_aspect() {
   aspect_ = 0;
   _has_bits_[0] &= ~0x00000010u;
 }
-inline double FunctionCall_player_move::_internal_aspect() const {
+inline double FunctionCall_PlayerMoveParams::_internal_aspect() const {
   return aspect_;
 }
-inline double FunctionCall_player_move::aspect() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.aspect)
+inline double FunctionCall_PlayerMoveParams::aspect() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.aspect)
   return _internal_aspect();
 }
-inline void FunctionCall_player_move::_internal_set_aspect(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_aspect(double value) {
   _has_bits_[0] |= 0x00000010u;
   aspect_ = value;
 }
-inline void FunctionCall_player_move::set_aspect(double value) {
+inline void FunctionCall_PlayerMoveParams::set_aspect(double value) {
   _internal_set_aspect(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.aspect)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.aspect)
 }
 
 // required double angle = 6;
-inline bool FunctionCall_player_move::_internal_has_angle() const {
+inline bool FunctionCall_PlayerMoveParams::_internal_has_angle() const {
   bool value = (_has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool FunctionCall_player_move::has_angle() const {
+inline bool FunctionCall_PlayerMoveParams::has_angle() const {
   return _internal_has_angle();
 }
-inline void FunctionCall_player_move::clear_angle() {
+inline void FunctionCall_PlayerMoveParams::clear_angle() {
   angle_ = 0;
   _has_bits_[0] &= ~0x00000020u;
 }
-inline double FunctionCall_player_move::_internal_angle() const {
+inline double FunctionCall_PlayerMoveParams::_internal_angle() const {
   return angle_;
 }
-inline double FunctionCall_player_move::angle() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move.angle)
+inline double FunctionCall_PlayerMoveParams::angle() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionCall.PlayerMoveParams.angle)
   return _internal_angle();
 }
-inline void FunctionCall_player_move::_internal_set_angle(double value) {
+inline void FunctionCall_PlayerMoveParams::_internal_set_angle(double value) {
   _has_bits_[0] |= 0x00000020u;
   angle_ = value;
 }
-inline void FunctionCall_player_move::set_angle(double value) {
+inline void FunctionCall_PlayerMoveParams::set_angle(double value) {
   _internal_set_angle(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionCall.player_move.angle)
+  // @@protoc_insertion_point(field_set:yi.FunctionCall.PlayerMoveParams.angle)
 }
 
 // -------------------------------------------------------------------
@@ -2929,7 +3637,7 @@ inline void FunctionCall::set_allocated_function_name(std::string* function_name
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.function_name)
 }
 
-// optional .yi.FunctionCall.add_int add_int_params = 2;
+// optional .yi.FunctionCall.AddIntParams add_int_params = 2;
 inline bool FunctionCall::_internal_has_add_int_params() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || add_int_params_ != nullptr);
@@ -2942,17 +3650,17 @@ inline void FunctionCall::clear_add_int_params() {
   if (add_int_params_ != nullptr) add_int_params_->Clear();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::yi::FunctionCall_add_int& FunctionCall::_internal_add_int_params() const {
-  const ::yi::FunctionCall_add_int* p = add_int_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_add_int&>(
-      ::yi::_FunctionCall_add_int_default_instance_);
+inline const ::yi::FunctionCall_AddIntParams& FunctionCall::_internal_add_int_params() const {
+  const ::yi::FunctionCall_AddIntParams* p = add_int_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_AddIntParams&>(
+      ::yi::_FunctionCall_AddIntParams_default_instance_);
 }
-inline const ::yi::FunctionCall_add_int& FunctionCall::add_int_params() const {
+inline const ::yi::FunctionCall_AddIntParams& FunctionCall::add_int_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionCall.add_int_params)
   return _internal_add_int_params();
 }
 inline void FunctionCall::unsafe_arena_set_allocated_add_int_params(
-    ::yi::FunctionCall_add_int* add_int_params) {
+    ::yi::FunctionCall_AddIntParams* add_int_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_int_params_);
   }
@@ -2964,9 +3672,9 @@ inline void FunctionCall::unsafe_arena_set_allocated_add_int_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionCall.add_int_params)
 }
-inline ::yi::FunctionCall_add_int* FunctionCall::release_add_int_params() {
+inline ::yi::FunctionCall_AddIntParams* FunctionCall::release_add_int_params() {
   _has_bits_[0] &= ~0x00000002u;
-  ::yi::FunctionCall_add_int* temp = add_int_params_;
+  ::yi::FunctionCall_AddIntParams* temp = add_int_params_;
   add_int_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -2979,34 +3687,34 @@ inline ::yi::FunctionCall_add_int* FunctionCall::release_add_int_params() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionCall_add_int* FunctionCall::unsafe_arena_release_add_int_params() {
+inline ::yi::FunctionCall_AddIntParams* FunctionCall::unsafe_arena_release_add_int_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionCall.add_int_params)
   _has_bits_[0] &= ~0x00000002u;
-  ::yi::FunctionCall_add_int* temp = add_int_params_;
+  ::yi::FunctionCall_AddIntParams* temp = add_int_params_;
   add_int_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionCall_add_int* FunctionCall::_internal_mutable_add_int_params() {
+inline ::yi::FunctionCall_AddIntParams* FunctionCall::_internal_mutable_add_int_params() {
   _has_bits_[0] |= 0x00000002u;
   if (add_int_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionCall_add_int>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionCall_AddIntParams>(GetArenaForAllocation());
     add_int_params_ = p;
   }
   return add_int_params_;
 }
-inline ::yi::FunctionCall_add_int* FunctionCall::mutable_add_int_params() {
-  ::yi::FunctionCall_add_int* _msg = _internal_mutable_add_int_params();
+inline ::yi::FunctionCall_AddIntParams* FunctionCall::mutable_add_int_params() {
+  ::yi::FunctionCall_AddIntParams* _msg = _internal_mutable_add_int_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionCall.add_int_params)
   return _msg;
 }
-inline void FunctionCall::set_allocated_add_int_params(::yi::FunctionCall_add_int* add_int_params) {
+inline void FunctionCall::set_allocated_add_int_params(::yi::FunctionCall_AddIntParams* add_int_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_int_params_;
   }
   if (add_int_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_add_int>::GetOwningArena(add_int_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_AddIntParams>::GetOwningArena(add_int_params);
     if (message_arena != submessage_arena) {
       add_int_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_int_params, submessage_arena);
@@ -3019,7 +3727,7 @@ inline void FunctionCall::set_allocated_add_int_params(::yi::FunctionCall_add_in
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.add_int_params)
 }
 
-// optional .yi.FunctionCall.add_double add_double_params = 3;
+// optional .yi.FunctionCall.AddDoubleParams add_double_params = 3;
 inline bool FunctionCall::_internal_has_add_double_params() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || add_double_params_ != nullptr);
@@ -3032,17 +3740,17 @@ inline void FunctionCall::clear_add_double_params() {
   if (add_double_params_ != nullptr) add_double_params_->Clear();
   _has_bits_[0] &= ~0x00000004u;
 }
-inline const ::yi::FunctionCall_add_double& FunctionCall::_internal_add_double_params() const {
-  const ::yi::FunctionCall_add_double* p = add_double_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_add_double&>(
-      ::yi::_FunctionCall_add_double_default_instance_);
+inline const ::yi::FunctionCall_AddDoubleParams& FunctionCall::_internal_add_double_params() const {
+  const ::yi::FunctionCall_AddDoubleParams* p = add_double_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_AddDoubleParams&>(
+      ::yi::_FunctionCall_AddDoubleParams_default_instance_);
 }
-inline const ::yi::FunctionCall_add_double& FunctionCall::add_double_params() const {
+inline const ::yi::FunctionCall_AddDoubleParams& FunctionCall::add_double_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionCall.add_double_params)
   return _internal_add_double_params();
 }
 inline void FunctionCall::unsafe_arena_set_allocated_add_double_params(
-    ::yi::FunctionCall_add_double* add_double_params) {
+    ::yi::FunctionCall_AddDoubleParams* add_double_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_double_params_);
   }
@@ -3054,9 +3762,9 @@ inline void FunctionCall::unsafe_arena_set_allocated_add_double_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionCall.add_double_params)
 }
-inline ::yi::FunctionCall_add_double* FunctionCall::release_add_double_params() {
+inline ::yi::FunctionCall_AddDoubleParams* FunctionCall::release_add_double_params() {
   _has_bits_[0] &= ~0x00000004u;
-  ::yi::FunctionCall_add_double* temp = add_double_params_;
+  ::yi::FunctionCall_AddDoubleParams* temp = add_double_params_;
   add_double_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3069,34 +3777,34 @@ inline ::yi::FunctionCall_add_double* FunctionCall::release_add_double_params() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionCall_add_double* FunctionCall::unsafe_arena_release_add_double_params() {
+inline ::yi::FunctionCall_AddDoubleParams* FunctionCall::unsafe_arena_release_add_double_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionCall.add_double_params)
   _has_bits_[0] &= ~0x00000004u;
-  ::yi::FunctionCall_add_double* temp = add_double_params_;
+  ::yi::FunctionCall_AddDoubleParams* temp = add_double_params_;
   add_double_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionCall_add_double* FunctionCall::_internal_mutable_add_double_params() {
+inline ::yi::FunctionCall_AddDoubleParams* FunctionCall::_internal_mutable_add_double_params() {
   _has_bits_[0] |= 0x00000004u;
   if (add_double_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionCall_add_double>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionCall_AddDoubleParams>(GetArenaForAllocation());
     add_double_params_ = p;
   }
   return add_double_params_;
 }
-inline ::yi::FunctionCall_add_double* FunctionCall::mutable_add_double_params() {
-  ::yi::FunctionCall_add_double* _msg = _internal_mutable_add_double_params();
+inline ::yi::FunctionCall_AddDoubleParams* FunctionCall::mutable_add_double_params() {
+  ::yi::FunctionCall_AddDoubleParams* _msg = _internal_mutable_add_double_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionCall.add_double_params)
   return _msg;
 }
-inline void FunctionCall::set_allocated_add_double_params(::yi::FunctionCall_add_double* add_double_params) {
+inline void FunctionCall::set_allocated_add_double_params(::yi::FunctionCall_AddDoubleParams* add_double_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_double_params_;
   }
   if (add_double_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_add_double>::GetOwningArena(add_double_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_AddDoubleParams>::GetOwningArena(add_double_params);
     if (message_arena != submessage_arena) {
       add_double_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_double_params, submessage_arena);
@@ -3109,7 +3817,7 @@ inline void FunctionCall::set_allocated_add_double_params(::yi::FunctionCall_add
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.add_double_params)
 }
 
-// optional .yi.FunctionCall.add_string add_string_params = 4;
+// optional .yi.FunctionCall.AddStringParams add_string_params = 4;
 inline bool FunctionCall::_internal_has_add_string_params() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || add_string_params_ != nullptr);
@@ -3122,17 +3830,17 @@ inline void FunctionCall::clear_add_string_params() {
   if (add_string_params_ != nullptr) add_string_params_->Clear();
   _has_bits_[0] &= ~0x00000008u;
 }
-inline const ::yi::FunctionCall_add_string& FunctionCall::_internal_add_string_params() const {
-  const ::yi::FunctionCall_add_string* p = add_string_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_add_string&>(
-      ::yi::_FunctionCall_add_string_default_instance_);
+inline const ::yi::FunctionCall_AddStringParams& FunctionCall::_internal_add_string_params() const {
+  const ::yi::FunctionCall_AddStringParams* p = add_string_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_AddStringParams&>(
+      ::yi::_FunctionCall_AddStringParams_default_instance_);
 }
-inline const ::yi::FunctionCall_add_string& FunctionCall::add_string_params() const {
+inline const ::yi::FunctionCall_AddStringParams& FunctionCall::add_string_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionCall.add_string_params)
   return _internal_add_string_params();
 }
 inline void FunctionCall::unsafe_arena_set_allocated_add_string_params(
-    ::yi::FunctionCall_add_string* add_string_params) {
+    ::yi::FunctionCall_AddStringParams* add_string_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_string_params_);
   }
@@ -3144,9 +3852,9 @@ inline void FunctionCall::unsafe_arena_set_allocated_add_string_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionCall.add_string_params)
 }
-inline ::yi::FunctionCall_add_string* FunctionCall::release_add_string_params() {
+inline ::yi::FunctionCall_AddStringParams* FunctionCall::release_add_string_params() {
   _has_bits_[0] &= ~0x00000008u;
-  ::yi::FunctionCall_add_string* temp = add_string_params_;
+  ::yi::FunctionCall_AddStringParams* temp = add_string_params_;
   add_string_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3159,34 +3867,34 @@ inline ::yi::FunctionCall_add_string* FunctionCall::release_add_string_params() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionCall_add_string* FunctionCall::unsafe_arena_release_add_string_params() {
+inline ::yi::FunctionCall_AddStringParams* FunctionCall::unsafe_arena_release_add_string_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionCall.add_string_params)
   _has_bits_[0] &= ~0x00000008u;
-  ::yi::FunctionCall_add_string* temp = add_string_params_;
+  ::yi::FunctionCall_AddStringParams* temp = add_string_params_;
   add_string_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionCall_add_string* FunctionCall::_internal_mutable_add_string_params() {
+inline ::yi::FunctionCall_AddStringParams* FunctionCall::_internal_mutable_add_string_params() {
   _has_bits_[0] |= 0x00000008u;
   if (add_string_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionCall_add_string>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionCall_AddStringParams>(GetArenaForAllocation());
     add_string_params_ = p;
   }
   return add_string_params_;
 }
-inline ::yi::FunctionCall_add_string* FunctionCall::mutable_add_string_params() {
-  ::yi::FunctionCall_add_string* _msg = _internal_mutable_add_string_params();
+inline ::yi::FunctionCall_AddStringParams* FunctionCall::mutable_add_string_params() {
+  ::yi::FunctionCall_AddStringParams* _msg = _internal_mutable_add_string_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionCall.add_string_params)
   return _msg;
 }
-inline void FunctionCall::set_allocated_add_string_params(::yi::FunctionCall_add_string* add_string_params) {
+inline void FunctionCall::set_allocated_add_string_params(::yi::FunctionCall_AddStringParams* add_string_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_string_params_;
   }
   if (add_string_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_add_string>::GetOwningArena(add_string_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_AddStringParams>::GetOwningArena(add_string_params);
     if (message_arena != submessage_arena) {
       add_string_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_string_params, submessage_arena);
@@ -3199,7 +3907,7 @@ inline void FunctionCall::set_allocated_add_string_params(::yi::FunctionCall_add
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionCall.add_string_params)
 }
 
-// optional .yi.FunctionCall.player_move player_move_params = 5;
+// optional .yi.FunctionCall.PlayerMoveParams player_move_params = 5;
 inline bool FunctionCall::_internal_has_player_move_params() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
   PROTOBUF_ASSUME(!value || player_move_params_ != nullptr);
@@ -3212,17 +3920,17 @@ inline void FunctionCall::clear_player_move_params() {
   if (player_move_params_ != nullptr) player_move_params_->Clear();
   _has_bits_[0] &= ~0x00000010u;
 }
-inline const ::yi::FunctionCall_player_move& FunctionCall::_internal_player_move_params() const {
-  const ::yi::FunctionCall_player_move* p = player_move_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_player_move&>(
-      ::yi::_FunctionCall_player_move_default_instance_);
+inline const ::yi::FunctionCall_PlayerMoveParams& FunctionCall::_internal_player_move_params() const {
+  const ::yi::FunctionCall_PlayerMoveParams* p = player_move_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionCall_PlayerMoveParams&>(
+      ::yi::_FunctionCall_PlayerMoveParams_default_instance_);
 }
-inline const ::yi::FunctionCall_player_move& FunctionCall::player_move_params() const {
+inline const ::yi::FunctionCall_PlayerMoveParams& FunctionCall::player_move_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionCall.player_move_params)
   return _internal_player_move_params();
 }
 inline void FunctionCall::unsafe_arena_set_allocated_player_move_params(
-    ::yi::FunctionCall_player_move* player_move_params) {
+    ::yi::FunctionCall_PlayerMoveParams* player_move_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(player_move_params_);
   }
@@ -3234,9 +3942,9 @@ inline void FunctionCall::unsafe_arena_set_allocated_player_move_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionCall.player_move_params)
 }
-inline ::yi::FunctionCall_player_move* FunctionCall::release_player_move_params() {
+inline ::yi::FunctionCall_PlayerMoveParams* FunctionCall::release_player_move_params() {
   _has_bits_[0] &= ~0x00000010u;
-  ::yi::FunctionCall_player_move* temp = player_move_params_;
+  ::yi::FunctionCall_PlayerMoveParams* temp = player_move_params_;
   player_move_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3249,34 +3957,34 @@ inline ::yi::FunctionCall_player_move* FunctionCall::release_player_move_params(
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionCall_player_move* FunctionCall::unsafe_arena_release_player_move_params() {
+inline ::yi::FunctionCall_PlayerMoveParams* FunctionCall::unsafe_arena_release_player_move_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionCall.player_move_params)
   _has_bits_[0] &= ~0x00000010u;
-  ::yi::FunctionCall_player_move* temp = player_move_params_;
+  ::yi::FunctionCall_PlayerMoveParams* temp = player_move_params_;
   player_move_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionCall_player_move* FunctionCall::_internal_mutable_player_move_params() {
+inline ::yi::FunctionCall_PlayerMoveParams* FunctionCall::_internal_mutable_player_move_params() {
   _has_bits_[0] |= 0x00000010u;
   if (player_move_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionCall_player_move>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionCall_PlayerMoveParams>(GetArenaForAllocation());
     player_move_params_ = p;
   }
   return player_move_params_;
 }
-inline ::yi::FunctionCall_player_move* FunctionCall::mutable_player_move_params() {
-  ::yi::FunctionCall_player_move* _msg = _internal_mutable_player_move_params();
+inline ::yi::FunctionCall_PlayerMoveParams* FunctionCall::mutable_player_move_params() {
+  ::yi::FunctionCall_PlayerMoveParams* _msg = _internal_mutable_player_move_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionCall.player_move_params)
   return _msg;
 }
-inline void FunctionCall::set_allocated_player_move_params(::yi::FunctionCall_player_move* player_move_params) {
+inline void FunctionCall::set_allocated_player_move_params(::yi::FunctionCall_PlayerMoveParams* player_move_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete player_move_params_;
   }
   if (player_move_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_player_move>::GetOwningArena(player_move_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionCall_PlayerMoveParams>::GetOwningArena(player_move_params);
     if (message_arena != submessage_arena) {
       player_move_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, player_move_params, submessage_arena);
@@ -3291,113 +3999,113 @@ inline void FunctionCall::set_allocated_player_move_params(::yi::FunctionCall_pl
 
 // -------------------------------------------------------------------
 
-// FunctionRet_add_int_ret
+// FunctionRet_AddIntRet
 
 // required int32 ret = 1;
-inline bool FunctionRet_add_int_ret::_internal_has_ret() const {
+inline bool FunctionRet_AddIntRet::_internal_has_ret() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionRet_add_int_ret::has_ret() const {
+inline bool FunctionRet_AddIntRet::has_ret() const {
   return _internal_has_ret();
 }
-inline void FunctionRet_add_int_ret::clear_ret() {
+inline void FunctionRet_AddIntRet::clear_ret() {
   ret_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t FunctionRet_add_int_ret::_internal_ret() const {
+inline int32_t FunctionRet_AddIntRet::_internal_ret() const {
   return ret_;
 }
-inline int32_t FunctionRet_add_int_ret::ret() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.add_int_ret.ret)
+inline int32_t FunctionRet_AddIntRet::ret() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.AddIntRet.ret)
   return _internal_ret();
 }
-inline void FunctionRet_add_int_ret::_internal_set_ret(int32_t value) {
+inline void FunctionRet_AddIntRet::_internal_set_ret(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   ret_ = value;
 }
-inline void FunctionRet_add_int_ret::set_ret(int32_t value) {
+inline void FunctionRet_AddIntRet::set_ret(int32_t value) {
   _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.add_int_ret.ret)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.AddIntRet.ret)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionRet_add_double_ret
+// FunctionRet_AddDoubleRet
 
 // required double ret = 1;
-inline bool FunctionRet_add_double_ret::_internal_has_ret() const {
+inline bool FunctionRet_AddDoubleRet::_internal_has_ret() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionRet_add_double_ret::has_ret() const {
+inline bool FunctionRet_AddDoubleRet::has_ret() const {
   return _internal_has_ret();
 }
-inline void FunctionRet_add_double_ret::clear_ret() {
+inline void FunctionRet_AddDoubleRet::clear_ret() {
   ret_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline double FunctionRet_add_double_ret::_internal_ret() const {
+inline double FunctionRet_AddDoubleRet::_internal_ret() const {
   return ret_;
 }
-inline double FunctionRet_add_double_ret::ret() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.add_double_ret.ret)
+inline double FunctionRet_AddDoubleRet::ret() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.AddDoubleRet.ret)
   return _internal_ret();
 }
-inline void FunctionRet_add_double_ret::_internal_set_ret(double value) {
+inline void FunctionRet_AddDoubleRet::_internal_set_ret(double value) {
   _has_bits_[0] |= 0x00000001u;
   ret_ = value;
 }
-inline void FunctionRet_add_double_ret::set_ret(double value) {
+inline void FunctionRet_AddDoubleRet::set_ret(double value) {
   _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.add_double_ret.ret)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.AddDoubleRet.ret)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionRet_add_string_ret
+// FunctionRet_AddStringRet
 
 // required string ret = 1;
-inline bool FunctionRet_add_string_ret::_internal_has_ret() const {
+inline bool FunctionRet_AddStringRet::_internal_has_ret() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionRet_add_string_ret::has_ret() const {
+inline bool FunctionRet_AddStringRet::has_ret() const {
   return _internal_has_ret();
 }
-inline void FunctionRet_add_string_ret::clear_ret() {
+inline void FunctionRet_AddStringRet::clear_ret() {
   ret_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FunctionRet_add_string_ret::ret() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.add_string_ret.ret)
+inline const std::string& FunctionRet_AddStringRet::ret() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.AddStringRet.ret)
   return _internal_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FunctionRet_add_string_ret::set_ret(ArgT0&& arg0, ArgT... args) {
+void FunctionRet_AddStringRet::set_ret(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  ret_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.add_string_ret.ret)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.AddStringRet.ret)
 }
-inline std::string* FunctionRet_add_string_ret::mutable_ret() {
+inline std::string* FunctionRet_AddStringRet::mutable_ret() {
   std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:yi.FunctionRet.add_string_ret.ret)
+  // @@protoc_insertion_point(field_mutable:yi.FunctionRet.AddStringRet.ret)
   return _s;
 }
-inline const std::string& FunctionRet_add_string_ret::_internal_ret() const {
+inline const std::string& FunctionRet_AddStringRet::_internal_ret() const {
   return ret_.Get();
 }
-inline void FunctionRet_add_string_ret::_internal_set_ret(const std::string& value) {
+inline void FunctionRet_AddStringRet::_internal_set_ret(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   ret_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* FunctionRet_add_string_ret::_internal_mutable_ret() {
+inline std::string* FunctionRet_AddStringRet::_internal_mutable_ret() {
   _has_bits_[0] |= 0x00000001u;
   return ret_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* FunctionRet_add_string_ret::release_ret() {
-  // @@protoc_insertion_point(field_release:yi.FunctionRet.add_string_ret.ret)
+inline std::string* FunctionRet_AddStringRet::release_ret() {
+  // @@protoc_insertion_point(field_release:yi.FunctionRet.AddStringRet.ret)
   if (!_internal_has_ret()) {
     return nullptr;
   }
@@ -3410,7 +4118,7 @@ inline std::string* FunctionRet_add_string_ret::release_ret() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FunctionRet_add_string_ret::set_allocated_ret(std::string* ret) {
+inline void FunctionRet_AddStringRet::set_allocated_ret(std::string* ret) {
   if (ret != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -3423,123 +4131,123 @@ inline void FunctionRet_add_string_ret::set_allocated_ret(std::string* ret) {
     ret_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.add_string_ret.ret)
+  // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.AddStringRet.ret)
 }
 
 // -------------------------------------------------------------------
 
-// FunctionRet_player_move_ret
+// FunctionRet_PlayerMoveRet
 
 // required double x = 1;
-inline bool FunctionRet_player_move_ret::_internal_has_x() const {
+inline bool FunctionRet_PlayerMoveRet::_internal_has_x() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FunctionRet_player_move_ret::has_x() const {
+inline bool FunctionRet_PlayerMoveRet::has_x() const {
   return _internal_has_x();
 }
-inline void FunctionRet_player_move_ret::clear_x() {
+inline void FunctionRet_PlayerMoveRet::clear_x() {
   x_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline double FunctionRet_player_move_ret::_internal_x() const {
+inline double FunctionRet_PlayerMoveRet::_internal_x() const {
   return x_;
 }
-inline double FunctionRet_player_move_ret::x() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.player_move_ret.x)
+inline double FunctionRet_PlayerMoveRet::x() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.PlayerMoveRet.x)
   return _internal_x();
 }
-inline void FunctionRet_player_move_ret::_internal_set_x(double value) {
+inline void FunctionRet_PlayerMoveRet::_internal_set_x(double value) {
   _has_bits_[0] |= 0x00000001u;
   x_ = value;
 }
-inline void FunctionRet_player_move_ret::set_x(double value) {
+inline void FunctionRet_PlayerMoveRet::set_x(double value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.player_move_ret.x)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.PlayerMoveRet.x)
 }
 
 // required double y = 2;
-inline bool FunctionRet_player_move_ret::_internal_has_y() const {
+inline bool FunctionRet_PlayerMoveRet::_internal_has_y() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FunctionRet_player_move_ret::has_y() const {
+inline bool FunctionRet_PlayerMoveRet::has_y() const {
   return _internal_has_y();
 }
-inline void FunctionRet_player_move_ret::clear_y() {
+inline void FunctionRet_PlayerMoveRet::clear_y() {
   y_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double FunctionRet_player_move_ret::_internal_y() const {
+inline double FunctionRet_PlayerMoveRet::_internal_y() const {
   return y_;
 }
-inline double FunctionRet_player_move_ret::y() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.player_move_ret.y)
+inline double FunctionRet_PlayerMoveRet::y() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.PlayerMoveRet.y)
   return _internal_y();
 }
-inline void FunctionRet_player_move_ret::_internal_set_y(double value) {
+inline void FunctionRet_PlayerMoveRet::_internal_set_y(double value) {
   _has_bits_[0] |= 0x00000002u;
   y_ = value;
 }
-inline void FunctionRet_player_move_ret::set_y(double value) {
+inline void FunctionRet_PlayerMoveRet::set_y(double value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.player_move_ret.y)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.PlayerMoveRet.y)
 }
 
 // required double speed = 3;
-inline bool FunctionRet_player_move_ret::_internal_has_speed() const {
+inline bool FunctionRet_PlayerMoveRet::_internal_has_speed() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FunctionRet_player_move_ret::has_speed() const {
+inline bool FunctionRet_PlayerMoveRet::has_speed() const {
   return _internal_has_speed();
 }
-inline void FunctionRet_player_move_ret::clear_speed() {
+inline void FunctionRet_PlayerMoveRet::clear_speed() {
   speed_ = 0;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline double FunctionRet_player_move_ret::_internal_speed() const {
+inline double FunctionRet_PlayerMoveRet::_internal_speed() const {
   return speed_;
 }
-inline double FunctionRet_player_move_ret::speed() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.player_move_ret.speed)
+inline double FunctionRet_PlayerMoveRet::speed() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.PlayerMoveRet.speed)
   return _internal_speed();
 }
-inline void FunctionRet_player_move_ret::_internal_set_speed(double value) {
+inline void FunctionRet_PlayerMoveRet::_internal_set_speed(double value) {
   _has_bits_[0] |= 0x00000004u;
   speed_ = value;
 }
-inline void FunctionRet_player_move_ret::set_speed(double value) {
+inline void FunctionRet_PlayerMoveRet::set_speed(double value) {
   _internal_set_speed(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.player_move_ret.speed)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.PlayerMoveRet.speed)
 }
 
 // required double aspect = 5;
-inline bool FunctionRet_player_move_ret::_internal_has_aspect() const {
+inline bool FunctionRet_PlayerMoveRet::_internal_has_aspect() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FunctionRet_player_move_ret::has_aspect() const {
+inline bool FunctionRet_PlayerMoveRet::has_aspect() const {
   return _internal_has_aspect();
 }
-inline void FunctionRet_player_move_ret::clear_aspect() {
+inline void FunctionRet_PlayerMoveRet::clear_aspect() {
   aspect_ = 0;
   _has_bits_[0] &= ~0x00000008u;
 }
-inline double FunctionRet_player_move_ret::_internal_aspect() const {
+inline double FunctionRet_PlayerMoveRet::_internal_aspect() const {
   return aspect_;
 }
-inline double FunctionRet_player_move_ret::aspect() const {
-  // @@protoc_insertion_point(field_get:yi.FunctionRet.player_move_ret.aspect)
+inline double FunctionRet_PlayerMoveRet::aspect() const {
+  // @@protoc_insertion_point(field_get:yi.FunctionRet.PlayerMoveRet.aspect)
   return _internal_aspect();
 }
-inline void FunctionRet_player_move_ret::_internal_set_aspect(double value) {
+inline void FunctionRet_PlayerMoveRet::_internal_set_aspect(double value) {
   _has_bits_[0] |= 0x00000008u;
   aspect_ = value;
 }
-inline void FunctionRet_player_move_ret::set_aspect(double value) {
+inline void FunctionRet_PlayerMoveRet::set_aspect(double value) {
   _internal_set_aspect(value);
-  // @@protoc_insertion_point(field_set:yi.FunctionRet.player_move_ret.aspect)
+  // @@protoc_insertion_point(field_set:yi.FunctionRet.PlayerMoveRet.aspect)
 }
 
 // -------------------------------------------------------------------
@@ -3615,7 +4323,7 @@ inline void FunctionRet::set_allocated_function_name(std::string* function_name)
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.function_name)
 }
 
-// optional .yi.FunctionRet.add_int_ret add_int_ret_params = 2;
+// optional .yi.FunctionRet.AddIntRet add_int_ret_params = 2;
 inline bool FunctionRet::_internal_has_add_int_ret_params() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || add_int_ret_params_ != nullptr);
@@ -3628,17 +4336,17 @@ inline void FunctionRet::clear_add_int_ret_params() {
   if (add_int_ret_params_ != nullptr) add_int_ret_params_->Clear();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const ::yi::FunctionRet_add_int_ret& FunctionRet::_internal_add_int_ret_params() const {
-  const ::yi::FunctionRet_add_int_ret* p = add_int_ret_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_add_int_ret&>(
-      ::yi::_FunctionRet_add_int_ret_default_instance_);
+inline const ::yi::FunctionRet_AddIntRet& FunctionRet::_internal_add_int_ret_params() const {
+  const ::yi::FunctionRet_AddIntRet* p = add_int_ret_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_AddIntRet&>(
+      ::yi::_FunctionRet_AddIntRet_default_instance_);
 }
-inline const ::yi::FunctionRet_add_int_ret& FunctionRet::add_int_ret_params() const {
+inline const ::yi::FunctionRet_AddIntRet& FunctionRet::add_int_ret_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionRet.add_int_ret_params)
   return _internal_add_int_ret_params();
 }
 inline void FunctionRet::unsafe_arena_set_allocated_add_int_ret_params(
-    ::yi::FunctionRet_add_int_ret* add_int_ret_params) {
+    ::yi::FunctionRet_AddIntRet* add_int_ret_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_int_ret_params_);
   }
@@ -3650,9 +4358,9 @@ inline void FunctionRet::unsafe_arena_set_allocated_add_int_ret_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionRet.add_int_ret_params)
 }
-inline ::yi::FunctionRet_add_int_ret* FunctionRet::release_add_int_ret_params() {
+inline ::yi::FunctionRet_AddIntRet* FunctionRet::release_add_int_ret_params() {
   _has_bits_[0] &= ~0x00000002u;
-  ::yi::FunctionRet_add_int_ret* temp = add_int_ret_params_;
+  ::yi::FunctionRet_AddIntRet* temp = add_int_ret_params_;
   add_int_ret_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3665,34 +4373,34 @@ inline ::yi::FunctionRet_add_int_ret* FunctionRet::release_add_int_ret_params() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionRet_add_int_ret* FunctionRet::unsafe_arena_release_add_int_ret_params() {
+inline ::yi::FunctionRet_AddIntRet* FunctionRet::unsafe_arena_release_add_int_ret_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionRet.add_int_ret_params)
   _has_bits_[0] &= ~0x00000002u;
-  ::yi::FunctionRet_add_int_ret* temp = add_int_ret_params_;
+  ::yi::FunctionRet_AddIntRet* temp = add_int_ret_params_;
   add_int_ret_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionRet_add_int_ret* FunctionRet::_internal_mutable_add_int_ret_params() {
+inline ::yi::FunctionRet_AddIntRet* FunctionRet::_internal_mutable_add_int_ret_params() {
   _has_bits_[0] |= 0x00000002u;
   if (add_int_ret_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionRet_add_int_ret>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionRet_AddIntRet>(GetArenaForAllocation());
     add_int_ret_params_ = p;
   }
   return add_int_ret_params_;
 }
-inline ::yi::FunctionRet_add_int_ret* FunctionRet::mutable_add_int_ret_params() {
-  ::yi::FunctionRet_add_int_ret* _msg = _internal_mutable_add_int_ret_params();
+inline ::yi::FunctionRet_AddIntRet* FunctionRet::mutable_add_int_ret_params() {
+  ::yi::FunctionRet_AddIntRet* _msg = _internal_mutable_add_int_ret_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionRet.add_int_ret_params)
   return _msg;
 }
-inline void FunctionRet::set_allocated_add_int_ret_params(::yi::FunctionRet_add_int_ret* add_int_ret_params) {
+inline void FunctionRet::set_allocated_add_int_ret_params(::yi::FunctionRet_AddIntRet* add_int_ret_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_int_ret_params_;
   }
   if (add_int_ret_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_add_int_ret>::GetOwningArena(add_int_ret_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_AddIntRet>::GetOwningArena(add_int_ret_params);
     if (message_arena != submessage_arena) {
       add_int_ret_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_int_ret_params, submessage_arena);
@@ -3705,7 +4413,7 @@ inline void FunctionRet::set_allocated_add_int_ret_params(::yi::FunctionRet_add_
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.add_int_ret_params)
 }
 
-// optional .yi.FunctionRet.add_double_ret add_double_ret_params = 3;
+// optional .yi.FunctionRet.AddDoubleRet add_double_ret_params = 3;
 inline bool FunctionRet::_internal_has_add_double_ret_params() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || add_double_ret_params_ != nullptr);
@@ -3718,17 +4426,17 @@ inline void FunctionRet::clear_add_double_ret_params() {
   if (add_double_ret_params_ != nullptr) add_double_ret_params_->Clear();
   _has_bits_[0] &= ~0x00000004u;
 }
-inline const ::yi::FunctionRet_add_double_ret& FunctionRet::_internal_add_double_ret_params() const {
-  const ::yi::FunctionRet_add_double_ret* p = add_double_ret_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_add_double_ret&>(
-      ::yi::_FunctionRet_add_double_ret_default_instance_);
+inline const ::yi::FunctionRet_AddDoubleRet& FunctionRet::_internal_add_double_ret_params() const {
+  const ::yi::FunctionRet_AddDoubleRet* p = add_double_ret_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_AddDoubleRet&>(
+      ::yi::_FunctionRet_AddDoubleRet_default_instance_);
 }
-inline const ::yi::FunctionRet_add_double_ret& FunctionRet::add_double_ret_params() const {
+inline const ::yi::FunctionRet_AddDoubleRet& FunctionRet::add_double_ret_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionRet.add_double_ret_params)
   return _internal_add_double_ret_params();
 }
 inline void FunctionRet::unsafe_arena_set_allocated_add_double_ret_params(
-    ::yi::FunctionRet_add_double_ret* add_double_ret_params) {
+    ::yi::FunctionRet_AddDoubleRet* add_double_ret_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_double_ret_params_);
   }
@@ -3740,9 +4448,9 @@ inline void FunctionRet::unsafe_arena_set_allocated_add_double_ret_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionRet.add_double_ret_params)
 }
-inline ::yi::FunctionRet_add_double_ret* FunctionRet::release_add_double_ret_params() {
+inline ::yi::FunctionRet_AddDoubleRet* FunctionRet::release_add_double_ret_params() {
   _has_bits_[0] &= ~0x00000004u;
-  ::yi::FunctionRet_add_double_ret* temp = add_double_ret_params_;
+  ::yi::FunctionRet_AddDoubleRet* temp = add_double_ret_params_;
   add_double_ret_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3755,34 +4463,34 @@ inline ::yi::FunctionRet_add_double_ret* FunctionRet::release_add_double_ret_par
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionRet_add_double_ret* FunctionRet::unsafe_arena_release_add_double_ret_params() {
+inline ::yi::FunctionRet_AddDoubleRet* FunctionRet::unsafe_arena_release_add_double_ret_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionRet.add_double_ret_params)
   _has_bits_[0] &= ~0x00000004u;
-  ::yi::FunctionRet_add_double_ret* temp = add_double_ret_params_;
+  ::yi::FunctionRet_AddDoubleRet* temp = add_double_ret_params_;
   add_double_ret_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionRet_add_double_ret* FunctionRet::_internal_mutable_add_double_ret_params() {
+inline ::yi::FunctionRet_AddDoubleRet* FunctionRet::_internal_mutable_add_double_ret_params() {
   _has_bits_[0] |= 0x00000004u;
   if (add_double_ret_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionRet_add_double_ret>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionRet_AddDoubleRet>(GetArenaForAllocation());
     add_double_ret_params_ = p;
   }
   return add_double_ret_params_;
 }
-inline ::yi::FunctionRet_add_double_ret* FunctionRet::mutable_add_double_ret_params() {
-  ::yi::FunctionRet_add_double_ret* _msg = _internal_mutable_add_double_ret_params();
+inline ::yi::FunctionRet_AddDoubleRet* FunctionRet::mutable_add_double_ret_params() {
+  ::yi::FunctionRet_AddDoubleRet* _msg = _internal_mutable_add_double_ret_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionRet.add_double_ret_params)
   return _msg;
 }
-inline void FunctionRet::set_allocated_add_double_ret_params(::yi::FunctionRet_add_double_ret* add_double_ret_params) {
+inline void FunctionRet::set_allocated_add_double_ret_params(::yi::FunctionRet_AddDoubleRet* add_double_ret_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_double_ret_params_;
   }
   if (add_double_ret_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_add_double_ret>::GetOwningArena(add_double_ret_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_AddDoubleRet>::GetOwningArena(add_double_ret_params);
     if (message_arena != submessage_arena) {
       add_double_ret_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_double_ret_params, submessage_arena);
@@ -3795,7 +4503,7 @@ inline void FunctionRet::set_allocated_add_double_ret_params(::yi::FunctionRet_a
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.add_double_ret_params)
 }
 
-// optional .yi.FunctionRet.add_string_ret add_string_ret_params = 4;
+// optional .yi.FunctionRet.AddStringRet add_string_ret_params = 4;
 inline bool FunctionRet::_internal_has_add_string_ret_params() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || add_string_ret_params_ != nullptr);
@@ -3808,17 +4516,17 @@ inline void FunctionRet::clear_add_string_ret_params() {
   if (add_string_ret_params_ != nullptr) add_string_ret_params_->Clear();
   _has_bits_[0] &= ~0x00000008u;
 }
-inline const ::yi::FunctionRet_add_string_ret& FunctionRet::_internal_add_string_ret_params() const {
-  const ::yi::FunctionRet_add_string_ret* p = add_string_ret_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_add_string_ret&>(
-      ::yi::_FunctionRet_add_string_ret_default_instance_);
+inline const ::yi::FunctionRet_AddStringRet& FunctionRet::_internal_add_string_ret_params() const {
+  const ::yi::FunctionRet_AddStringRet* p = add_string_ret_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_AddStringRet&>(
+      ::yi::_FunctionRet_AddStringRet_default_instance_);
 }
-inline const ::yi::FunctionRet_add_string_ret& FunctionRet::add_string_ret_params() const {
+inline const ::yi::FunctionRet_AddStringRet& FunctionRet::add_string_ret_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionRet.add_string_ret_params)
   return _internal_add_string_ret_params();
 }
 inline void FunctionRet::unsafe_arena_set_allocated_add_string_ret_params(
-    ::yi::FunctionRet_add_string_ret* add_string_ret_params) {
+    ::yi::FunctionRet_AddStringRet* add_string_ret_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(add_string_ret_params_);
   }
@@ -3830,9 +4538,9 @@ inline void FunctionRet::unsafe_arena_set_allocated_add_string_ret_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionRet.add_string_ret_params)
 }
-inline ::yi::FunctionRet_add_string_ret* FunctionRet::release_add_string_ret_params() {
+inline ::yi::FunctionRet_AddStringRet* FunctionRet::release_add_string_ret_params() {
   _has_bits_[0] &= ~0x00000008u;
-  ::yi::FunctionRet_add_string_ret* temp = add_string_ret_params_;
+  ::yi::FunctionRet_AddStringRet* temp = add_string_ret_params_;
   add_string_ret_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3845,34 +4553,34 @@ inline ::yi::FunctionRet_add_string_ret* FunctionRet::release_add_string_ret_par
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionRet_add_string_ret* FunctionRet::unsafe_arena_release_add_string_ret_params() {
+inline ::yi::FunctionRet_AddStringRet* FunctionRet::unsafe_arena_release_add_string_ret_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionRet.add_string_ret_params)
   _has_bits_[0] &= ~0x00000008u;
-  ::yi::FunctionRet_add_string_ret* temp = add_string_ret_params_;
+  ::yi::FunctionRet_AddStringRet* temp = add_string_ret_params_;
   add_string_ret_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionRet_add_string_ret* FunctionRet::_internal_mutable_add_string_ret_params() {
+inline ::yi::FunctionRet_AddStringRet* FunctionRet::_internal_mutable_add_string_ret_params() {
   _has_bits_[0] |= 0x00000008u;
   if (add_string_ret_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionRet_add_string_ret>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionRet_AddStringRet>(GetArenaForAllocation());
     add_string_ret_params_ = p;
   }
   return add_string_ret_params_;
 }
-inline ::yi::FunctionRet_add_string_ret* FunctionRet::mutable_add_string_ret_params() {
-  ::yi::FunctionRet_add_string_ret* _msg = _internal_mutable_add_string_ret_params();
+inline ::yi::FunctionRet_AddStringRet* FunctionRet::mutable_add_string_ret_params() {
+  ::yi::FunctionRet_AddStringRet* _msg = _internal_mutable_add_string_ret_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionRet.add_string_ret_params)
   return _msg;
 }
-inline void FunctionRet::set_allocated_add_string_ret_params(::yi::FunctionRet_add_string_ret* add_string_ret_params) {
+inline void FunctionRet::set_allocated_add_string_ret_params(::yi::FunctionRet_AddStringRet* add_string_ret_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete add_string_ret_params_;
   }
   if (add_string_ret_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_add_string_ret>::GetOwningArena(add_string_ret_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_AddStringRet>::GetOwningArena(add_string_ret_params);
     if (message_arena != submessage_arena) {
       add_string_ret_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, add_string_ret_params, submessage_arena);
@@ -3885,7 +4593,7 @@ inline void FunctionRet::set_allocated_add_string_ret_params(::yi::FunctionRet_a
   // @@protoc_insertion_point(field_set_allocated:yi.FunctionRet.add_string_ret_params)
 }
 
-// optional .yi.FunctionRet.player_move_ret player_move_ret_params = 5;
+// optional .yi.FunctionRet.PlayerMoveRet player_move_ret_params = 5;
 inline bool FunctionRet::_internal_has_player_move_ret_params() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
   PROTOBUF_ASSUME(!value || player_move_ret_params_ != nullptr);
@@ -3898,17 +4606,17 @@ inline void FunctionRet::clear_player_move_ret_params() {
   if (player_move_ret_params_ != nullptr) player_move_ret_params_->Clear();
   _has_bits_[0] &= ~0x00000010u;
 }
-inline const ::yi::FunctionRet_player_move_ret& FunctionRet::_internal_player_move_ret_params() const {
-  const ::yi::FunctionRet_player_move_ret* p = player_move_ret_params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_player_move_ret&>(
-      ::yi::_FunctionRet_player_move_ret_default_instance_);
+inline const ::yi::FunctionRet_PlayerMoveRet& FunctionRet::_internal_player_move_ret_params() const {
+  const ::yi::FunctionRet_PlayerMoveRet* p = player_move_ret_params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::FunctionRet_PlayerMoveRet&>(
+      ::yi::_FunctionRet_PlayerMoveRet_default_instance_);
 }
-inline const ::yi::FunctionRet_player_move_ret& FunctionRet::player_move_ret_params() const {
+inline const ::yi::FunctionRet_PlayerMoveRet& FunctionRet::player_move_ret_params() const {
   // @@protoc_insertion_point(field_get:yi.FunctionRet.player_move_ret_params)
   return _internal_player_move_ret_params();
 }
 inline void FunctionRet::unsafe_arena_set_allocated_player_move_ret_params(
-    ::yi::FunctionRet_player_move_ret* player_move_ret_params) {
+    ::yi::FunctionRet_PlayerMoveRet* player_move_ret_params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(player_move_ret_params_);
   }
@@ -3920,9 +4628,9 @@ inline void FunctionRet::unsafe_arena_set_allocated_player_move_ret_params(
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.FunctionRet.player_move_ret_params)
 }
-inline ::yi::FunctionRet_player_move_ret* FunctionRet::release_player_move_ret_params() {
+inline ::yi::FunctionRet_PlayerMoveRet* FunctionRet::release_player_move_ret_params() {
   _has_bits_[0] &= ~0x00000010u;
-  ::yi::FunctionRet_player_move_ret* temp = player_move_ret_params_;
+  ::yi::FunctionRet_PlayerMoveRet* temp = player_move_ret_params_;
   player_move_ret_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3935,34 +4643,34 @@ inline ::yi::FunctionRet_player_move_ret* FunctionRet::release_player_move_ret_p
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::yi::FunctionRet_player_move_ret* FunctionRet::unsafe_arena_release_player_move_ret_params() {
+inline ::yi::FunctionRet_PlayerMoveRet* FunctionRet::unsafe_arena_release_player_move_ret_params() {
   // @@protoc_insertion_point(field_release:yi.FunctionRet.player_move_ret_params)
   _has_bits_[0] &= ~0x00000010u;
-  ::yi::FunctionRet_player_move_ret* temp = player_move_ret_params_;
+  ::yi::FunctionRet_PlayerMoveRet* temp = player_move_ret_params_;
   player_move_ret_params_ = nullptr;
   return temp;
 }
-inline ::yi::FunctionRet_player_move_ret* FunctionRet::_internal_mutable_player_move_ret_params() {
+inline ::yi::FunctionRet_PlayerMoveRet* FunctionRet::_internal_mutable_player_move_ret_params() {
   _has_bits_[0] |= 0x00000010u;
   if (player_move_ret_params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::yi::FunctionRet_player_move_ret>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::yi::FunctionRet_PlayerMoveRet>(GetArenaForAllocation());
     player_move_ret_params_ = p;
   }
   return player_move_ret_params_;
 }
-inline ::yi::FunctionRet_player_move_ret* FunctionRet::mutable_player_move_ret_params() {
-  ::yi::FunctionRet_player_move_ret* _msg = _internal_mutable_player_move_ret_params();
+inline ::yi::FunctionRet_PlayerMoveRet* FunctionRet::mutable_player_move_ret_params() {
+  ::yi::FunctionRet_PlayerMoveRet* _msg = _internal_mutable_player_move_ret_params();
   // @@protoc_insertion_point(field_mutable:yi.FunctionRet.player_move_ret_params)
   return _msg;
 }
-inline void FunctionRet::set_allocated_player_move_ret_params(::yi::FunctionRet_player_move_ret* player_move_ret_params) {
+inline void FunctionRet::set_allocated_player_move_ret_params(::yi::FunctionRet_PlayerMoveRet* player_move_ret_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete player_move_ret_params_;
   }
   if (player_move_ret_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_player_move_ret>::GetOwningArena(player_move_ret_params);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::FunctionRet_PlayerMoveRet>::GetOwningArena(player_move_ret_params);
     if (message_arena != submessage_arena) {
       player_move_ret_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, player_move_ret_params, submessage_arena);
@@ -3979,78 +4687,38 @@ inline void FunctionRet::set_allocated_player_move_ret_params(::yi::FunctionRet_
 
 // Request
 
-// required string call_type = 1;
+// required .yi.Request.RequestType call_type = 1;
 inline bool Request::_internal_has_call_type() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Request::has_call_type() const {
   return _internal_has_call_type();
 }
 inline void Request::clear_call_type() {
-  call_type_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
+  call_type_ = 0;
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& Request::call_type() const {
+inline ::yi::Request_RequestType Request::_internal_call_type() const {
+  return static_cast< ::yi::Request_RequestType >(call_type_);
+}
+inline ::yi::Request_RequestType Request::call_type() const {
   // @@protoc_insertion_point(field_get:yi.Request.call_type)
   return _internal_call_type();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void Request::set_call_type(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
- call_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void Request::_internal_set_call_type(::yi::Request_RequestType value) {
+  assert(::yi::Request_RequestType_IsValid(value));
+  _has_bits_[0] |= 0x00000010u;
+  call_type_ = value;
+}
+inline void Request::set_call_type(::yi::Request_RequestType value) {
+  _internal_set_call_type(value);
   // @@protoc_insertion_point(field_set:yi.Request.call_type)
-}
-inline std::string* Request::mutable_call_type() {
-  std::string* _s = _internal_mutable_call_type();
-  // @@protoc_insertion_point(field_mutable:yi.Request.call_type)
-  return _s;
-}
-inline const std::string& Request::_internal_call_type() const {
-  return call_type_.Get();
-}
-inline void Request::_internal_set_call_type(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  call_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
-}
-inline std::string* Request::_internal_mutable_call_type() {
-  _has_bits_[0] |= 0x00000001u;
-  return call_type_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
-}
-inline std::string* Request::release_call_type() {
-  // @@protoc_insertion_point(field_release:yi.Request.call_type)
-  if (!_internal_has_call_type()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  auto* p = call_type_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (call_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
-    call_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void Request::set_allocated_call_type(std::string* call_type) {
-  if (call_type != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  call_type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), call_type,
-      GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (call_type_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
-    call_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:yi.Request.call_type)
 }
 
 // optional .yi.ConnectionReq connection_req = 2;
 inline bool Request::_internal_has_connection_req() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || connection_req_ != nullptr);
   return value;
 }
@@ -4059,7 +4727,7 @@ inline bool Request::has_connection_req() const {
 }
 inline void Request::clear_connection_req() {
   if (connection_req_ != nullptr) connection_req_->Clear();
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
 }
 inline const ::yi::ConnectionReq& Request::_internal_connection_req() const {
   const ::yi::ConnectionReq* p = connection_req_;
@@ -4077,14 +4745,14 @@ inline void Request::unsafe_arena_set_allocated_connection_req(
   }
   connection_req_ = connection_req;
   if (connection_req) {
-    _has_bits_[0] |= 0x00000002u;
+    _has_bits_[0] |= 0x00000001u;
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    _has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.Request.connection_req)
 }
 inline ::yi::ConnectionReq* Request::release_connection_req() {
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
   ::yi::ConnectionReq* temp = connection_req_;
   connection_req_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4100,13 +4768,13 @@ inline ::yi::ConnectionReq* Request::release_connection_req() {
 }
 inline ::yi::ConnectionReq* Request::unsafe_arena_release_connection_req() {
   // @@protoc_insertion_point(field_release:yi.Request.connection_req)
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000001u;
   ::yi::ConnectionReq* temp = connection_req_;
   connection_req_ = nullptr;
   return temp;
 }
 inline ::yi::ConnectionReq* Request::_internal_mutable_connection_req() {
-  _has_bits_[0] |= 0x00000002u;
+  _has_bits_[0] |= 0x00000001u;
   if (connection_req_ == nullptr) {
     auto* p = CreateMaybeMessage<::yi::ConnectionReq>(GetArenaForAllocation());
     connection_req_ = p;
@@ -4130,15 +4798,105 @@ inline void Request::set_allocated_connection_req(::yi::ConnectionReq* connectio
       connection_req = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, connection_req, submessage_arena);
     }
-    _has_bits_[0] |= 0x00000002u;
+    _has_bits_[0] |= 0x00000001u;
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    _has_bits_[0] &= ~0x00000001u;
   }
   connection_req_ = connection_req;
   // @@protoc_insertion_point(field_set_allocated:yi.Request.connection_req)
 }
 
-// optional .yi.FunctionCall function_call = 3;
+// optional .yi.ConnectionRet connection_ret = 3;
+inline bool Request::_internal_has_connection_ret() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  PROTOBUF_ASSUME(!value || connection_ret_ != nullptr);
+  return value;
+}
+inline bool Request::has_connection_ret() const {
+  return _internal_has_connection_ret();
+}
+inline void Request::clear_connection_ret() {
+  if (connection_ret_ != nullptr) connection_ret_->Clear();
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline const ::yi::ConnectionRet& Request::_internal_connection_ret() const {
+  const ::yi::ConnectionRet* p = connection_ret_;
+  return p != nullptr ? *p : reinterpret_cast<const ::yi::ConnectionRet&>(
+      ::yi::_ConnectionRet_default_instance_);
+}
+inline const ::yi::ConnectionRet& Request::connection_ret() const {
+  // @@protoc_insertion_point(field_get:yi.Request.connection_ret)
+  return _internal_connection_ret();
+}
+inline void Request::unsafe_arena_set_allocated_connection_ret(
+    ::yi::ConnectionRet* connection_ret) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(connection_ret_);
+  }
+  connection_ret_ = connection_ret;
+  if (connection_ret) {
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:yi.Request.connection_ret)
+}
+inline ::yi::ConnectionRet* Request::release_connection_ret() {
+  _has_bits_[0] &= ~0x00000002u;
+  ::yi::ConnectionRet* temp = connection_ret_;
+  connection_ret_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::yi::ConnectionRet* Request::unsafe_arena_release_connection_ret() {
+  // @@protoc_insertion_point(field_release:yi.Request.connection_ret)
+  _has_bits_[0] &= ~0x00000002u;
+  ::yi::ConnectionRet* temp = connection_ret_;
+  connection_ret_ = nullptr;
+  return temp;
+}
+inline ::yi::ConnectionRet* Request::_internal_mutable_connection_ret() {
+  _has_bits_[0] |= 0x00000002u;
+  if (connection_ret_ == nullptr) {
+    auto* p = CreateMaybeMessage<::yi::ConnectionRet>(GetArenaForAllocation());
+    connection_ret_ = p;
+  }
+  return connection_ret_;
+}
+inline ::yi::ConnectionRet* Request::mutable_connection_ret() {
+  ::yi::ConnectionRet* _msg = _internal_mutable_connection_ret();
+  // @@protoc_insertion_point(field_mutable:yi.Request.connection_ret)
+  return _msg;
+}
+inline void Request::set_allocated_connection_ret(::yi::ConnectionRet* connection_ret) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete connection_ret_;
+  }
+  if (connection_ret) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::yi::ConnectionRet>::GetOwningArena(connection_ret);
+    if (message_arena != submessage_arena) {
+      connection_ret = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, connection_ret, submessage_arena);
+    }
+    _has_bits_[0] |= 0x00000002u;
+  } else {
+    _has_bits_[0] &= ~0x00000002u;
+  }
+  connection_ret_ = connection_ret;
+  // @@protoc_insertion_point(field_set_allocated:yi.Request.connection_ret)
+}
+
+// optional .yi.FunctionCall function_call = 4;
 inline bool Request::_internal_has_function_call() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || function_call_ != nullptr);
@@ -4228,7 +4986,7 @@ inline void Request::set_allocated_function_call(::yi::FunctionCall* function_ca
   // @@protoc_insertion_point(field_set_allocated:yi.Request.function_call)
 }
 
-// optional .yi.FunctionRet function_ret = 4;
+// optional .yi.FunctionRet function_ret = 5;
 inline bool Request::_internal_has_function_ret() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || function_ret_ != nullptr);
@@ -4343,10 +5101,24 @@ inline void Request::set_allocated_function_ret(::yi::FunctionRet* function_ret)
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace yi
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::yi::Request_RequestType> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::yi::Request_RequestType>() {
+  return ::yi::Request_RequestType_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

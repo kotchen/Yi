@@ -28,46 +28,72 @@ struct ConnectionReqDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ConnectionReqDefaultTypeInternal _ConnectionReq_default_instance_;
-constexpr FunctionCall_add_int::FunctionCall_add_int(
+constexpr ConnectionRet_FuncInfo::ConnectionRet_FuncInfo(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : func_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , params_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , return_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ConnectionRet_FuncInfoDefaultTypeInternal {
+  constexpr ConnectionRet_FuncInfoDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ConnectionRet_FuncInfoDefaultTypeInternal() {}
+  union {
+    ConnectionRet_FuncInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ConnectionRet_FuncInfoDefaultTypeInternal _ConnectionRet_FuncInfo_default_instance_;
+constexpr ConnectionRet::ConnectionRet(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : func_info_(){}
+struct ConnectionRetDefaultTypeInternal {
+  constexpr ConnectionRetDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ConnectionRetDefaultTypeInternal() {}
+  union {
+    ConnectionRet _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ConnectionRetDefaultTypeInternal _ConnectionRet_default_instance_;
+constexpr FunctionCall_AddIntParams::FunctionCall_AddIntParams(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : left_(0)
   , right_(0){}
-struct FunctionCall_add_intDefaultTypeInternal {
-  constexpr FunctionCall_add_intDefaultTypeInternal()
+struct FunctionCall_AddIntParamsDefaultTypeInternal {
+  constexpr FunctionCall_AddIntParamsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionCall_add_intDefaultTypeInternal() {}
+  ~FunctionCall_AddIntParamsDefaultTypeInternal() {}
   union {
-    FunctionCall_add_int _instance;
+    FunctionCall_AddIntParams _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_add_intDefaultTypeInternal _FunctionCall_add_int_default_instance_;
-constexpr FunctionCall_add_double::FunctionCall_add_double(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_AddIntParamsDefaultTypeInternal _FunctionCall_AddIntParams_default_instance_;
+constexpr FunctionCall_AddDoubleParams::FunctionCall_AddDoubleParams(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : left_(0)
   , right_(0){}
-struct FunctionCall_add_doubleDefaultTypeInternal {
-  constexpr FunctionCall_add_doubleDefaultTypeInternal()
+struct FunctionCall_AddDoubleParamsDefaultTypeInternal {
+  constexpr FunctionCall_AddDoubleParamsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionCall_add_doubleDefaultTypeInternal() {}
+  ~FunctionCall_AddDoubleParamsDefaultTypeInternal() {}
   union {
-    FunctionCall_add_double _instance;
+    FunctionCall_AddDoubleParams _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_add_doubleDefaultTypeInternal _FunctionCall_add_double_default_instance_;
-constexpr FunctionCall_add_string::FunctionCall_add_string(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_AddDoubleParamsDefaultTypeInternal _FunctionCall_AddDoubleParams_default_instance_;
+constexpr FunctionCall_AddStringParams::FunctionCall_AddStringParams(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : left_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , right_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
-struct FunctionCall_add_stringDefaultTypeInternal {
-  constexpr FunctionCall_add_stringDefaultTypeInternal()
+struct FunctionCall_AddStringParamsDefaultTypeInternal {
+  constexpr FunctionCall_AddStringParamsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionCall_add_stringDefaultTypeInternal() {}
+  ~FunctionCall_AddStringParamsDefaultTypeInternal() {}
   union {
-    FunctionCall_add_string _instance;
+    FunctionCall_AddStringParams _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_add_stringDefaultTypeInternal _FunctionCall_add_string_default_instance_;
-constexpr FunctionCall_player_move::FunctionCall_player_move(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_AddStringParamsDefaultTypeInternal _FunctionCall_AddStringParams_default_instance_;
+constexpr FunctionCall_PlayerMoveParams::FunctionCall_PlayerMoveParams(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : x_(0)
   , y_(0)
@@ -75,15 +101,15 @@ constexpr FunctionCall_player_move::FunctionCall_player_move(
   , acceleration_(0)
   , aspect_(0)
   , angle_(0){}
-struct FunctionCall_player_moveDefaultTypeInternal {
-  constexpr FunctionCall_player_moveDefaultTypeInternal()
+struct FunctionCall_PlayerMoveParamsDefaultTypeInternal {
+  constexpr FunctionCall_PlayerMoveParamsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionCall_player_moveDefaultTypeInternal() {}
+  ~FunctionCall_PlayerMoveParamsDefaultTypeInternal() {}
   union {
-    FunctionCall_player_move _instance;
+    FunctionCall_PlayerMoveParams _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_player_moveDefaultTypeInternal _FunctionCall_player_move_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCall_PlayerMoveParamsDefaultTypeInternal _FunctionCall_PlayerMoveParams_default_instance_;
 constexpr FunctionCall::FunctionCall(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : function_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
@@ -100,57 +126,57 @@ struct FunctionCallDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionCallDefaultTypeInternal _FunctionCall_default_instance_;
-constexpr FunctionRet_add_int_ret::FunctionRet_add_int_ret(
+constexpr FunctionRet_AddIntRet::FunctionRet_AddIntRet(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : ret_(0){}
-struct FunctionRet_add_int_retDefaultTypeInternal {
-  constexpr FunctionRet_add_int_retDefaultTypeInternal()
+struct FunctionRet_AddIntRetDefaultTypeInternal {
+  constexpr FunctionRet_AddIntRetDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionRet_add_int_retDefaultTypeInternal() {}
+  ~FunctionRet_AddIntRetDefaultTypeInternal() {}
   union {
-    FunctionRet_add_int_ret _instance;
+    FunctionRet_AddIntRet _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_add_int_retDefaultTypeInternal _FunctionRet_add_int_ret_default_instance_;
-constexpr FunctionRet_add_double_ret::FunctionRet_add_double_ret(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_AddIntRetDefaultTypeInternal _FunctionRet_AddIntRet_default_instance_;
+constexpr FunctionRet_AddDoubleRet::FunctionRet_AddDoubleRet(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : ret_(0){}
-struct FunctionRet_add_double_retDefaultTypeInternal {
-  constexpr FunctionRet_add_double_retDefaultTypeInternal()
+struct FunctionRet_AddDoubleRetDefaultTypeInternal {
+  constexpr FunctionRet_AddDoubleRetDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionRet_add_double_retDefaultTypeInternal() {}
+  ~FunctionRet_AddDoubleRetDefaultTypeInternal() {}
   union {
-    FunctionRet_add_double_ret _instance;
+    FunctionRet_AddDoubleRet _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_add_double_retDefaultTypeInternal _FunctionRet_add_double_ret_default_instance_;
-constexpr FunctionRet_add_string_ret::FunctionRet_add_string_ret(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_AddDoubleRetDefaultTypeInternal _FunctionRet_AddDoubleRet_default_instance_;
+constexpr FunctionRet_AddStringRet::FunctionRet_AddStringRet(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : ret_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
-struct FunctionRet_add_string_retDefaultTypeInternal {
-  constexpr FunctionRet_add_string_retDefaultTypeInternal()
+struct FunctionRet_AddStringRetDefaultTypeInternal {
+  constexpr FunctionRet_AddStringRetDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionRet_add_string_retDefaultTypeInternal() {}
+  ~FunctionRet_AddStringRetDefaultTypeInternal() {}
   union {
-    FunctionRet_add_string_ret _instance;
+    FunctionRet_AddStringRet _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_add_string_retDefaultTypeInternal _FunctionRet_add_string_ret_default_instance_;
-constexpr FunctionRet_player_move_ret::FunctionRet_player_move_ret(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_AddStringRetDefaultTypeInternal _FunctionRet_AddStringRet_default_instance_;
+constexpr FunctionRet_PlayerMoveRet::FunctionRet_PlayerMoveRet(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : x_(0)
   , y_(0)
   , speed_(0)
   , aspect_(0){}
-struct FunctionRet_player_move_retDefaultTypeInternal {
-  constexpr FunctionRet_player_move_retDefaultTypeInternal()
+struct FunctionRet_PlayerMoveRetDefaultTypeInternal {
+  constexpr FunctionRet_PlayerMoveRetDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FunctionRet_player_move_retDefaultTypeInternal() {}
+  ~FunctionRet_PlayerMoveRetDefaultTypeInternal() {}
   union {
-    FunctionRet_player_move_ret _instance;
+    FunctionRet_PlayerMoveRet _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_player_move_retDefaultTypeInternal _FunctionRet_player_move_ret_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRet_PlayerMoveRetDefaultTypeInternal _FunctionRet_PlayerMoveRet_default_instance_;
 constexpr FunctionRet::FunctionRet(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : function_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
@@ -169,10 +195,12 @@ struct FunctionRetDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FunctionRetDefaultTypeInternal _FunctionRet_default_instance_;
 constexpr Request::Request(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : call_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , connection_req_(nullptr)
+  : connection_req_(nullptr)
+  , connection_ret_(nullptr)
   , function_call_(nullptr)
-  , function_ret_(nullptr){}
+  , function_ret_(nullptr)
+  , call_type_(0)
+{}
 struct RequestDefaultTypeInternal {
   constexpr RequestDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -183,8 +211,8 @@ struct RequestDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RequestDefaultTypeInternal _Request_default_instance_;
 }  // namespace yi
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Request_2eproto[12];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Request_2eproto = nullptr;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Request_2eproto[14];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_Request_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Request_2eproto = nullptr;
 
 const uint32_t TableStruct_Request_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -194,48 +222,67 @@ const uint32_t TableStruct_Request_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_int, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_int, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet_FuncInfo, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet_FuncInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_int, left_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_int, right_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet_FuncInfo, func_name_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet_FuncInfo, params_type_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet_FuncInfo, return_type_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_double, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_double, _internal_metadata_),
+  2,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_double, left_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_double, right_),
+  PROTOBUF_FIELD_OFFSET(::yi::ConnectionRet, func_info_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddIntParams, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddIntParams, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddIntParams, left_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddIntParams, right_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_string, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_string, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddDoubleParams, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddDoubleParams, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_string, left_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_add_string, right_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddDoubleParams, left_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddDoubleParams, right_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddStringParams, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddStringParams, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, x_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, y_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, speed_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, acceleration_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, aspect_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_player_move, angle_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddStringParams, left_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_AddStringParams, right_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, x_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, y_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, speed_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, acceleration_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, aspect_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionCall_PlayerMoveParams, angle_),
   0,
   1,
   2,
@@ -258,40 +305,40 @@ const uint32_t TableStruct_Request_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   2,
   3,
   4,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_int_ret, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_int_ret, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddIntRet, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddIntRet, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_int_ret, ret_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddIntRet, ret_),
   0,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_double_ret, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_double_ret, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddDoubleRet, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddDoubleRet, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_double_ret, ret_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddDoubleRet, ret_),
   0,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_string_ret, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_string_ret, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddStringRet, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddStringRet, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_add_string_ret, ret_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_AddStringRet, ret_),
   0,
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, x_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, y_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, speed_),
-  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_player_move_ret, aspect_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, x_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, y_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, speed_),
+  PROTOBUF_FIELD_OFFSET(::yi::FunctionRet_PlayerMoveRet, aspect_),
   0,
   1,
   2,
@@ -320,8 +367,10 @@ const uint32_t TableStruct_Request_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::yi::Request, call_type_),
   PROTOBUF_FIELD_OFFSET(::yi::Request, connection_req_),
+  PROTOBUF_FIELD_OFFSET(::yi::Request, connection_ret_),
   PROTOBUF_FIELD_OFFSET(::yi::Request, function_call_),
   PROTOBUF_FIELD_OFFSET(::yi::Request, function_ret_),
+  4,
   0,
   1,
   2,
@@ -329,69 +378,81 @@ const uint32_t TableStruct_Request_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::yi::ConnectionReq)},
-  { 6, 14, -1, sizeof(::yi::FunctionCall_add_int)},
-  { 16, 24, -1, sizeof(::yi::FunctionCall_add_double)},
-  { 26, 34, -1, sizeof(::yi::FunctionCall_add_string)},
-  { 36, 48, -1, sizeof(::yi::FunctionCall_player_move)},
-  { 54, 65, -1, sizeof(::yi::FunctionCall)},
-  { 70, 77, -1, sizeof(::yi::FunctionRet_add_int_ret)},
-  { 78, 85, -1, sizeof(::yi::FunctionRet_add_double_ret)},
-  { 86, 93, -1, sizeof(::yi::FunctionRet_add_string_ret)},
-  { 94, 104, -1, sizeof(::yi::FunctionRet_player_move_ret)},
-  { 108, 119, -1, sizeof(::yi::FunctionRet)},
-  { 124, 134, -1, sizeof(::yi::Request)},
+  { 6, 15, -1, sizeof(::yi::ConnectionRet_FuncInfo)},
+  { 18, -1, -1, sizeof(::yi::ConnectionRet)},
+  { 25, 33, -1, sizeof(::yi::FunctionCall_AddIntParams)},
+  { 35, 43, -1, sizeof(::yi::FunctionCall_AddDoubleParams)},
+  { 45, 53, -1, sizeof(::yi::FunctionCall_AddStringParams)},
+  { 55, 67, -1, sizeof(::yi::FunctionCall_PlayerMoveParams)},
+  { 73, 84, -1, sizeof(::yi::FunctionCall)},
+  { 89, 96, -1, sizeof(::yi::FunctionRet_AddIntRet)},
+  { 97, 104, -1, sizeof(::yi::FunctionRet_AddDoubleRet)},
+  { 105, 112, -1, sizeof(::yi::FunctionRet_AddStringRet)},
+  { 113, 123, -1, sizeof(::yi::FunctionRet_PlayerMoveRet)},
+  { 127, 138, -1, sizeof(::yi::FunctionRet)},
+  { 143, 154, -1, sizeof(::yi::Request)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_ConnectionReq_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_add_int_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_add_double_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_add_string_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_player_move_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_ConnectionRet_FuncInfo_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_ConnectionRet_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_AddIntParams_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_AddDoubleParams_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_AddStringParams_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_PlayerMoveParams_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionCall_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_add_int_ret_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_add_double_ret_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_add_string_ret_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_player_move_ret_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_AddIntRet_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_AddDoubleRet_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_AddStringRet_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_PlayerMoveRet_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_FunctionRet_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::yi::_Request_default_instance_),
 };
 
 const char descriptor_table_protodef_Request_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rRequest.proto\022\002yi\"\017\n\rConnectionReq\"\350\003\n"
-  "\014FunctionCall\022\025\n\rfunction_name\030\001 \002(\t\0220\n\016"
-  "add_int_params\030\002 \001(\0132\030.yi.FunctionCall.a"
-  "dd_int\0226\n\021add_double_params\030\003 \001(\0132\033.yi.F"
-  "unctionCall.add_double\0226\n\021add_string_par"
-  "ams\030\004 \001(\0132\033.yi.FunctionCall.add_string\0228"
-  "\n\022player_move_params\030\005 \001(\0132\034.yi.Function"
-  "Call.player_move\032&\n\007add_int\022\014\n\004left\030\001 \002("
-  "\005\022\r\n\005right\030\002 \002(\005\032)\n\nadd_double\022\014\n\004left\030\001"
-  " \002(\001\022\r\n\005right\030\002 \002(\001\032)\n\nadd_string\022\014\n\004lef"
-  "t\030\001 \002(\t\022\r\n\005right\030\002 \002(\t\032g\n\013player_move\022\t\n"
-  "\001x\030\001 \002(\001\022\t\n\001y\030\002 \002(\001\022\r\n\005speed\030\003 \002(\001\022\024\n\014ac"
-  "celeration\030\004 \002(\001\022\016\n\006aspect\030\005 \002(\001\022\r\n\005angl"
-  "e\030\006 \002(\001\"\276\003\n\013FunctionRet\022\025\n\rfunction_name"
-  "\030\001 \002(\t\0227\n\022add_int_ret_params\030\002 \001(\0132\033.yi."
-  "FunctionRet.add_int_ret\022=\n\025add_double_re"
-  "t_params\030\003 \001(\0132\036.yi.FunctionRet.add_doub"
-  "le_ret\022=\n\025add_string_ret_params\030\004 \001(\0132\036."
-  "yi.FunctionRet.add_string_ret\022\?\n\026player_"
-  "move_ret_params\030\005 \001(\0132\037.yi.FunctionRet.p"
-  "layer_move_ret\032\032\n\013add_int_ret\022\013\n\003ret\030\001 \002"
-  "(\005\032\035\n\016add_double_ret\022\013\n\003ret\030\001 \002(\001\032\035\n\016add"
-  "_string_ret\022\013\n\003ret\030\001 \002(\t\032F\n\017player_move_"
-  "ret\022\t\n\001x\030\001 \002(\001\022\t\n\001y\030\002 \002(\001\022\r\n\005speed\030\003 \002(\001"
-  "\022\016\n\006aspect\030\005 \002(\001\"\227\001\n\007Request\022\021\n\tcall_typ"
-  "e\030\001 \002(\t\022)\n\016connection_req\030\002 \001(\0132\021.yi.Con"
-  "nectionReq\022\'\n\rfunction_call\030\003 \001(\0132\020.yi.F"
-  "unctionCall\022%\n\014function_ret\030\004 \001(\0132\017.yi.F"
-  "unctionRet"
+  "\n\rRequest.proto\022\002yi\"\017\n\rConnectionReq\"\207\001\n"
+  "\rConnectionRet\022-\n\tfunc_info\030\001 \003(\0132\032.yi.C"
+  "onnectionRet.FuncInfo\032G\n\010FuncInfo\022\021\n\tfun"
+  "c_name\030\001 \002(\t\022\023\n\013params_type\030\002 \002(\t\022\023\n\013ret"
+  "urn_type\030\003 \002(\t\"\220\004\n\014FunctionCall\022\025\n\rfunct"
+  "ion_name\030\001 \002(\t\0225\n\016add_int_params\030\002 \001(\0132\035"
+  ".yi.FunctionCall.AddIntParams\022;\n\021add_dou"
+  "ble_params\030\003 \001(\0132 .yi.FunctionCall.AddDo"
+  "ubleParams\022;\n\021add_string_params\030\004 \001(\0132 ."
+  "yi.FunctionCall.AddStringParams\022=\n\022playe"
+  "r_move_params\030\005 \001(\0132!.yi.FunctionCall.Pl"
+  "ayerMoveParams\032+\n\014AddIntParams\022\014\n\004left\030\001"
+  " \002(\005\022\r\n\005right\030\002 \002(\005\032.\n\017AddDoubleParams\022\014"
+  "\n\004left\030\001 \002(\001\022\r\n\005right\030\002 \002(\001\032.\n\017AddString"
+  "Params\022\014\n\004left\030\001 \002(\t\022\r\n\005right\030\002 \002(\t\032l\n\020P"
+  "layerMoveParams\022\t\n\001x\030\001 \002(\001\022\t\n\001y\030\002 \002(\001\022\r\n"
+  "\005speed\030\003 \002(\001\022\024\n\014acceleration\030\004 \002(\001\022\016\n\006as"
+  "pect\030\005 \002(\001\022\r\n\005angle\030\006 \002(\001\"\256\003\n\013FunctionRe"
+  "t\022\025\n\rfunction_name\030\001 \002(\t\0225\n\022add_int_ret_"
+  "params\030\002 \001(\0132\031.yi.FunctionRet.AddIntRet\022"
+  ";\n\025add_double_ret_params\030\003 \001(\0132\034.yi.Func"
+  "tionRet.AddDoubleRet\022;\n\025add_string_ret_p"
+  "arams\030\004 \001(\0132\034.yi.FunctionRet.AddStringRe"
+  "t\022=\n\026player_move_ret_params\030\005 \001(\0132\035.yi.F"
+  "unctionRet.PlayerMoveRet\032\030\n\tAddIntRet\022\013\n"
+  "\003ret\030\001 \002(\005\032\033\n\014AddDoubleRet\022\013\n\003ret\030\001 \002(\001\032"
+  "\033\n\014AddStringRet\022\013\n\003ret\030\001 \002(\t\032D\n\rPlayerMo"
+  "veRet\022\t\n\001x\030\001 \002(\001\022\t\n\001y\030\002 \002(\001\022\r\n\005speed\030\003 \002"
+  "(\001\022\016\n\006aspect\030\005 \002(\001\"\263\002\n\007Request\022*\n\tcall_t"
+  "ype\030\001 \002(\0162\027.yi.Request.RequestType\022)\n\016co"
+  "nnection_req\030\002 \001(\0132\021.yi.ConnectionReq\022)\n"
+  "\016connection_ret\030\003 \001(\0132\021.yi.ConnectionRet"
+  "\022\'\n\rfunction_call\030\004 \001(\0132\020.yi.FunctionCal"
+  "l\022%\n\014function_ret\030\005 \001(\0132\017.yi.FunctionRet"
+  "\"V\n\013RequestType\022\021\n\rConnectionReq\020\000\022\021\n\rCo"
+  "nnectionRet\020\001\022\020\n\014FunctionCall\020\002\022\017\n\013Funct"
+  "ionRet\020\003"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Request_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Request_2eproto = {
-  false, false, 1130, descriptor_table_protodef_Request_2eproto, "Request.proto", 
-  &descriptor_table_Request_2eproto_once, nullptr, 0, 12,
+  false, false, 1448, descriptor_table_protodef_Request_2eproto, "Request.proto", 
+  &descriptor_table_Request_2eproto_once, nullptr, 0, 14,
   schemas, file_default_instances, TableStruct_Request_2eproto::offsets,
   file_level_metadata_Request_2eproto, file_level_enum_descriptors_Request_2eproto, file_level_service_descriptors_Request_2eproto,
 };
@@ -402,6 +463,31 @@ PROTOBUF_ATTRIBUTE_WEAK const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_Request_2eproto(&descriptor_table_Request_2eproto);
 namespace yi {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Request_RequestType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Request_2eproto);
+  return file_level_enum_descriptors_Request_2eproto[0];
+}
+bool Request_RequestType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr Request_RequestType Request::ConnectionReq;
+constexpr Request_RequestType Request::ConnectionRet;
+constexpr Request_RequestType Request::FunctionCall;
+constexpr Request_RequestType Request::FunctionRet;
+constexpr Request_RequestType Request::RequestType_MIN;
+constexpr Request_RequestType Request::RequestType_MAX;
+constexpr int Request::RequestType_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
@@ -444,9 +530,560 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectionReq::GetClassData() 
 
 // ===================================================================
 
-class FunctionCall_add_int::_Internal {
+class ConnectionRet_FuncInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionCall_add_int>()._has_bits_);
+  using HasBits = decltype(std::declval<ConnectionRet_FuncInfo>()._has_bits_);
+  static void set_has_func_name(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_params_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_return_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
+  }
+};
+
+ConnectionRet_FuncInfo::ConnectionRet_FuncInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:yi.ConnectionRet.FuncInfo)
+}
+ConnectionRet_FuncInfo::ConnectionRet_FuncInfo(const ConnectionRet_FuncInfo& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  func_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    func_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_func_name()) {
+    func_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_func_name(), 
+      GetArenaForAllocation());
+  }
+  params_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    params_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_params_type()) {
+    params_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_params_type(), 
+      GetArenaForAllocation());
+  }
+  return_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    return_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_return_type()) {
+    return_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_return_type(), 
+      GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:yi.ConnectionRet.FuncInfo)
+}
+
+inline void ConnectionRet_FuncInfo::SharedCtor() {
+func_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  func_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+params_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  params_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+return_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+ConnectionRet_FuncInfo::~ConnectionRet_FuncInfo() {
+  // @@protoc_insertion_point(destructor:yi.ConnectionRet.FuncInfo)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void ConnectionRet_FuncInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  func_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  params_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  return_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void ConnectionRet_FuncInfo::ArenaDtor(void* object) {
+  ConnectionRet_FuncInfo* _this = reinterpret_cast< ConnectionRet_FuncInfo* >(object);
+  (void)_this;
+}
+void ConnectionRet_FuncInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ConnectionRet_FuncInfo::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ConnectionRet_FuncInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.ConnectionRet.FuncInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      func_name_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      params_type_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      return_type_.ClearNonDefaultToEmpty();
+    }
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ConnectionRet_FuncInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required string func_name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_func_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          #ifndef NDEBUG
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.ConnectionRet.FuncInfo.func_name");
+          #endif  // !NDEBUG
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required string params_type = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_params_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          #ifndef NDEBUG
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.ConnectionRet.FuncInfo.params_type");
+          #endif  // !NDEBUG
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required string return_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_return_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          #ifndef NDEBUG
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.ConnectionRet.FuncInfo.return_type");
+          #endif  // !NDEBUG
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ConnectionRet_FuncInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:yi.ConnectionRet.FuncInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // required string func_name = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_func_name().data(), static_cast<int>(this->_internal_func_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "yi.ConnectionRet.FuncInfo.func_name");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_func_name(), target);
+  }
+
+  // required string params_type = 2;
+  if (cached_has_bits & 0x00000002u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_params_type().data(), static_cast<int>(this->_internal_params_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "yi.ConnectionRet.FuncInfo.params_type");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_params_type(), target);
+  }
+
+  // required string return_type = 3;
+  if (cached_has_bits & 0x00000004u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_return_type().data(), static_cast<int>(this->_internal_return_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "yi.ConnectionRet.FuncInfo.return_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_return_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:yi.ConnectionRet.FuncInfo)
+  return target;
+}
+
+size_t ConnectionRet_FuncInfo::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.ConnectionRet.FuncInfo)
+  size_t total_size = 0;
+
+  if (_internal_has_func_name()) {
+    // required string func_name = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_func_name());
+  }
+
+  if (_internal_has_params_type()) {
+    // required string params_type = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_params_type());
+  }
+
+  if (_internal_has_return_type()) {
+    // required string return_type = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_return_type());
+  }
+
+  return total_size;
+}
+size_t ConnectionRet_FuncInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.ConnectionRet.FuncInfo)
+  size_t total_size = 0;
+
+  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required string func_name = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_func_name());
+
+    // required string params_type = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_params_type());
+
+    // required string return_type = 3;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_return_type());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ConnectionRet_FuncInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ConnectionRet_FuncInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectionRet_FuncInfo::GetClassData() const { return &_class_data_; }
+
+void ConnectionRet_FuncInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ConnectionRet_FuncInfo *>(to)->MergeFrom(
+      static_cast<const ConnectionRet_FuncInfo &>(from));
+}
+
+
+void ConnectionRet_FuncInfo::MergeFrom(const ConnectionRet_FuncInfo& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.ConnectionRet.FuncInfo)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_func_name(from._internal_func_name());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_params_type(from._internal_params_type());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _internal_set_return_type(from._internal_return_type());
+    }
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ConnectionRet_FuncInfo::CopyFrom(const ConnectionRet_FuncInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.ConnectionRet.FuncInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConnectionRet_FuncInfo::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+  return true;
+}
+
+void ConnectionRet_FuncInfo::InternalSwap(ConnectionRet_FuncInfo* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &func_name_, lhs_arena,
+      &other->func_name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &params_type_, lhs_arena,
+      &other->params_type_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &return_type_, lhs_arena,
+      &other->return_type_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ConnectionRet_FuncInfo::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
+      file_level_metadata_Request_2eproto[1]);
+}
+
+// ===================================================================
+
+class ConnectionRet::_Internal {
+ public:
+};
+
+ConnectionRet::ConnectionRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  func_info_(arena) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:yi.ConnectionRet)
+}
+ConnectionRet::ConnectionRet(const ConnectionRet& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      func_info_(from.func_info_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:yi.ConnectionRet)
+}
+
+inline void ConnectionRet::SharedCtor() {
+}
+
+ConnectionRet::~ConnectionRet() {
+  // @@protoc_insertion_point(destructor:yi.ConnectionRet)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void ConnectionRet::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ConnectionRet::ArenaDtor(void* object) {
+  ConnectionRet* _this = reinterpret_cast< ConnectionRet* >(object);
+  (void)_this;
+}
+void ConnectionRet::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ConnectionRet::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ConnectionRet::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.ConnectionRet)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  func_info_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ConnectionRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .yi.ConnectionRet.FuncInfo func_info = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_func_info(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ConnectionRet::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:yi.ConnectionRet)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .yi.ConnectionRet.FuncInfo func_info = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_func_info_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_func_info(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:yi.ConnectionRet)
+  return target;
+}
+
+size_t ConnectionRet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.ConnectionRet)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .yi.ConnectionRet.FuncInfo func_info = 1;
+  total_size += 1UL * this->_internal_func_info_size();
+  for (const auto& msg : this->func_info_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ConnectionRet::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ConnectionRet::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectionRet::GetClassData() const { return &_class_data_; }
+
+void ConnectionRet::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ConnectionRet *>(to)->MergeFrom(
+      static_cast<const ConnectionRet &>(from));
+}
+
+
+void ConnectionRet::MergeFrom(const ConnectionRet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.ConnectionRet)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  func_info_.MergeFrom(from.func_info_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ConnectionRet::CopyFrom(const ConnectionRet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.ConnectionRet)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConnectionRet::IsInitialized() const {
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(func_info_))
+    return false;
+  return true;
+}
+
+void ConnectionRet::InternalSwap(ConnectionRet* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  func_info_.InternalSwap(&other->func_info_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ConnectionRet::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
+      file_level_metadata_Request_2eproto[2]);
+}
+
+// ===================================================================
+
+class FunctionCall_AddIntParams::_Internal {
+ public:
+  using HasBits = decltype(std::declval<FunctionCall_AddIntParams>()._has_bits_);
   static void set_has_left(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -458,55 +1095,55 @@ class FunctionCall_add_int::_Internal {
   }
 };
 
-FunctionCall_add_int::FunctionCall_add_int(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionCall_AddIntParams::FunctionCall_AddIntParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.add_int)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.AddIntParams)
 }
-FunctionCall_add_int::FunctionCall_add_int(const FunctionCall_add_int& from)
+FunctionCall_AddIntParams::FunctionCall_AddIntParams(const FunctionCall_AddIntParams& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&left_, &from.left_,
     static_cast<size_t>(reinterpret_cast<char*>(&right_) -
     reinterpret_cast<char*>(&left_)) + sizeof(right_));
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.add_int)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.AddIntParams)
 }
 
-inline void FunctionCall_add_int::SharedCtor() {
+inline void FunctionCall_AddIntParams::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&left_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&right_) -
     reinterpret_cast<char*>(&left_)) + sizeof(right_));
 }
 
-FunctionCall_add_int::~FunctionCall_add_int() {
-  // @@protoc_insertion_point(destructor:yi.FunctionCall.add_int)
+FunctionCall_AddIntParams::~FunctionCall_AddIntParams() {
+  // @@protoc_insertion_point(destructor:yi.FunctionCall.AddIntParams)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionCall_add_int::SharedDtor() {
+inline void FunctionCall_AddIntParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionCall_add_int::ArenaDtor(void* object) {
-  FunctionCall_add_int* _this = reinterpret_cast< FunctionCall_add_int* >(object);
+void FunctionCall_AddIntParams::ArenaDtor(void* object) {
+  FunctionCall_AddIntParams* _this = reinterpret_cast< FunctionCall_AddIntParams* >(object);
   (void)_this;
 }
-void FunctionCall_add_int::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionCall_AddIntParams::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionCall_add_int::SetCachedSize(int size) const {
+void FunctionCall_AddIntParams::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionCall_add_int::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.add_int)
+void FunctionCall_AddIntParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.AddIntParams)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -521,7 +1158,7 @@ void FunctionCall_add_int::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionCall_add_int::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionCall_AddIntParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -570,9 +1207,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionCall_add_int::_InternalSerialize(
+uint8_t* FunctionCall_AddIntParams::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.add_int)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.AddIntParams)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -593,12 +1230,12 @@ uint8_t* FunctionCall_add_int::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.add_int)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.AddIntParams)
   return target;
 }
 
-size_t FunctionCall_add_int::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.add_int)
+size_t FunctionCall_AddIntParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.AddIntParams)
   size_t total_size = 0;
 
   if (_internal_has_left()) {
@@ -613,8 +1250,8 @@ size_t FunctionCall_add_int::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t FunctionCall_add_int::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.add_int)
+size_t FunctionCall_AddIntParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.AddIntParams)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -634,21 +1271,21 @@ size_t FunctionCall_add_int::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_add_int::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_AddIntParams::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionCall_add_int::MergeImpl
+    FunctionCall_AddIntParams::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_add_int::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_AddIntParams::GetClassData() const { return &_class_data_; }
 
-void FunctionCall_add_int::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionCall_AddIntParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionCall_add_int *>(to)->MergeFrom(
-      static_cast<const FunctionCall_add_int &>(from));
+  static_cast<FunctionCall_AddIntParams *>(to)->MergeFrom(
+      static_cast<const FunctionCall_AddIntParams &>(from));
 }
 
 
-void FunctionCall_add_int::MergeFrom(const FunctionCall_add_int& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.add_int)
+void FunctionCall_AddIntParams::MergeFrom(const FunctionCall_AddIntParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.AddIntParams)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -666,41 +1303,41 @@ void FunctionCall_add_int::MergeFrom(const FunctionCall_add_int& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionCall_add_int::CopyFrom(const FunctionCall_add_int& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.add_int)
+void FunctionCall_AddIntParams::CopyFrom(const FunctionCall_AddIntParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.AddIntParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionCall_add_int::IsInitialized() const {
+bool FunctionCall_AddIntParams::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionCall_add_int::InternalSwap(FunctionCall_add_int* other) {
+void FunctionCall_AddIntParams::InternalSwap(FunctionCall_AddIntParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FunctionCall_add_int, right_)
-      + sizeof(FunctionCall_add_int::right_)
-      - PROTOBUF_FIELD_OFFSET(FunctionCall_add_int, left_)>(
+      PROTOBUF_FIELD_OFFSET(FunctionCall_AddIntParams, right_)
+      + sizeof(FunctionCall_AddIntParams::right_)
+      - PROTOBUF_FIELD_OFFSET(FunctionCall_AddIntParams, left_)>(
           reinterpret_cast<char*>(&left_),
           reinterpret_cast<char*>(&other->left_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_add_int::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_AddIntParams::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[1]);
+      file_level_metadata_Request_2eproto[3]);
 }
 
 // ===================================================================
 
-class FunctionCall_add_double::_Internal {
+class FunctionCall_AddDoubleParams::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionCall_add_double>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionCall_AddDoubleParams>()._has_bits_);
   static void set_has_left(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -712,55 +1349,55 @@ class FunctionCall_add_double::_Internal {
   }
 };
 
-FunctionCall_add_double::FunctionCall_add_double(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionCall_AddDoubleParams::FunctionCall_AddDoubleParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.add_double)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.AddDoubleParams)
 }
-FunctionCall_add_double::FunctionCall_add_double(const FunctionCall_add_double& from)
+FunctionCall_AddDoubleParams::FunctionCall_AddDoubleParams(const FunctionCall_AddDoubleParams& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&left_, &from.left_,
     static_cast<size_t>(reinterpret_cast<char*>(&right_) -
     reinterpret_cast<char*>(&left_)) + sizeof(right_));
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.add_double)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.AddDoubleParams)
 }
 
-inline void FunctionCall_add_double::SharedCtor() {
+inline void FunctionCall_AddDoubleParams::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&left_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&right_) -
     reinterpret_cast<char*>(&left_)) + sizeof(right_));
 }
 
-FunctionCall_add_double::~FunctionCall_add_double() {
-  // @@protoc_insertion_point(destructor:yi.FunctionCall.add_double)
+FunctionCall_AddDoubleParams::~FunctionCall_AddDoubleParams() {
+  // @@protoc_insertion_point(destructor:yi.FunctionCall.AddDoubleParams)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionCall_add_double::SharedDtor() {
+inline void FunctionCall_AddDoubleParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionCall_add_double::ArenaDtor(void* object) {
-  FunctionCall_add_double* _this = reinterpret_cast< FunctionCall_add_double* >(object);
+void FunctionCall_AddDoubleParams::ArenaDtor(void* object) {
+  FunctionCall_AddDoubleParams* _this = reinterpret_cast< FunctionCall_AddDoubleParams* >(object);
   (void)_this;
 }
-void FunctionCall_add_double::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionCall_AddDoubleParams::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionCall_add_double::SetCachedSize(int size) const {
+void FunctionCall_AddDoubleParams::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionCall_add_double::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.add_double)
+void FunctionCall_AddDoubleParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.AddDoubleParams)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -775,7 +1412,7 @@ void FunctionCall_add_double::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionCall_add_double::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionCall_AddDoubleParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -824,9 +1461,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionCall_add_double::_InternalSerialize(
+uint8_t* FunctionCall_AddDoubleParams::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.add_double)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.AddDoubleParams)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -847,12 +1484,12 @@ uint8_t* FunctionCall_add_double::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.add_double)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.AddDoubleParams)
   return target;
 }
 
-size_t FunctionCall_add_double::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.add_double)
+size_t FunctionCall_AddDoubleParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.AddDoubleParams)
   size_t total_size = 0;
 
   if (_internal_has_left()) {
@@ -867,8 +1504,8 @@ size_t FunctionCall_add_double::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t FunctionCall_add_double::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.add_double)
+size_t FunctionCall_AddDoubleParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.AddDoubleParams)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -888,21 +1525,21 @@ size_t FunctionCall_add_double::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_add_double::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_AddDoubleParams::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionCall_add_double::MergeImpl
+    FunctionCall_AddDoubleParams::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_add_double::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_AddDoubleParams::GetClassData() const { return &_class_data_; }
 
-void FunctionCall_add_double::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionCall_AddDoubleParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionCall_add_double *>(to)->MergeFrom(
-      static_cast<const FunctionCall_add_double &>(from));
+  static_cast<FunctionCall_AddDoubleParams *>(to)->MergeFrom(
+      static_cast<const FunctionCall_AddDoubleParams &>(from));
 }
 
 
-void FunctionCall_add_double::MergeFrom(const FunctionCall_add_double& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.add_double)
+void FunctionCall_AddDoubleParams::MergeFrom(const FunctionCall_AddDoubleParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.AddDoubleParams)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -920,41 +1557,41 @@ void FunctionCall_add_double::MergeFrom(const FunctionCall_add_double& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionCall_add_double::CopyFrom(const FunctionCall_add_double& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.add_double)
+void FunctionCall_AddDoubleParams::CopyFrom(const FunctionCall_AddDoubleParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.AddDoubleParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionCall_add_double::IsInitialized() const {
+bool FunctionCall_AddDoubleParams::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionCall_add_double::InternalSwap(FunctionCall_add_double* other) {
+void FunctionCall_AddDoubleParams::InternalSwap(FunctionCall_AddDoubleParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FunctionCall_add_double, right_)
-      + sizeof(FunctionCall_add_double::right_)
-      - PROTOBUF_FIELD_OFFSET(FunctionCall_add_double, left_)>(
+      PROTOBUF_FIELD_OFFSET(FunctionCall_AddDoubleParams, right_)
+      + sizeof(FunctionCall_AddDoubleParams::right_)
+      - PROTOBUF_FIELD_OFFSET(FunctionCall_AddDoubleParams, left_)>(
           reinterpret_cast<char*>(&left_),
           reinterpret_cast<char*>(&other->left_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_add_double::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_AddDoubleParams::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[2]);
+      file_level_metadata_Request_2eproto[4]);
 }
 
 // ===================================================================
 
-class FunctionCall_add_string::_Internal {
+class FunctionCall_AddStringParams::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionCall_add_string>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionCall_AddStringParams>()._has_bits_);
   static void set_has_left(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -966,16 +1603,16 @@ class FunctionCall_add_string::_Internal {
   }
 };
 
-FunctionCall_add_string::FunctionCall_add_string(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionCall_AddStringParams::FunctionCall_AddStringParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.add_string)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.AddStringParams)
 }
-FunctionCall_add_string::FunctionCall_add_string(const FunctionCall_add_string& from)
+FunctionCall_AddStringParams::FunctionCall_AddStringParams(const FunctionCall_AddStringParams& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -995,10 +1632,10 @@ FunctionCall_add_string::FunctionCall_add_string(const FunctionCall_add_string& 
     right_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_right(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.add_string)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.AddStringParams)
 }
 
-inline void FunctionCall_add_string::SharedCtor() {
+inline void FunctionCall_AddStringParams::SharedCtor() {
 left_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   left_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -1009,31 +1646,31 @@ right_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlread
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-FunctionCall_add_string::~FunctionCall_add_string() {
-  // @@protoc_insertion_point(destructor:yi.FunctionCall.add_string)
+FunctionCall_AddStringParams::~FunctionCall_AddStringParams() {
+  // @@protoc_insertion_point(destructor:yi.FunctionCall.AddStringParams)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionCall_add_string::SharedDtor() {
+inline void FunctionCall_AddStringParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   left_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   right_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void FunctionCall_add_string::ArenaDtor(void* object) {
-  FunctionCall_add_string* _this = reinterpret_cast< FunctionCall_add_string* >(object);
+void FunctionCall_AddStringParams::ArenaDtor(void* object) {
+  FunctionCall_AddStringParams* _this = reinterpret_cast< FunctionCall_AddStringParams* >(object);
   (void)_this;
 }
-void FunctionCall_add_string::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionCall_AddStringParams::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionCall_add_string::SetCachedSize(int size) const {
+void FunctionCall_AddStringParams::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionCall_add_string::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.add_string)
+void FunctionCall_AddStringParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.AddStringParams)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1051,7 +1688,7 @@ void FunctionCall_add_string::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionCall_add_string::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionCall_AddStringParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1064,7 +1701,7 @@ const char* FunctionCall_add_string::_InternalParse(const char* ptr, ::PROTOBUF_
           auto str = _internal_mutable_left();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionCall.add_string.left");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionCall.AddStringParams.left");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -1076,7 +1713,7 @@ const char* FunctionCall_add_string::_InternalParse(const char* ptr, ::PROTOBUF_
           auto str = _internal_mutable_right();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionCall.add_string.right");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionCall.AddStringParams.right");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -1106,9 +1743,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionCall_add_string::_InternalSerialize(
+uint8_t* FunctionCall_AddStringParams::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.add_string)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.AddStringParams)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1118,7 +1755,7 @@ uint8_t* FunctionCall_add_string::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_left().data(), static_cast<int>(this->_internal_left().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "yi.FunctionCall.add_string.left");
+      "yi.FunctionCall.AddStringParams.left");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_left(), target);
   }
@@ -1128,7 +1765,7 @@ uint8_t* FunctionCall_add_string::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_right().data(), static_cast<int>(this->_internal_right().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "yi.FunctionCall.add_string.right");
+      "yi.FunctionCall.AddStringParams.right");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_right(), target);
   }
@@ -1137,12 +1774,12 @@ uint8_t* FunctionCall_add_string::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.add_string)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.AddStringParams)
   return target;
 }
 
-size_t FunctionCall_add_string::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.add_string)
+size_t FunctionCall_AddStringParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.AddStringParams)
   size_t total_size = 0;
 
   if (_internal_has_left()) {
@@ -1161,8 +1798,8 @@ size_t FunctionCall_add_string::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t FunctionCall_add_string::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.add_string)
+size_t FunctionCall_AddStringParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.AddStringParams)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -1186,21 +1823,21 @@ size_t FunctionCall_add_string::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_add_string::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_AddStringParams::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionCall_add_string::MergeImpl
+    FunctionCall_AddStringParams::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_add_string::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_AddStringParams::GetClassData() const { return &_class_data_; }
 
-void FunctionCall_add_string::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionCall_AddStringParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionCall_add_string *>(to)->MergeFrom(
-      static_cast<const FunctionCall_add_string &>(from));
+  static_cast<FunctionCall_AddStringParams *>(to)->MergeFrom(
+      static_cast<const FunctionCall_AddStringParams &>(from));
 }
 
 
-void FunctionCall_add_string::MergeFrom(const FunctionCall_add_string& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.add_string)
+void FunctionCall_AddStringParams::MergeFrom(const FunctionCall_AddStringParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.AddStringParams)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1217,19 +1854,19 @@ void FunctionCall_add_string::MergeFrom(const FunctionCall_add_string& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionCall_add_string::CopyFrom(const FunctionCall_add_string& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.add_string)
+void FunctionCall_AddStringParams::CopyFrom(const FunctionCall_AddStringParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.AddStringParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionCall_add_string::IsInitialized() const {
+bool FunctionCall_AddStringParams::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionCall_add_string::InternalSwap(FunctionCall_add_string* other) {
+void FunctionCall_AddStringParams::InternalSwap(FunctionCall_AddStringParams* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -1247,17 +1884,17 @@ void FunctionCall_add_string::InternalSwap(FunctionCall_add_string* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_add_string::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_AddStringParams::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[3]);
+      file_level_metadata_Request_2eproto[5]);
 }
 
 // ===================================================================
 
-class FunctionCall_player_move::_Internal {
+class FunctionCall_PlayerMoveParams::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionCall_player_move>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionCall_PlayerMoveParams>()._has_bits_);
   static void set_has_x(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -1281,55 +1918,55 @@ class FunctionCall_player_move::_Internal {
   }
 };
 
-FunctionCall_player_move::FunctionCall_player_move(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionCall_PlayerMoveParams::FunctionCall_PlayerMoveParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.player_move)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionCall.PlayerMoveParams)
 }
-FunctionCall_player_move::FunctionCall_player_move(const FunctionCall_player_move& from)
+FunctionCall_PlayerMoveParams::FunctionCall_PlayerMoveParams(const FunctionCall_PlayerMoveParams& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&x_, &from.x_,
     static_cast<size_t>(reinterpret_cast<char*>(&angle_) -
     reinterpret_cast<char*>(&x_)) + sizeof(angle_));
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.player_move)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionCall.PlayerMoveParams)
 }
 
-inline void FunctionCall_player_move::SharedCtor() {
+inline void FunctionCall_PlayerMoveParams::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&x_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&angle_) -
     reinterpret_cast<char*>(&x_)) + sizeof(angle_));
 }
 
-FunctionCall_player_move::~FunctionCall_player_move() {
-  // @@protoc_insertion_point(destructor:yi.FunctionCall.player_move)
+FunctionCall_PlayerMoveParams::~FunctionCall_PlayerMoveParams() {
+  // @@protoc_insertion_point(destructor:yi.FunctionCall.PlayerMoveParams)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionCall_player_move::SharedDtor() {
+inline void FunctionCall_PlayerMoveParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionCall_player_move::ArenaDtor(void* object) {
-  FunctionCall_player_move* _this = reinterpret_cast< FunctionCall_player_move* >(object);
+void FunctionCall_PlayerMoveParams::ArenaDtor(void* object) {
+  FunctionCall_PlayerMoveParams* _this = reinterpret_cast< FunctionCall_PlayerMoveParams* >(object);
   (void)_this;
 }
-void FunctionCall_player_move::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionCall_PlayerMoveParams::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionCall_player_move::SetCachedSize(int size) const {
+void FunctionCall_PlayerMoveParams::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionCall_player_move::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.player_move)
+void FunctionCall_PlayerMoveParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionCall.PlayerMoveParams)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1344,7 +1981,7 @@ void FunctionCall_player_move::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionCall_player_move::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionCall_PlayerMoveParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1429,9 +2066,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionCall_player_move::_InternalSerialize(
+uint8_t* FunctionCall_PlayerMoveParams::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.player_move)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionCall.PlayerMoveParams)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1476,12 +2113,12 @@ uint8_t* FunctionCall_player_move::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.player_move)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionCall.PlayerMoveParams)
   return target;
 }
 
-size_t FunctionCall_player_move::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.player_move)
+size_t FunctionCall_PlayerMoveParams::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionCall.PlayerMoveParams)
   size_t total_size = 0;
 
   if (_internal_has_x()) {
@@ -1516,8 +2153,8 @@ size_t FunctionCall_player_move::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t FunctionCall_player_move::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.player_move)
+size_t FunctionCall_PlayerMoveParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionCall.PlayerMoveParams)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
@@ -1549,21 +2186,21 @@ size_t FunctionCall_player_move::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_player_move::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionCall_PlayerMoveParams::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionCall_player_move::MergeImpl
+    FunctionCall_PlayerMoveParams::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_player_move::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionCall_PlayerMoveParams::GetClassData() const { return &_class_data_; }
 
-void FunctionCall_player_move::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionCall_PlayerMoveParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionCall_player_move *>(to)->MergeFrom(
-      static_cast<const FunctionCall_player_move &>(from));
+  static_cast<FunctionCall_PlayerMoveParams *>(to)->MergeFrom(
+      static_cast<const FunctionCall_PlayerMoveParams &>(from));
 }
 
 
-void FunctionCall_player_move::MergeFrom(const FunctionCall_player_move& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.player_move)
+void FunctionCall_PlayerMoveParams::MergeFrom(const FunctionCall_PlayerMoveParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionCall.PlayerMoveParams)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1593,34 +2230,34 @@ void FunctionCall_player_move::MergeFrom(const FunctionCall_player_move& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionCall_player_move::CopyFrom(const FunctionCall_player_move& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.player_move)
+void FunctionCall_PlayerMoveParams::CopyFrom(const FunctionCall_PlayerMoveParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionCall.PlayerMoveParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionCall_player_move::IsInitialized() const {
+bool FunctionCall_PlayerMoveParams::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionCall_player_move::InternalSwap(FunctionCall_player_move* other) {
+void FunctionCall_PlayerMoveParams::InternalSwap(FunctionCall_PlayerMoveParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FunctionCall_player_move, angle_)
-      + sizeof(FunctionCall_player_move::angle_)
-      - PROTOBUF_FIELD_OFFSET(FunctionCall_player_move, x_)>(
+      PROTOBUF_FIELD_OFFSET(FunctionCall_PlayerMoveParams, angle_)
+      + sizeof(FunctionCall_PlayerMoveParams::angle_)
+      - PROTOBUF_FIELD_OFFSET(FunctionCall_PlayerMoveParams, x_)>(
           reinterpret_cast<char*>(&x_),
           reinterpret_cast<char*>(&other->x_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_player_move::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall_PlayerMoveParams::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[4]);
+      file_level_metadata_Request_2eproto[6]);
 }
 
 // ===================================================================
@@ -1631,19 +2268,19 @@ class FunctionCall::_Internal {
   static void set_has_function_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::yi::FunctionCall_add_int& add_int_params(const FunctionCall* msg);
+  static const ::yi::FunctionCall_AddIntParams& add_int_params(const FunctionCall* msg);
   static void set_has_add_int_params(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static const ::yi::FunctionCall_add_double& add_double_params(const FunctionCall* msg);
+  static const ::yi::FunctionCall_AddDoubleParams& add_double_params(const FunctionCall* msg);
   static void set_has_add_double_params(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static const ::yi::FunctionCall_add_string& add_string_params(const FunctionCall* msg);
+  static const ::yi::FunctionCall_AddStringParams& add_string_params(const FunctionCall* msg);
   static void set_has_add_string_params(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static const ::yi::FunctionCall_player_move& player_move_params(const FunctionCall* msg);
+  static const ::yi::FunctionCall_PlayerMoveParams& player_move_params(const FunctionCall* msg);
   static void set_has_player_move_params(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
@@ -1652,19 +2289,19 @@ class FunctionCall::_Internal {
   }
 };
 
-const ::yi::FunctionCall_add_int&
+const ::yi::FunctionCall_AddIntParams&
 FunctionCall::_Internal::add_int_params(const FunctionCall* msg) {
   return *msg->add_int_params_;
 }
-const ::yi::FunctionCall_add_double&
+const ::yi::FunctionCall_AddDoubleParams&
 FunctionCall::_Internal::add_double_params(const FunctionCall* msg) {
   return *msg->add_double_params_;
 }
-const ::yi::FunctionCall_add_string&
+const ::yi::FunctionCall_AddStringParams&
 FunctionCall::_Internal::add_string_params(const FunctionCall* msg) {
   return *msg->add_string_params_;
 }
-const ::yi::FunctionCall_player_move&
+const ::yi::FunctionCall_PlayerMoveParams&
 FunctionCall::_Internal::player_move_params(const FunctionCall* msg) {
   return *msg->player_move_params_;
 }
@@ -1690,22 +2327,22 @@ FunctionCall::FunctionCall(const FunctionCall& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_add_int_params()) {
-    add_int_params_ = new ::yi::FunctionCall_add_int(*from.add_int_params_);
+    add_int_params_ = new ::yi::FunctionCall_AddIntParams(*from.add_int_params_);
   } else {
     add_int_params_ = nullptr;
   }
   if (from._internal_has_add_double_params()) {
-    add_double_params_ = new ::yi::FunctionCall_add_double(*from.add_double_params_);
+    add_double_params_ = new ::yi::FunctionCall_AddDoubleParams(*from.add_double_params_);
   } else {
     add_double_params_ = nullptr;
   }
   if (from._internal_has_add_string_params()) {
-    add_string_params_ = new ::yi::FunctionCall_add_string(*from.add_string_params_);
+    add_string_params_ = new ::yi::FunctionCall_AddStringParams(*from.add_string_params_);
   } else {
     add_string_params_ = nullptr;
   }
   if (from._internal_has_player_move_params()) {
-    player_move_params_ = new ::yi::FunctionCall_player_move(*from.player_move_params_);
+    player_move_params_ = new ::yi::FunctionCall_PlayerMoveParams(*from.player_move_params_);
   } else {
     player_move_params_ = nullptr;
   }
@@ -1800,7 +2437,7 @@ const char* FunctionCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionCall.add_int add_int_params = 2;
+      // optional .yi.FunctionCall.AddIntParams add_int_params = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_int_params(), ptr);
@@ -1808,7 +2445,7 @@ const char* FunctionCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionCall.add_double add_double_params = 3;
+      // optional .yi.FunctionCall.AddDoubleParams add_double_params = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_double_params(), ptr);
@@ -1816,7 +2453,7 @@ const char* FunctionCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionCall.add_string add_string_params = 4;
+      // optional .yi.FunctionCall.AddStringParams add_string_params = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_string_params(), ptr);
@@ -1824,7 +2461,7 @@ const char* FunctionCall::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionCall.player_move player_move_params = 5;
+      // optional .yi.FunctionCall.PlayerMoveParams player_move_params = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_player_move_params(), ptr);
@@ -1873,7 +2510,7 @@ uint8_t* FunctionCall::_InternalSerialize(
         1, this->_internal_function_name(), target);
   }
 
-  // optional .yi.FunctionCall.add_int add_int_params = 2;
+  // optional .yi.FunctionCall.AddIntParams add_int_params = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1881,7 +2518,7 @@ uint8_t* FunctionCall::_InternalSerialize(
         2, _Internal::add_int_params(this), target, stream);
   }
 
-  // optional .yi.FunctionCall.add_double add_double_params = 3;
+  // optional .yi.FunctionCall.AddDoubleParams add_double_params = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1889,7 +2526,7 @@ uint8_t* FunctionCall::_InternalSerialize(
         3, _Internal::add_double_params(this), target, stream);
   }
 
-  // optional .yi.FunctionCall.add_string add_string_params = 4;
+  // optional .yi.FunctionCall.AddStringParams add_string_params = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1897,7 +2534,7 @@ uint8_t* FunctionCall::_InternalSerialize(
         4, _Internal::add_string_params(this), target, stream);
   }
 
-  // optional .yi.FunctionCall.player_move player_move_params = 5;
+  // optional .yi.FunctionCall.PlayerMoveParams player_move_params = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1929,28 +2566,28 @@ size_t FunctionCall::ByteSizeLong() const {
 
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x0000001eu) {
-    // optional .yi.FunctionCall.add_int add_int_params = 2;
+    // optional .yi.FunctionCall.AddIntParams add_int_params = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_int_params_);
     }
 
-    // optional .yi.FunctionCall.add_double add_double_params = 3;
+    // optional .yi.FunctionCall.AddDoubleParams add_double_params = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_double_params_);
     }
 
-    // optional .yi.FunctionCall.add_string add_string_params = 4;
+    // optional .yi.FunctionCall.AddStringParams add_string_params = 4;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_string_params_);
     }
 
-    // optional .yi.FunctionCall.player_move player_move_params = 5;
+    // optional .yi.FunctionCall.PlayerMoveParams player_move_params = 5;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1986,16 +2623,16 @@ void FunctionCall::MergeFrom(const FunctionCall& from) {
       _internal_set_function_name(from._internal_function_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_mutable_add_int_params()->::yi::FunctionCall_add_int::MergeFrom(from._internal_add_int_params());
+      _internal_mutable_add_int_params()->::yi::FunctionCall_AddIntParams::MergeFrom(from._internal_add_int_params());
     }
     if (cached_has_bits & 0x00000004u) {
-      _internal_mutable_add_double_params()->::yi::FunctionCall_add_double::MergeFrom(from._internal_add_double_params());
+      _internal_mutable_add_double_params()->::yi::FunctionCall_AddDoubleParams::MergeFrom(from._internal_add_double_params());
     }
     if (cached_has_bits & 0x00000008u) {
-      _internal_mutable_add_string_params()->::yi::FunctionCall_add_string::MergeFrom(from._internal_add_string_params());
+      _internal_mutable_add_string_params()->::yi::FunctionCall_AddStringParams::MergeFrom(from._internal_add_string_params());
     }
     if (cached_has_bits & 0x00000010u) {
-      _internal_mutable_player_move_params()->::yi::FunctionCall_player_move::MergeFrom(from._internal_player_move_params());
+      _internal_mutable_player_move_params()->::yi::FunctionCall_PlayerMoveParams::MergeFrom(from._internal_player_move_params());
     }
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -2047,14 +2684,14 @@ void FunctionCall::InternalSwap(FunctionCall* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FunctionCall::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[5]);
+      file_level_metadata_Request_2eproto[7]);
 }
 
 // ===================================================================
 
-class FunctionRet_add_int_ret::_Internal {
+class FunctionRet_AddIntRet::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionRet_add_int_ret>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionRet_AddIntRet>()._has_bits_);
   static void set_has_ret(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2063,50 +2700,50 @@ class FunctionRet_add_int_ret::_Internal {
   }
 };
 
-FunctionRet_add_int_ret::FunctionRet_add_int_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionRet_AddIntRet::FunctionRet_AddIntRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.add_int_ret)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.AddIntRet)
 }
-FunctionRet_add_int_ret::FunctionRet_add_int_ret(const FunctionRet_add_int_ret& from)
+FunctionRet_AddIntRet::FunctionRet_AddIntRet(const FunctionRet_AddIntRet& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ret_ = from.ret_;
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.add_int_ret)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.AddIntRet)
 }
 
-inline void FunctionRet_add_int_ret::SharedCtor() {
+inline void FunctionRet_AddIntRet::SharedCtor() {
 ret_ = 0;
 }
 
-FunctionRet_add_int_ret::~FunctionRet_add_int_ret() {
-  // @@protoc_insertion_point(destructor:yi.FunctionRet.add_int_ret)
+FunctionRet_AddIntRet::~FunctionRet_AddIntRet() {
+  // @@protoc_insertion_point(destructor:yi.FunctionRet.AddIntRet)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionRet_add_int_ret::SharedDtor() {
+inline void FunctionRet_AddIntRet::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionRet_add_int_ret::ArenaDtor(void* object) {
-  FunctionRet_add_int_ret* _this = reinterpret_cast< FunctionRet_add_int_ret* >(object);
+void FunctionRet_AddIntRet::ArenaDtor(void* object) {
+  FunctionRet_AddIntRet* _this = reinterpret_cast< FunctionRet_AddIntRet* >(object);
   (void)_this;
 }
-void FunctionRet_add_int_ret::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionRet_AddIntRet::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionRet_add_int_ret::SetCachedSize(int size) const {
+void FunctionRet_AddIntRet::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionRet_add_int_ret::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.add_int_ret)
+void FunctionRet_AddIntRet::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.AddIntRet)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2116,7 +2753,7 @@ void FunctionRet_add_int_ret::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionRet_add_int_ret::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionRet_AddIntRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2156,9 +2793,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionRet_add_int_ret::_InternalSerialize(
+uint8_t* FunctionRet_AddIntRet::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.add_int_ret)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.AddIntRet)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2173,12 +2810,12 @@ uint8_t* FunctionRet_add_int_ret::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.add_int_ret)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.AddIntRet)
   return target;
 }
 
-size_t FunctionRet_add_int_ret::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.add_int_ret)
+size_t FunctionRet_AddIntRet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.AddIntRet)
   size_t total_size = 0;
 
   // required int32 ret = 1;
@@ -2192,21 +2829,21 @@ size_t FunctionRet_add_int_ret::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_add_int_ret::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_AddIntRet::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionRet_add_int_ret::MergeImpl
+    FunctionRet_AddIntRet::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_add_int_ret::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_AddIntRet::GetClassData() const { return &_class_data_; }
 
-void FunctionRet_add_int_ret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionRet_AddIntRet::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionRet_add_int_ret *>(to)->MergeFrom(
-      static_cast<const FunctionRet_add_int_ret &>(from));
+  static_cast<FunctionRet_AddIntRet *>(to)->MergeFrom(
+      static_cast<const FunctionRet_AddIntRet &>(from));
 }
 
 
-void FunctionRet_add_int_ret::MergeFrom(const FunctionRet_add_int_ret& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.add_int_ret)
+void FunctionRet_AddIntRet::MergeFrom(const FunctionRet_AddIntRet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.AddIntRet)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2217,36 +2854,36 @@ void FunctionRet_add_int_ret::MergeFrom(const FunctionRet_add_int_ret& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionRet_add_int_ret::CopyFrom(const FunctionRet_add_int_ret& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.add_int_ret)
+void FunctionRet_AddIntRet::CopyFrom(const FunctionRet_AddIntRet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.AddIntRet)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionRet_add_int_ret::IsInitialized() const {
+bool FunctionRet_AddIntRet::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionRet_add_int_ret::InternalSwap(FunctionRet_add_int_ret* other) {
+void FunctionRet_AddIntRet::InternalSwap(FunctionRet_AddIntRet* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(ret_, other->ret_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_add_int_ret::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_AddIntRet::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[6]);
+      file_level_metadata_Request_2eproto[8]);
 }
 
 // ===================================================================
 
-class FunctionRet_add_double_ret::_Internal {
+class FunctionRet_AddDoubleRet::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionRet_add_double_ret>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionRet_AddDoubleRet>()._has_bits_);
   static void set_has_ret(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2255,50 +2892,50 @@ class FunctionRet_add_double_ret::_Internal {
   }
 };
 
-FunctionRet_add_double_ret::FunctionRet_add_double_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionRet_AddDoubleRet::FunctionRet_AddDoubleRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.add_double_ret)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.AddDoubleRet)
 }
-FunctionRet_add_double_ret::FunctionRet_add_double_ret(const FunctionRet_add_double_ret& from)
+FunctionRet_AddDoubleRet::FunctionRet_AddDoubleRet(const FunctionRet_AddDoubleRet& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ret_ = from.ret_;
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.add_double_ret)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.AddDoubleRet)
 }
 
-inline void FunctionRet_add_double_ret::SharedCtor() {
+inline void FunctionRet_AddDoubleRet::SharedCtor() {
 ret_ = 0;
 }
 
-FunctionRet_add_double_ret::~FunctionRet_add_double_ret() {
-  // @@protoc_insertion_point(destructor:yi.FunctionRet.add_double_ret)
+FunctionRet_AddDoubleRet::~FunctionRet_AddDoubleRet() {
+  // @@protoc_insertion_point(destructor:yi.FunctionRet.AddDoubleRet)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionRet_add_double_ret::SharedDtor() {
+inline void FunctionRet_AddDoubleRet::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionRet_add_double_ret::ArenaDtor(void* object) {
-  FunctionRet_add_double_ret* _this = reinterpret_cast< FunctionRet_add_double_ret* >(object);
+void FunctionRet_AddDoubleRet::ArenaDtor(void* object) {
+  FunctionRet_AddDoubleRet* _this = reinterpret_cast< FunctionRet_AddDoubleRet* >(object);
   (void)_this;
 }
-void FunctionRet_add_double_ret::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionRet_AddDoubleRet::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionRet_add_double_ret::SetCachedSize(int size) const {
+void FunctionRet_AddDoubleRet::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionRet_add_double_ret::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.add_double_ret)
+void FunctionRet_AddDoubleRet::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.AddDoubleRet)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2308,7 +2945,7 @@ void FunctionRet_add_double_ret::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionRet_add_double_ret::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionRet_AddDoubleRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2348,9 +2985,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionRet_add_double_ret::_InternalSerialize(
+uint8_t* FunctionRet_AddDoubleRet::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.add_double_ret)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.AddDoubleRet)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2365,12 +3002,12 @@ uint8_t* FunctionRet_add_double_ret::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.add_double_ret)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.AddDoubleRet)
   return target;
 }
 
-size_t FunctionRet_add_double_ret::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.add_double_ret)
+size_t FunctionRet_AddDoubleRet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.AddDoubleRet)
   size_t total_size = 0;
 
   // required double ret = 1;
@@ -2384,21 +3021,21 @@ size_t FunctionRet_add_double_ret::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_add_double_ret::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_AddDoubleRet::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionRet_add_double_ret::MergeImpl
+    FunctionRet_AddDoubleRet::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_add_double_ret::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_AddDoubleRet::GetClassData() const { return &_class_data_; }
 
-void FunctionRet_add_double_ret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionRet_AddDoubleRet::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionRet_add_double_ret *>(to)->MergeFrom(
-      static_cast<const FunctionRet_add_double_ret &>(from));
+  static_cast<FunctionRet_AddDoubleRet *>(to)->MergeFrom(
+      static_cast<const FunctionRet_AddDoubleRet &>(from));
 }
 
 
-void FunctionRet_add_double_ret::MergeFrom(const FunctionRet_add_double_ret& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.add_double_ret)
+void FunctionRet_AddDoubleRet::MergeFrom(const FunctionRet_AddDoubleRet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.AddDoubleRet)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2409,36 +3046,36 @@ void FunctionRet_add_double_ret::MergeFrom(const FunctionRet_add_double_ret& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionRet_add_double_ret::CopyFrom(const FunctionRet_add_double_ret& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.add_double_ret)
+void FunctionRet_AddDoubleRet::CopyFrom(const FunctionRet_AddDoubleRet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.AddDoubleRet)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionRet_add_double_ret::IsInitialized() const {
+bool FunctionRet_AddDoubleRet::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionRet_add_double_ret::InternalSwap(FunctionRet_add_double_ret* other) {
+void FunctionRet_AddDoubleRet::InternalSwap(FunctionRet_AddDoubleRet* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(ret_, other->ret_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_add_double_ret::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_AddDoubleRet::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[7]);
+      file_level_metadata_Request_2eproto[9]);
 }
 
 // ===================================================================
 
-class FunctionRet_add_string_ret::_Internal {
+class FunctionRet_AddStringRet::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionRet_add_string_ret>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionRet_AddStringRet>()._has_bits_);
   static void set_has_ret(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2447,16 +3084,16 @@ class FunctionRet_add_string_ret::_Internal {
   }
 };
 
-FunctionRet_add_string_ret::FunctionRet_add_string_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionRet_AddStringRet::FunctionRet_AddStringRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.add_string_ret)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.AddStringRet)
 }
-FunctionRet_add_string_ret::FunctionRet_add_string_ret(const FunctionRet_add_string_ret& from)
+FunctionRet_AddStringRet::FunctionRet_AddStringRet(const FunctionRet_AddStringRet& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -2468,40 +3105,40 @@ FunctionRet_add_string_ret::FunctionRet_add_string_ret(const FunctionRet_add_str
     ret_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_ret(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.add_string_ret)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.AddStringRet)
 }
 
-inline void FunctionRet_add_string_ret::SharedCtor() {
+inline void FunctionRet_AddStringRet::SharedCtor() {
 ret_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   ret_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-FunctionRet_add_string_ret::~FunctionRet_add_string_ret() {
-  // @@protoc_insertion_point(destructor:yi.FunctionRet.add_string_ret)
+FunctionRet_AddStringRet::~FunctionRet_AddStringRet() {
+  // @@protoc_insertion_point(destructor:yi.FunctionRet.AddStringRet)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionRet_add_string_ret::SharedDtor() {
+inline void FunctionRet_AddStringRet::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   ret_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void FunctionRet_add_string_ret::ArenaDtor(void* object) {
-  FunctionRet_add_string_ret* _this = reinterpret_cast< FunctionRet_add_string_ret* >(object);
+void FunctionRet_AddStringRet::ArenaDtor(void* object) {
+  FunctionRet_AddStringRet* _this = reinterpret_cast< FunctionRet_AddStringRet* >(object);
   (void)_this;
 }
-void FunctionRet_add_string_ret::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionRet_AddStringRet::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionRet_add_string_ret::SetCachedSize(int size) const {
+void FunctionRet_AddStringRet::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionRet_add_string_ret::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.add_string_ret)
+void FunctionRet_AddStringRet::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.AddStringRet)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2514,7 +3151,7 @@ void FunctionRet_add_string_ret::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionRet_add_string_ret::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionRet_AddStringRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2527,7 +3164,7 @@ const char* FunctionRet_add_string_ret::_InternalParse(const char* ptr, ::PROTOB
           auto str = _internal_mutable_ret();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionRet.add_string_ret.ret");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.FunctionRet.AddStringRet.ret");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -2557,9 +3194,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionRet_add_string_ret::_InternalSerialize(
+uint8_t* FunctionRet_AddStringRet::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.add_string_ret)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.AddStringRet)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2569,7 +3206,7 @@ uint8_t* FunctionRet_add_string_ret::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_ret().data(), static_cast<int>(this->_internal_ret().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "yi.FunctionRet.add_string_ret.ret");
+      "yi.FunctionRet.AddStringRet.ret");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_ret(), target);
   }
@@ -2578,12 +3215,12 @@ uint8_t* FunctionRet_add_string_ret::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.add_string_ret)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.AddStringRet)
   return target;
 }
 
-size_t FunctionRet_add_string_ret::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.add_string_ret)
+size_t FunctionRet_AddStringRet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.AddStringRet)
   size_t total_size = 0;
 
   // required string ret = 1;
@@ -2599,21 +3236,21 @@ size_t FunctionRet_add_string_ret::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_add_string_ret::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_AddStringRet::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionRet_add_string_ret::MergeImpl
+    FunctionRet_AddStringRet::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_add_string_ret::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_AddStringRet::GetClassData() const { return &_class_data_; }
 
-void FunctionRet_add_string_ret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionRet_AddStringRet::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionRet_add_string_ret *>(to)->MergeFrom(
-      static_cast<const FunctionRet_add_string_ret &>(from));
+  static_cast<FunctionRet_AddStringRet *>(to)->MergeFrom(
+      static_cast<const FunctionRet_AddStringRet &>(from));
 }
 
 
-void FunctionRet_add_string_ret::MergeFrom(const FunctionRet_add_string_ret& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.add_string_ret)
+void FunctionRet_AddStringRet::MergeFrom(const FunctionRet_AddStringRet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.AddStringRet)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2624,19 +3261,19 @@ void FunctionRet_add_string_ret::MergeFrom(const FunctionRet_add_string_ret& fro
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionRet_add_string_ret::CopyFrom(const FunctionRet_add_string_ret& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.add_string_ret)
+void FunctionRet_AddStringRet::CopyFrom(const FunctionRet_AddStringRet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.AddStringRet)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionRet_add_string_ret::IsInitialized() const {
+bool FunctionRet_AddStringRet::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionRet_add_string_ret::InternalSwap(FunctionRet_add_string_ret* other) {
+void FunctionRet_AddStringRet::InternalSwap(FunctionRet_AddStringRet* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -2649,17 +3286,17 @@ void FunctionRet_add_string_ret::InternalSwap(FunctionRet_add_string_ret* other)
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_add_string_ret::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_AddStringRet::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[8]);
+      file_level_metadata_Request_2eproto[10]);
 }
 
 // ===================================================================
 
-class FunctionRet_player_move_ret::_Internal {
+class FunctionRet_PlayerMoveRet::_Internal {
  public:
-  using HasBits = decltype(std::declval<FunctionRet_player_move_ret>()._has_bits_);
+  using HasBits = decltype(std::declval<FunctionRet_PlayerMoveRet>()._has_bits_);
   static void set_has_x(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2677,55 +3314,55 @@ class FunctionRet_player_move_ret::_Internal {
   }
 };
 
-FunctionRet_player_move_ret::FunctionRet_player_move_ret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FunctionRet_PlayerMoveRet::FunctionRet_PlayerMoveRet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.player_move_ret)
+  // @@protoc_insertion_point(arena_constructor:yi.FunctionRet.PlayerMoveRet)
 }
-FunctionRet_player_move_ret::FunctionRet_player_move_ret(const FunctionRet_player_move_ret& from)
+FunctionRet_PlayerMoveRet::FunctionRet_PlayerMoveRet(const FunctionRet_PlayerMoveRet& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&x_, &from.x_,
     static_cast<size_t>(reinterpret_cast<char*>(&aspect_) -
     reinterpret_cast<char*>(&x_)) + sizeof(aspect_));
-  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.player_move_ret)
+  // @@protoc_insertion_point(copy_constructor:yi.FunctionRet.PlayerMoveRet)
 }
 
-inline void FunctionRet_player_move_ret::SharedCtor() {
+inline void FunctionRet_PlayerMoveRet::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&x_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&aspect_) -
     reinterpret_cast<char*>(&x_)) + sizeof(aspect_));
 }
 
-FunctionRet_player_move_ret::~FunctionRet_player_move_ret() {
-  // @@protoc_insertion_point(destructor:yi.FunctionRet.player_move_ret)
+FunctionRet_PlayerMoveRet::~FunctionRet_PlayerMoveRet() {
+  // @@protoc_insertion_point(destructor:yi.FunctionRet.PlayerMoveRet)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void FunctionRet_player_move_ret::SharedDtor() {
+inline void FunctionRet_PlayerMoveRet::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FunctionRet_player_move_ret::ArenaDtor(void* object) {
-  FunctionRet_player_move_ret* _this = reinterpret_cast< FunctionRet_player_move_ret* >(object);
+void FunctionRet_PlayerMoveRet::ArenaDtor(void* object) {
+  FunctionRet_PlayerMoveRet* _this = reinterpret_cast< FunctionRet_PlayerMoveRet* >(object);
   (void)_this;
 }
-void FunctionRet_player_move_ret::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void FunctionRet_PlayerMoveRet::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void FunctionRet_player_move_ret::SetCachedSize(int size) const {
+void FunctionRet_PlayerMoveRet::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void FunctionRet_player_move_ret::Clear() {
-// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.player_move_ret)
+void FunctionRet_PlayerMoveRet::Clear() {
+// @@protoc_insertion_point(message_clear_start:yi.FunctionRet.PlayerMoveRet)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2740,7 +3377,7 @@ void FunctionRet_player_move_ret::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FunctionRet_player_move_ret::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FunctionRet_PlayerMoveRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2807,9 +3444,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FunctionRet_player_move_ret::_InternalSerialize(
+uint8_t* FunctionRet_PlayerMoveRet::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.player_move_ret)
+  // @@protoc_insertion_point(serialize_to_array_start:yi.FunctionRet.PlayerMoveRet)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2842,12 +3479,12 @@ uint8_t* FunctionRet_player_move_ret::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.player_move_ret)
+  // @@protoc_insertion_point(serialize_to_array_end:yi.FunctionRet.PlayerMoveRet)
   return target;
 }
 
-size_t FunctionRet_player_move_ret::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionRet.player_move_ret)
+size_t FunctionRet_PlayerMoveRet::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:yi.FunctionRet.PlayerMoveRet)
   size_t total_size = 0;
 
   if (_internal_has_x()) {
@@ -2872,8 +3509,8 @@ size_t FunctionRet_player_move_ret::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t FunctionRet_player_move_ret::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.player_move_ret)
+size_t FunctionRet_PlayerMoveRet::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:yi.FunctionRet.PlayerMoveRet)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
@@ -2899,21 +3536,21 @@ size_t FunctionRet_player_move_ret::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_player_move_ret::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FunctionRet_PlayerMoveRet::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    FunctionRet_player_move_ret::MergeImpl
+    FunctionRet_PlayerMoveRet::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_player_move_ret::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FunctionRet_PlayerMoveRet::GetClassData() const { return &_class_data_; }
 
-void FunctionRet_player_move_ret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void FunctionRet_PlayerMoveRet::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<FunctionRet_player_move_ret *>(to)->MergeFrom(
-      static_cast<const FunctionRet_player_move_ret &>(from));
+  static_cast<FunctionRet_PlayerMoveRet *>(to)->MergeFrom(
+      static_cast<const FunctionRet_PlayerMoveRet &>(from));
 }
 
 
-void FunctionRet_player_move_ret::MergeFrom(const FunctionRet_player_move_ret& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.player_move_ret)
+void FunctionRet_PlayerMoveRet::MergeFrom(const FunctionRet_PlayerMoveRet& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:yi.FunctionRet.PlayerMoveRet)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2937,34 +3574,34 @@ void FunctionRet_player_move_ret::MergeFrom(const FunctionRet_player_move_ret& f
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FunctionRet_player_move_ret::CopyFrom(const FunctionRet_player_move_ret& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.player_move_ret)
+void FunctionRet_PlayerMoveRet::CopyFrom(const FunctionRet_PlayerMoveRet& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:yi.FunctionRet.PlayerMoveRet)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FunctionRet_player_move_ret::IsInitialized() const {
+bool FunctionRet_PlayerMoveRet::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void FunctionRet_player_move_ret::InternalSwap(FunctionRet_player_move_ret* other) {
+void FunctionRet_PlayerMoveRet::InternalSwap(FunctionRet_PlayerMoveRet* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FunctionRet_player_move_ret, aspect_)
-      + sizeof(FunctionRet_player_move_ret::aspect_)
-      - PROTOBUF_FIELD_OFFSET(FunctionRet_player_move_ret, x_)>(
+      PROTOBUF_FIELD_OFFSET(FunctionRet_PlayerMoveRet, aspect_)
+      + sizeof(FunctionRet_PlayerMoveRet::aspect_)
+      - PROTOBUF_FIELD_OFFSET(FunctionRet_PlayerMoveRet, x_)>(
           reinterpret_cast<char*>(&x_),
           reinterpret_cast<char*>(&other->x_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_player_move_ret::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet_PlayerMoveRet::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[9]);
+      file_level_metadata_Request_2eproto[11]);
 }
 
 // ===================================================================
@@ -2975,19 +3612,19 @@ class FunctionRet::_Internal {
   static void set_has_function_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::yi::FunctionRet_add_int_ret& add_int_ret_params(const FunctionRet* msg);
+  static const ::yi::FunctionRet_AddIntRet& add_int_ret_params(const FunctionRet* msg);
   static void set_has_add_int_ret_params(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static const ::yi::FunctionRet_add_double_ret& add_double_ret_params(const FunctionRet* msg);
+  static const ::yi::FunctionRet_AddDoubleRet& add_double_ret_params(const FunctionRet* msg);
   static void set_has_add_double_ret_params(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static const ::yi::FunctionRet_add_string_ret& add_string_ret_params(const FunctionRet* msg);
+  static const ::yi::FunctionRet_AddStringRet& add_string_ret_params(const FunctionRet* msg);
   static void set_has_add_string_ret_params(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static const ::yi::FunctionRet_player_move_ret& player_move_ret_params(const FunctionRet* msg);
+  static const ::yi::FunctionRet_PlayerMoveRet& player_move_ret_params(const FunctionRet* msg);
   static void set_has_player_move_ret_params(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
@@ -2996,19 +3633,19 @@ class FunctionRet::_Internal {
   }
 };
 
-const ::yi::FunctionRet_add_int_ret&
+const ::yi::FunctionRet_AddIntRet&
 FunctionRet::_Internal::add_int_ret_params(const FunctionRet* msg) {
   return *msg->add_int_ret_params_;
 }
-const ::yi::FunctionRet_add_double_ret&
+const ::yi::FunctionRet_AddDoubleRet&
 FunctionRet::_Internal::add_double_ret_params(const FunctionRet* msg) {
   return *msg->add_double_ret_params_;
 }
-const ::yi::FunctionRet_add_string_ret&
+const ::yi::FunctionRet_AddStringRet&
 FunctionRet::_Internal::add_string_ret_params(const FunctionRet* msg) {
   return *msg->add_string_ret_params_;
 }
-const ::yi::FunctionRet_player_move_ret&
+const ::yi::FunctionRet_PlayerMoveRet&
 FunctionRet::_Internal::player_move_ret_params(const FunctionRet* msg) {
   return *msg->player_move_ret_params_;
 }
@@ -3034,22 +3671,22 @@ FunctionRet::FunctionRet(const FunctionRet& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_add_int_ret_params()) {
-    add_int_ret_params_ = new ::yi::FunctionRet_add_int_ret(*from.add_int_ret_params_);
+    add_int_ret_params_ = new ::yi::FunctionRet_AddIntRet(*from.add_int_ret_params_);
   } else {
     add_int_ret_params_ = nullptr;
   }
   if (from._internal_has_add_double_ret_params()) {
-    add_double_ret_params_ = new ::yi::FunctionRet_add_double_ret(*from.add_double_ret_params_);
+    add_double_ret_params_ = new ::yi::FunctionRet_AddDoubleRet(*from.add_double_ret_params_);
   } else {
     add_double_ret_params_ = nullptr;
   }
   if (from._internal_has_add_string_ret_params()) {
-    add_string_ret_params_ = new ::yi::FunctionRet_add_string_ret(*from.add_string_ret_params_);
+    add_string_ret_params_ = new ::yi::FunctionRet_AddStringRet(*from.add_string_ret_params_);
   } else {
     add_string_ret_params_ = nullptr;
   }
   if (from._internal_has_player_move_ret_params()) {
-    player_move_ret_params_ = new ::yi::FunctionRet_player_move_ret(*from.player_move_ret_params_);
+    player_move_ret_params_ = new ::yi::FunctionRet_PlayerMoveRet(*from.player_move_ret_params_);
   } else {
     player_move_ret_params_ = nullptr;
   }
@@ -3144,7 +3781,7 @@ const char* FunctionRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionRet.add_int_ret add_int_ret_params = 2;
+      // optional .yi.FunctionRet.AddIntRet add_int_ret_params = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_int_ret_params(), ptr);
@@ -3152,7 +3789,7 @@ const char* FunctionRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionRet.add_double_ret add_double_ret_params = 3;
+      // optional .yi.FunctionRet.AddDoubleRet add_double_ret_params = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_double_ret_params(), ptr);
@@ -3160,7 +3797,7 @@ const char* FunctionRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionRet.add_string_ret add_string_ret_params = 4;
+      // optional .yi.FunctionRet.AddStringRet add_string_ret_params = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_add_string_ret_params(), ptr);
@@ -3168,7 +3805,7 @@ const char* FunctionRet::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionRet.player_move_ret player_move_ret_params = 5;
+      // optional .yi.FunctionRet.PlayerMoveRet player_move_ret_params = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_player_move_ret_params(), ptr);
@@ -3217,7 +3854,7 @@ uint8_t* FunctionRet::_InternalSerialize(
         1, this->_internal_function_name(), target);
   }
 
-  // optional .yi.FunctionRet.add_int_ret add_int_ret_params = 2;
+  // optional .yi.FunctionRet.AddIntRet add_int_ret_params = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3225,7 +3862,7 @@ uint8_t* FunctionRet::_InternalSerialize(
         2, _Internal::add_int_ret_params(this), target, stream);
   }
 
-  // optional .yi.FunctionRet.add_double_ret add_double_ret_params = 3;
+  // optional .yi.FunctionRet.AddDoubleRet add_double_ret_params = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3233,7 +3870,7 @@ uint8_t* FunctionRet::_InternalSerialize(
         3, _Internal::add_double_ret_params(this), target, stream);
   }
 
-  // optional .yi.FunctionRet.add_string_ret add_string_ret_params = 4;
+  // optional .yi.FunctionRet.AddStringRet add_string_ret_params = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3241,7 +3878,7 @@ uint8_t* FunctionRet::_InternalSerialize(
         4, _Internal::add_string_ret_params(this), target, stream);
   }
 
-  // optional .yi.FunctionRet.player_move_ret player_move_ret_params = 5;
+  // optional .yi.FunctionRet.PlayerMoveRet player_move_ret_params = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3273,28 +3910,28 @@ size_t FunctionRet::ByteSizeLong() const {
 
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x0000001eu) {
-    // optional .yi.FunctionRet.add_int_ret add_int_ret_params = 2;
+    // optional .yi.FunctionRet.AddIntRet add_int_ret_params = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_int_ret_params_);
     }
 
-    // optional .yi.FunctionRet.add_double_ret add_double_ret_params = 3;
+    // optional .yi.FunctionRet.AddDoubleRet add_double_ret_params = 3;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_double_ret_params_);
     }
 
-    // optional .yi.FunctionRet.add_string_ret add_string_ret_params = 4;
+    // optional .yi.FunctionRet.AddStringRet add_string_ret_params = 4;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *add_string_ret_params_);
     }
 
-    // optional .yi.FunctionRet.player_move_ret player_move_ret_params = 5;
+    // optional .yi.FunctionRet.PlayerMoveRet player_move_ret_params = 5;
     if (cached_has_bits & 0x00000010u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3330,16 +3967,16 @@ void FunctionRet::MergeFrom(const FunctionRet& from) {
       _internal_set_function_name(from._internal_function_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_mutable_add_int_ret_params()->::yi::FunctionRet_add_int_ret::MergeFrom(from._internal_add_int_ret_params());
+      _internal_mutable_add_int_ret_params()->::yi::FunctionRet_AddIntRet::MergeFrom(from._internal_add_int_ret_params());
     }
     if (cached_has_bits & 0x00000004u) {
-      _internal_mutable_add_double_ret_params()->::yi::FunctionRet_add_double_ret::MergeFrom(from._internal_add_double_ret_params());
+      _internal_mutable_add_double_ret_params()->::yi::FunctionRet_AddDoubleRet::MergeFrom(from._internal_add_double_ret_params());
     }
     if (cached_has_bits & 0x00000008u) {
-      _internal_mutable_add_string_ret_params()->::yi::FunctionRet_add_string_ret::MergeFrom(from._internal_add_string_ret_params());
+      _internal_mutable_add_string_ret_params()->::yi::FunctionRet_AddStringRet::MergeFrom(from._internal_add_string_ret_params());
     }
     if (cached_has_bits & 0x00000010u) {
-      _internal_mutable_player_move_ret_params()->::yi::FunctionRet_player_move_ret::MergeFrom(from._internal_player_move_ret_params());
+      _internal_mutable_player_move_ret_params()->::yi::FunctionRet_PlayerMoveRet::MergeFrom(from._internal_player_move_ret_params());
     }
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -3391,7 +4028,7 @@ void FunctionRet::InternalSwap(FunctionRet* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FunctionRet::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[10]);
+      file_level_metadata_Request_2eproto[12]);
 }
 
 // ===================================================================
@@ -3400,10 +4037,14 @@ class Request::_Internal {
  public:
   using HasBits = decltype(std::declval<Request>()._has_bits_);
   static void set_has_call_type(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
+    (*has_bits)[0] |= 16u;
   }
   static const ::yi::ConnectionReq& connection_req(const Request* msg);
   static void set_has_connection_req(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static const ::yi::ConnectionRet& connection_ret(const Request* msg);
+  static void set_has_connection_ret(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static const ::yi::FunctionCall& function_call(const Request* msg);
@@ -3415,13 +4056,17 @@ class Request::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000010) ^ 0x00000010) != 0;
   }
 };
 
 const ::yi::ConnectionReq&
 Request::_Internal::connection_req(const Request* msg) {
   return *msg->connection_req_;
+}
+const ::yi::ConnectionRet&
+Request::_Internal::connection_ret(const Request* msg) {
+  return *msg->connection_ret_;
 }
 const ::yi::FunctionCall&
 Request::_Internal::function_call(const Request* msg) {
@@ -3444,18 +4089,15 @@ Request::Request(const Request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  call_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    call_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_call_type()) {
-    call_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_call_type(), 
-      GetArenaForAllocation());
-  }
   if (from._internal_has_connection_req()) {
     connection_req_ = new ::yi::ConnectionReq(*from.connection_req_);
   } else {
     connection_req_ = nullptr;
+  }
+  if (from._internal_has_connection_ret()) {
+    connection_ret_ = new ::yi::ConnectionRet(*from.connection_ret_);
+  } else {
+    connection_ret_ = nullptr;
   }
   if (from._internal_has_function_call()) {
     function_call_ = new ::yi::FunctionCall(*from.function_call_);
@@ -3467,18 +4109,15 @@ Request::Request(const Request& from)
   } else {
     function_ret_ = nullptr;
   }
+  call_type_ = from.call_type_;
   // @@protoc_insertion_point(copy_constructor:yi.Request)
 }
 
 inline void Request::SharedCtor() {
-call_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  call_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&connection_req_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&function_ret_) -
-    reinterpret_cast<char*>(&connection_req_)) + sizeof(function_ret_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&call_type_) -
+    reinterpret_cast<char*>(&connection_req_)) + sizeof(call_type_));
 }
 
 Request::~Request() {
@@ -3490,8 +4129,8 @@ Request::~Request() {
 
 inline void Request::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  call_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete connection_req_;
+  if (this != internal_default_instance()) delete connection_ret_;
   if (this != internal_default_instance()) delete function_call_;
   if (this != internal_default_instance()) delete function_ret_;
 }
@@ -3515,11 +4154,12 @@ void Request::Clear() {
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      call_type_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
       GOOGLE_DCHECK(connection_req_ != nullptr);
       connection_req_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      GOOGLE_DCHECK(connection_ret_ != nullptr);
+      connection_ret_->Clear();
     }
     if (cached_has_bits & 0x00000004u) {
       GOOGLE_DCHECK(function_call_ != nullptr);
@@ -3530,6 +4170,7 @@ void Request::Clear() {
       function_ret_->Clear();
     }
   }
+  call_type_ = 0;
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3541,15 +4182,16 @@ const char* Request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string call_type = 1;
+      // required .yi.Request.RequestType call_type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_call_type();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "yi.Request.call_type");
-          #endif  // !NDEBUG
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::yi::Request_RequestType_IsValid(val))) {
+            _internal_set_call_type(static_cast<::yi::Request_RequestType>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(1, val, mutable_unknown_fields());
+          }
         } else
           goto handle_unusual;
         continue;
@@ -3561,17 +4203,25 @@ const char* Request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionCall function_call = 3;
+      // optional .yi.ConnectionRet connection_ret = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_connection_ret(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional .yi.FunctionCall function_call = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_function_call(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional .yi.FunctionRet function_ret = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+      // optional .yi.FunctionRet function_ret = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_function_ret(), ptr);
           CHK_(ptr);
         } else
@@ -3608,38 +4258,43 @@ uint8_t* Request::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  // required string call_type = 1;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->_internal_call_type().data(), static_cast<int>(this->_internal_call_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "yi.Request.call_type");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_call_type(), target);
+  // required .yi.Request.RequestType call_type = 1;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_call_type(), target);
   }
 
   // optional .yi.ConnectionReq connection_req = 2;
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
         2, _Internal::connection_req(this), target, stream);
   }
 
-  // optional .yi.FunctionCall function_call = 3;
+  // optional .yi.ConnectionRet connection_ret = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::connection_ret(this), target, stream);
+  }
+
+  // optional .yi.FunctionCall function_call = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        3, _Internal::function_call(this), target, stream);
+        4, _Internal::function_call(this), target, stream);
   }
 
-  // optional .yi.FunctionRet function_ret = 4;
+  // optional .yi.FunctionRet function_ret = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        4, _Internal::function_ret(this), target, stream);
+        5, _Internal::function_ret(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3654,33 +4309,39 @@ size_t Request::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:yi.Request)
   size_t total_size = 0;
 
-  // required string call_type = 1;
+  // required .yi.Request.RequestType call_type = 1;
   if (_internal_has_call_type()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_call_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_call_type());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x0000000eu) {
+  if (cached_has_bits & 0x0000000fu) {
     // optional .yi.ConnectionReq connection_req = 2;
-    if (cached_has_bits & 0x00000002u) {
+    if (cached_has_bits & 0x00000001u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *connection_req_);
     }
 
-    // optional .yi.FunctionCall function_call = 3;
+    // optional .yi.ConnectionRet connection_ret = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *connection_ret_);
+    }
+
+    // optional .yi.FunctionCall function_call = 4;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *function_call_);
     }
 
-    // optional .yi.FunctionRet function_ret = 4;
+    // optional .yi.FunctionRet function_ret = 5;
     if (cached_has_bits & 0x00000008u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3711,12 +4372,12 @@ void Request::MergeFrom(const Request& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_call_type(from._internal_call_type());
+      _internal_mutable_connection_req()->::yi::ConnectionReq::MergeFrom(from._internal_connection_req());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_mutable_connection_req()->::yi::ConnectionReq::MergeFrom(from._internal_connection_req());
+      _internal_mutable_connection_ret()->::yi::ConnectionRet::MergeFrom(from._internal_connection_ret());
     }
     if (cached_has_bits & 0x00000004u) {
       _internal_mutable_function_call()->::yi::FunctionCall::MergeFrom(from._internal_function_call());
@@ -3724,6 +4385,10 @@ void Request::MergeFrom(const Request& from) {
     if (cached_has_bits & 0x00000008u) {
       _internal_mutable_function_ret()->::yi::FunctionRet::MergeFrom(from._internal_function_ret());
     }
+    if (cached_has_bits & 0x00000010u) {
+      call_type_ = from.call_type_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3737,6 +4402,9 @@ void Request::CopyFrom(const Request& from) {
 
 bool Request::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+  if (_internal_has_connection_ret()) {
+    if (!connection_ret_->IsInitialized()) return false;
+  }
   if (_internal_has_function_call()) {
     if (!function_call_->IsInitialized()) return false;
   }
@@ -3748,18 +4416,11 @@ bool Request::IsInitialized() const {
 
 void Request::InternalSwap(Request* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &call_type_, lhs_arena,
-      &other->call_type_, rhs_arena
-  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Request, function_ret_)
-      + sizeof(Request::function_ret_)
+      PROTOBUF_FIELD_OFFSET(Request, call_type_)
+      + sizeof(Request::call_type_)
       - PROTOBUF_FIELD_OFFSET(Request, connection_req_)>(
           reinterpret_cast<char*>(&connection_req_),
           reinterpret_cast<char*>(&other->connection_req_));
@@ -3768,7 +4429,7 @@ void Request::InternalSwap(Request* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Request::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_Request_2eproto_getter, &descriptor_table_Request_2eproto_once,
-      file_level_metadata_Request_2eproto[11]);
+      file_level_metadata_Request_2eproto[13]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -3777,32 +4438,38 @@ PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::yi::ConnectionReq* Arena::CreateMaybeMessage< ::yi::ConnectionReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::yi::ConnectionReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionCall_add_int* Arena::CreateMaybeMessage< ::yi::FunctionCall_add_int >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionCall_add_int >(arena);
+template<> PROTOBUF_NOINLINE ::yi::ConnectionRet_FuncInfo* Arena::CreateMaybeMessage< ::yi::ConnectionRet_FuncInfo >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::ConnectionRet_FuncInfo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionCall_add_double* Arena::CreateMaybeMessage< ::yi::FunctionCall_add_double >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionCall_add_double >(arena);
+template<> PROTOBUF_NOINLINE ::yi::ConnectionRet* Arena::CreateMaybeMessage< ::yi::ConnectionRet >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::ConnectionRet >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionCall_add_string* Arena::CreateMaybeMessage< ::yi::FunctionCall_add_string >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionCall_add_string >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionCall_AddIntParams* Arena::CreateMaybeMessage< ::yi::FunctionCall_AddIntParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionCall_AddIntParams >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionCall_player_move* Arena::CreateMaybeMessage< ::yi::FunctionCall_player_move >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionCall_player_move >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionCall_AddDoubleParams* Arena::CreateMaybeMessage< ::yi::FunctionCall_AddDoubleParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionCall_AddDoubleParams >(arena);
+}
+template<> PROTOBUF_NOINLINE ::yi::FunctionCall_AddStringParams* Arena::CreateMaybeMessage< ::yi::FunctionCall_AddStringParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionCall_AddStringParams >(arena);
+}
+template<> PROTOBUF_NOINLINE ::yi::FunctionCall_PlayerMoveParams* Arena::CreateMaybeMessage< ::yi::FunctionCall_PlayerMoveParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionCall_PlayerMoveParams >(arena);
 }
 template<> PROTOBUF_NOINLINE ::yi::FunctionCall* Arena::CreateMaybeMessage< ::yi::FunctionCall >(Arena* arena) {
   return Arena::CreateMessageInternal< ::yi::FunctionCall >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionRet_add_int_ret* Arena::CreateMaybeMessage< ::yi::FunctionRet_add_int_ret >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionRet_add_int_ret >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionRet_AddIntRet* Arena::CreateMaybeMessage< ::yi::FunctionRet_AddIntRet >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionRet_AddIntRet >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionRet_add_double_ret* Arena::CreateMaybeMessage< ::yi::FunctionRet_add_double_ret >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionRet_add_double_ret >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionRet_AddDoubleRet* Arena::CreateMaybeMessage< ::yi::FunctionRet_AddDoubleRet >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionRet_AddDoubleRet >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionRet_add_string_ret* Arena::CreateMaybeMessage< ::yi::FunctionRet_add_string_ret >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionRet_add_string_ret >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionRet_AddStringRet* Arena::CreateMaybeMessage< ::yi::FunctionRet_AddStringRet >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionRet_AddStringRet >(arena);
 }
-template<> PROTOBUF_NOINLINE ::yi::FunctionRet_player_move_ret* Arena::CreateMaybeMessage< ::yi::FunctionRet_player_move_ret >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::yi::FunctionRet_player_move_ret >(arena);
+template<> PROTOBUF_NOINLINE ::yi::FunctionRet_PlayerMoveRet* Arena::CreateMaybeMessage< ::yi::FunctionRet_PlayerMoveRet >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::yi::FunctionRet_PlayerMoveRet >(arena);
 }
 template<> PROTOBUF_NOINLINE ::yi::FunctionRet* Arena::CreateMaybeMessage< ::yi::FunctionRet >(Arena* arena) {
   return Arena::CreateMessageInternal< ::yi::FunctionRet >(arena);
