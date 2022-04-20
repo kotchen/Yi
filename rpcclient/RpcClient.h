@@ -1,17 +1,16 @@
 ﻿#include <any>
 #include <memory>
 #include "../util/yi_type.h"
-#include "../serialization/PackageParser.h"
 #include "../serialization/Parser.h"
 #include "../network/Net.h"
 #include "../network/socket/Socket.h"
+class yi::Request;
 namespace yi
 {
     class RpcClient
     {
     private:
         /* data */
-        yi::PackageParser _package_parser;
         std::shared_ptr<yi::Net> _net;
         std::shared_ptr<yi::Socket> _listen_sock;
 
@@ -42,6 +41,7 @@ namespace yi
         {
             // 先解包参数
             _package_parser.ParseParams(function_name, std::forward<Args>(args)...);
+            auto package = yi::MakeRequest(yi::Request::FunctionCall,  )
             // 序列化 function name and parameters
             auto package = _package_parser.Serialize();
             // send package
