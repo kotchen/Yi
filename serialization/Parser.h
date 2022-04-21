@@ -86,7 +86,6 @@
     YI_PARAMS_FILL_IMPL(func_call, __VA_ARGS__)
 
 
-YI_SET_FUNCTIONCALL(PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
 
 
 
