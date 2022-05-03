@@ -8,7 +8,6 @@
 #include "../util/yi_type.h"
 #include "../network/Net.h"
 #include "../network/socket/Socket.h"
-#include "../serialization/PackageParser.h"
 #include "../util/Singleton.h"
 #include "../thread/LockFreeThreadPool.h"
 #include "Request.pb.h"

@@ -15,8 +15,7 @@ message("PROTO_SRCS = ${PROTO_SRCS}")
 message("PROTO_HDRS = ${PROTO_HDRS}")
 
 
-aux_source_directory(${PROTO_SRCS} src_files)
-aux_source_directory(${PROTO_HDRS} src_files)
+aux_source_directory(${PROJECT_SOURCE_DIR} src_files)
 
 SET(serialization_source ${src_files} PARENT_SCOPE)
 
