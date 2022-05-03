@@ -1,8 +1,8 @@
 ﻿cmake_minimum_required(VERSION 3.10)
-project(network)
+project(Yi)
 
-aux_source_directory(${PROJECT_SOURCE_DIR}/io/noBuffer src_files)
-aux_source_directory(${PROJECT_SOURCE_DIR}/io/withBuffer src_files)
+aux_source_directory(Net.h src_files)
+aux_source_directory(Net.cpp src_files)
 
 
-set(network_io_src ${src_files} PARENT_SCOPE)
+set(yi_source ${src_files} PARENT_SCOPE)

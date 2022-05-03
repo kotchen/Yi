@@ -18,9 +18,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -std=c++17 -rdynamic -lpthread -fPIC
 message(STATUS "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}")
 
 add_subdirectory(network)
+add_subdirectory(thread)
+add_subdirectory(util)
 add_subdirectory(timer)
 add_subdirectory(test)
 add_subdirectory(rpcserver)
 add_subdirectory(serialization)
 
-add_library(${PROJECT_NAME} STATIC ${network_io_src} ${timer_src})
+add_library(${PROJECT_NAME} STATIC ${yi_source})
