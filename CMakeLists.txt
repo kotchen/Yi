@@ -14,11 +14,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #  -pipe
 #  -latomic
 #  )
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -std=c++17 -rdynamic -lpthread -fPIC -lstdc++ -pipe -latomic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -std=c++17 -rdynamic -lpthread -fPIC -lstdc++ -pipe -latomic -lprotobuf")
 message(STATUS "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}")
 
 add_subdirectory(network)
 add_subdirectory(timer)
 add_subdirectory(test)
+add_subdirectory(rpcserver)
+add_subdirectory(serialization)
 
 add_library(${PROJECT_NAME} STATIC ${network_io_src} ${timer_src})
