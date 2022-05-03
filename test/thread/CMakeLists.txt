@@ -1,9 +1,11 @@
 ﻿find_package(Threads)
 
 include_directories(${CMAKE_SOURCE_DIR}/thread)
+include_directories(${CMAKE_SOURCE_DIR}/util)
+include_directories(${CMAKE_SOURCE_DIR}/serialization)
 
 project(test_thread_pool)
-add_executable(test_thread_pool test_thread_pool.cpp) 
+add_executable(test_thread_pool test_thread_pool.cpp ${CMAKE_SOURCE_DIR}/serialization/Request.pb.cc) 
 target_link_libraries(test_thread_pool ${CMAKE_THREAD_LIBS_INIT})
 
 project(test_lock_free_queue)

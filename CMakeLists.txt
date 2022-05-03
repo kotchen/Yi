@@ -22,7 +22,6 @@ add_subdirectory(thread)
 add_subdirectory(util)
 add_subdirectory(timer)
 add_subdirectory(test)
-add_subdirectory(rpcserver)
 add_subdirectory(serialization)
 
 add_library(${PROJECT_NAME} STATIC ${network_source} ${thread_source} ${util_source} ${serialization_source})

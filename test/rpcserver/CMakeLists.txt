@@ -1,0 +1,10 @@
+﻿find_package(Threads)
+find_package(Protobuf)
+include_directories(${CMAKE_SOURCE_DIR}/thread)
+include_directories(${CMAKE_SOURCE_DIR}/serialization)
+include_directories(${CMAKE_SOURCE_DIR}/util)
+include_directories(${CMAKE_SOURCE_DIR}/test)
+
+project(rpcserver)
+add_executable(rpcserver server.cpp RpcServer.cpp) 
+target_link_libraries(rpcserver ${CMAKE_THREAD_LIBS_INIT} serialization)
