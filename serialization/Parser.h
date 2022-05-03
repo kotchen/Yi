@@ -1,4 +1,4 @@
-#ifndef __YI_PARSER__
+﻿#ifndef __YI_PARSER__
 #define __YI_PARSER__
 #include "Request.pb.h"
 #include <string>
@@ -59,7 +59,10 @@
 //     func_call.set_##property(value); \
 //     (YI_PARAMS_FILL_##YI_PARAMS_COUNT(__VA_ARGS__))(func_call, __VA_ARGS__)
 
-
+/**
+ * @brief 填充一个function call的参数
+ * 
+ */
 
 
 #define YI_PARAMS_FILL_IMPL(func_call, property, value, ...) \
@@ -81,7 +84,7 @@
  * 
  * @param func_call_name 就是等会传入CallFunction的参数的名字
  * @param func_name 函数的名字，驼峰命名法，开头大写
- * @param params_type 函数的名字小写，用下划线分割，最后加上paramss后缀
+ * @param params_type 函数的名字小写，用下划线分割，最后加上paramss后缀,这个参数是一个中间变量，是有特定的格式
  * 
  * @example YI_CREATE_FUNCTIONCALL(player_move_call, PlayerMove, player_move_params, x, 1.0, y, 2.0, .....)
  * 写好前面3个参数之后，后面就是参数的设置，格式为参数名与参数的值成对出现
@@ -97,7 +100,14 @@
 
 namespace yi
 {
-
+    /**
+     * @brief 
+     * 
+     * @tparam T 
+     * @param request_type 
+     * @param request 
+     * @return constexpr yi::Request 
+     */
     template <typename T>
     constexpr yi::Request MakeRequest(yi::Request::RequestType request_type, T request)
     {
@@ -113,11 +123,11 @@ namespace yi
             break;
         case yi::Request::FunctionCall:
             req.set_call_type(yi::Request::FunctionCall);
-            req.mutable_function_call_req()->CopyFrom(request);
+            req.mutable_function_call()->CopyFrom(request);
             break;
         case yi::Request::FunctionRet:
             req.set_call_type(yi::Request::FunctionRet);
-            req.mutable_function_call_ret()->CopyFrom(request);
+            req.mutable_function_ret()->CopyFrom(request);
             break;
         default:
             break;
@@ -131,7 +141,7 @@ namespace yi
      * @return std::string 返回序列化后的字符串
      */
 
-    std::string Serialize(const yi::Request &req)
+    static std::string Serialize(const yi::Request &req)
     {
         std::string serialized;
         req.SerializeToString(&serialized);
@@ -145,7 +155,7 @@ namespace yi
      * @return yi::Request 返回一个yi::Request对象
      */
 
-    yi::Request Parse(const std::string &str)
+    static yi::Request Parse(const std::string &str)
     {
         yi::Request parsed;
         parsed.ParseFromString(str);
