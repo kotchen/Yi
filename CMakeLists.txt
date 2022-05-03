@@ -25,4 +25,4 @@ add_subdirectory(test)
 add_subdirectory(rpcserver)
 add_subdirectory(serialization)
 
-add_library(${PROJECT_NAME} STATIC ${yi_source})
+add_library(${PROJECT_NAME} STATIC ${network_source} ${thread_source} ${util_source} ${serialization_source})

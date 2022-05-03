@@ -5,4 +5,4 @@ project(Yi)
 aux_source_directory(LockFreeQueue.h src_files)
 aux_source_directory(Singleton.h src_files)
 
-SET(yi_source ${src_files} PARENT_SCOPE)
+SET(util_source ${src_files} PARENT_SCOPE)

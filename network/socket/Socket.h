@@ -48,7 +48,7 @@ namespace yi
             return this->_type;
         }
 
-        bool SendPackage(const char* package)
+        void SendPackage(const char* package)
         {
             // network_io_writen(_sockfd, package, sizeof(package));
             write(_sockfd, package, strlen(package));

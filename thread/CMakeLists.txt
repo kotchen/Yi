@@ -2,6 +2,6 @@
 
 project(Yi)
 
-aux_source_directory(${PROJECT_SOURCE_DIR} src_files)
+aux_source_directory(${PROJECT_SOURCE_DIR}/ src_files)
 
-SET(yi_source ${src_files} PARENT_SCOPE)
+SET(thread_source ${src_files} PARENT_SCOPE)

@@ -1,32 +1,55 @@
 ﻿#include "Request.pb.h"
+#include "Parser.h"
 #include <map>
+#include "../thread/LockFreeThreadPool.h"
+#include "../test/Player.h"
 
-yi::FunctionRet::AddIntRet add_int(const yi::FunctionCall::AddIntParams& add_int_params)
+yi::FunctionRet add_int(const yi::FunctionCall& func_call)
 {
-    yi::FunctionRet::AddIntRet ret;
-    ret.set_ret(add_int_params.left()+add_int_params.right());
+    yi::FunctionRet ret;
+    yi::FunctionCall::AddIntParams params = func_call.add_int_params();
+    yi::FunctionRet::AddIntRet add_int_ret;
+    // 逻辑计算
+    add_int_ret.set_ret(params.left() + params.right());
+    // 设置好返回值的属性
+    ret.set_function_name("add_int");
+    ret.mutable_add_int_ret_params()->CopyFrom(add_int_ret);
     return ret;
 }
 
-yi::FunctionRet::AddDoubleRet add_double(const yi::FunctionCall::AddDoubleParams& add_double_params)
+yi::FunctionRet add_double(const yi::FunctionCall& add_double_params)
 {
-    yi::FunctionRet::AddDoubleRet ret;
-    ret.set_ret(add_double_params.left()+add_double_params.right());
+}
+
+yi::FunctionRet add_string(const yi::FunctionCall& add_string_params)
+{
+}
+
+yi::FunctionRet player_move(const yi::FunctionCall& func_call)
+{
+    yi::FunctionRet ret;
+    yi::FunctionCall::PlayerMoveParams params = func_call.player_move_params();
+    yi::Player palyer;
+    // 逻辑计算
+    auto ret_params =  palyer.move(params); 
+    // 设置好返回值的属性
+    ret.set_function_name("player_move");
+    ret.mutable_player_move_ret_params()->CopyFrom(ret_params);
     return ret;
 }
 
-yi::FunctionRet::AddStringRet add_string(const yi::FunctionCall::AddStringParams& add_string_params)
+
+// call back
+void add_int_call_back(const yi::FunctionRet& ret)
 {
-    yi::FunctionRet::AddStringRet ret;
-    ret.set_ret(add_string_params.left()+add_string_params.right());
-    return ret;
+    yi::FunctionRet::AddIntRet add_int_ret = ret.add_int_ret_params();
+    std::cout << "add_int_call_back: " << add_int_ret.ret() << std::endl;
 }
 
-yi::FunctionRet::PlayerMoveRet player_move(const yi::FunctionCall::PlayerMoveParams& player_move_params)
+void player_move_call_back(const yi::FunctionRet& ret)
 {
-    yi::FunctionRet::PlayerMoveRet ret;
-    
-    return ret;
+    yi::FunctionRet::PlayerMoveRet player_move_ret = ret.player_move_ret_params();
+    std::cout << "player_move_call_back: " << player_move_ret.x() << " " << player_move_ret.y() << " " << player_move_ret.speed() << " " << player_move_ret.aspect() << std::endl;
 }
 
 
@@ -34,7 +57,7 @@ yi::FunctionRet::PlayerMoveRet player_move(const yi::FunctionCall::PlayerMovePar
 template<typename T>
 constexpr yi::Request MakeRequest(yi::Request::RequestType request_type, T request)
 {
-    yi::Requset req;
+    yi::Request req;
     switch (request_type)
     {
         case yi::Request::ConnectionReq:
@@ -58,34 +81,10 @@ constexpr yi::Request MakeRequest(yi::Request::RequestType request_type, T reque
     return req;
 }
 
-template<typename T, typename... Args>
-T MakeRequestBody(yi::Request::RequestType request_type)
+
+void status_mechine(const yi::FunctionCall& func_call)
 {
 
-}
-
-void status_mechine(const std::string& package)
-{
-    yi::Request req;
-    req.ParseFromString(package);
-    switch (req.call_type())
-    {
-        case yi::Request::ConnectionReq:
-            break;
-        case yi::Request::ConnectionRet:
-            // for (auto& item : ret.connection_ret().func_info())
-            // {
-            //     // std::cout << item.func_name() << " " << item.params_type() << " " << item.return_type() << std::endl;
-            //     client_function_list[item.func_name()] = {item.params_type(), item.return_type()};
-            // }
-            break;
-        case yi::Request::FunctionCall:
-            break;
-        case yi::Request::FunctionRet:
-            break;
-        default:
-            break;
-    }
 }
 
 
@@ -97,11 +96,21 @@ int main(int argc, char const *argv[])
 {
 
     std::unordered_map<std::string, std::pair<std::string, std::string>> params;
+    std::unordered_map<std::string, std::function<yi::FunctionRet(const yi::FunctionCall)>> function_call_map;
+    std::unordered_map<std::string, std::function<void(const yi::FunctionRet)>> function_ret_map;
     // 服务器 设置好函数的参数和返回值的信息
     params["add_int"] = {"ii", "i"};
     params["add_double"] = {"dd", "d"};
     params["add_string"] = {"ss", "s"};
     params["player_move"] = {"ddddd", "dddd"};
+
+    function_call_map["add_int"] = add_int;
+    function_call_map["add_double"] = add_double;
+    function_call_map["add_string"] = add_string;
+    function_call_map["player_move"] = player_move;
+
+    function_ret_map["add_int"] = add_int_call_back;
+    function_ret_map["player_move"] = player_move_call_back;
     
     yi::Request request;
 
@@ -158,17 +167,12 @@ int main(int argc, char const *argv[])
         // 客户端调用函数
         yi::FunctionCall player_move;
         player_move.set_function_name("player_move");
-        yi::FunctionCall::PlayerMoveParams player_move_params;
-        player_move_params.set_x(1.0);
-        player_move_params.set_y(2.0);
-        player_move_params.set_acceleration(3.0);
-        player_move_params.set_speed(4.0);
-        player_move_params.set_angle(5.0);
-        player_move_params.set_aspect(6.0);
+
+        YI_SET_FUNCTIONCALL_PARAMS(PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
 
         player_move.mutable_player_move_params()->CopyFrom(player_move_params);
 
-        auto PlayerMoveReq = MakeRequest(yi::Request::FunctionCall, player_move);
+        auto PlayerMoveReq = yi::MakeRequest(yi::Request::FunctionCall, player_move);
 
 
 
@@ -176,6 +180,10 @@ int main(int argc, char const *argv[])
         PlayerMoveReq.SerializeToString(&out);
 
         // 服务器接收客户端发来的二进制信息，然后解包
+
+        yi::LockFreeThreadPool pool(4, 4096);
+        yi::Request ret;
+        ret.ParseFromString(out);
         switch (ret.call_type())
         {
         case yi::Request::ConnectionReq:
@@ -187,11 +195,16 @@ int main(int argc, char const *argv[])
                 client_function_list[item.func_name()] = {item.params_type(), item.return_type()};
             }
             break;
-        case yi::Request::FunctionCall:
-            
+        case yi::Request::FunctionCall:{
+            yi::FunctionCall func_call = ret.function_call();
+            // 将函数的信息和参数插入线程池中的任务队列
+            auto future = pool.enqueue(function_call_map[func_call.function_name()], func_call);
             break;
-        case yi::Request::FunctionRet:
+        }
+        case yi::Request::FunctionRet:{
+            function_ret_map[ret.function_ret().function_name()](ret.function_ret());
             break;
+        }
         default:
             break;
         }
