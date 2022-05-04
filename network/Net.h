@@ -3,9 +3,9 @@
 #include <cstring>
 #include <memory>
 #include "socket/Socket.h"
-#include "../thread/LockFreeThreadPool.h"
-#include "../util/Singleton.h"
-#include "../serialization/Parser.h"
+#include "thread/LockFreeThreadPool.h"
+#include "util/Singleton.h"
+#include "serialization/Parser.h"
 namespace yi
 {
     class Net
