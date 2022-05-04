@@ -10,7 +10,7 @@
 #include <memory>
 #include <utility>
 #include <stdexcept>
-#include "../util/LockFreeQueue.h"
+#include "util/LockFreeQueue.h"
 
 namespace yi
 {
