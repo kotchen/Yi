@@ -1,10 +1,9 @@
-﻿#include <any>
-#include <memory>
-#include "../util/yi_type.h"
-#include "../serialization/Parser.h"
-#include "../network/Net.h"
-#include "../network/socket/Socket.h"
+﻿#include <memory>
+#include "serialization/Parser.h"
+#include "network/Net.h"
+#include "network/socket/Socket.h"
 #include "Request.pb.h"
+#include "thread/ThreadPool.h"
 class yi::Request;
 namespace yi
 {
@@ -17,13 +16,15 @@ namespace yi
 
         std::unordered_map<std::string, std::function<void(const yi::FunctionRet&)>> _function_call_back_map;
 
+        thread::ThreadPool _thread_pool;
+
     public:
-        RpcClient()
+        RpcClient():_thread_pool(2)
         {
             _listen_sock = std::make_shared<yi::Socket> (AF_INET, SOCK_STREAM);
             _net = std::make_shared<yi::Net> (_listen_sock); 
         }
-        RpcClient(int domain, int type)
+        RpcClient(int domain, int type) : _thread_pool(2)
         {
             _listen_sock = std::make_shared<yi::Socket> (domain, type);
             _net = std::make_shared<yi::Net> (_listen_sock); 
@@ -35,7 +36,6 @@ namespace yi
         // 下面的函数是交给线程
         bool Connect(const std::string& ip, int port)
         {
-            struct sockaddr_in addr;
             _net->Connect(ip, port);
         }
 
@@ -53,7 +53,10 @@ namespace yi
         {
             _function_call_back_map[func_name] = func;
         }
-        
+
+        void start()
+        {
+        } 
     };
 
 } // namespace yi

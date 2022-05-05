@@ -44,6 +44,9 @@ int main(int argc, char const *argv[])
     // 登记服务函数
     server.register_function("PlayerMove", player_move);
     // 启动服务，给出port and ip
-    server.start("127.0.0.1", 2000);
+    server.start("127.0.0.1", 5005);
     return 0;
+
+
+
 }

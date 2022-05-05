@@ -93,8 +93,8 @@
 #define YI_CREATE_FUNCTIONCALL(func_call_name, func_name, params_type, ...) \
     yi::FunctionCall func_call_name; \
     func_call_name.set_function_name(#func_name); \
-    YI_SET_FUNCTIONCALL_PARAMS(func_name, params, __VA_ARGS__) \
-    func_call_name.mutable_##params_type()->CopyFrom(params);
+    YI_SET_FUNCTIONCALL_PARAMS(func_name, params_type, __VA_ARGS__) \
+    func_call_name.mutable_##params_type()->CopyFrom(params_type);
 
 
 

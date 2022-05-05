@@ -54,6 +54,12 @@ namespace yi
             write(_sockfd, package, strlen(package));
         }
 
+        ssize_t ReadPackage(char* package, size_t size)
+        {
+            // return network_io_readn(_sockfd, package, size);
+            return read(_sockfd, package, size);
+        }
+
     };
     
      

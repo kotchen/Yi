@@ -34,7 +34,7 @@ void yi::Net::_Read(int fd, struct epoll_event &ev)
 
     _out_pool.enqueue([&]()
                       {
-                auto future = yi::Singleton<yi::LockFreeThreadPool>::Get()->enqueue(_function_call_map[function_call.function_name()], function_call);
+                auto future = _task_pool.enqueue(_function_call_map[function_call.function_name()], function_call);
                 yi::Request request;
                 request.set_call_type(yi::Request::FunctionRet);
                 request.mutable_function_ret()->CopyFrom(future.get());
@@ -53,19 +53,22 @@ void yi::Net::_write(int fd, yi::Request &req)
 yi::Net::Net(std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<yi::FunctionRet(const yi::FunctionCall &)>> &function_call_map)
     : _listen_sock(listen_sock),
       _function_call_map(function_call_map),
-      _out_pool(2, TASK_QUEUE_CAPACITY)
+      _out_pool(2),
+      _task_pool(4)
 {
 
     memset(&_server_addr, 0, sizeof(_server_addr));
     _epollfd = epoll_create(1);
 
     int32_t cpu_nums = std::thread::hardware_concurrency();
-    yi::Singleton<yi::LockFreeThreadPool>::New(cpu_nums, TASK_QUEUE_CAPACITY);
+    // yi::Singleton<yi::LockFreeThreadPool>::New(cpu_nums, TASK_QUEUE_CAPACITY);
+    // yi::Singleton<thread::ThreadPool>::New(cpu_nums);
 }
 yi::Net::~Net()
 {
     close(_epollfd);
-    yi::Singleton<yi::LockFreeThreadPool>::Delete();
+    // yi::Singleton<yi::LockFreeThreadPool>::Delete();
+    // yi::Singleton<thread::ThreadPool>::Delete();
 }
 
 bool yi::Net::Connect(const std::string &ip, int port)
@@ -175,7 +178,8 @@ void yi::Net::Accept()
             else if (events[ii].events & EPOLLIN)
             {
                 int fd = events[ii].data.fd;
-                yi::Singleton<yi::LockFreeThreadPool>::Get()->enqueue(&yi::Net::_Read, this, fd, ev);
+                // yi::Singleton<thread::ThreadPool>::Get()->enqueue(&yi::Net::_Read, this, fd, ev);
+                _task_pool.enqueue(&yi::Net::_Read, this, fd, ev);
             }
         }
     }

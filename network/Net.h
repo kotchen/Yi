@@ -3,7 +3,7 @@
 #include <cstring>
 #include <memory>
 #include "socket/Socket.h"
-#include "thread/LockFreeThreadPool.h"
+#include "thread/ThreadPool.h"
 #include "util/Singleton.h"
 #include "serialization/Parser.h"
 namespace yi
@@ -19,12 +19,10 @@ namespace yi
         int _epollfd;
         struct epoll_event events[MAXEVENTS];
 
-        yi::LockFreeThreadPool _out_pool;
+        thread::ThreadPool _out_pool;
+        thread::ThreadPool _task_pool;
 
         std::unordered_map<std::string, std::function<yi::FunctionRet(const yi::FunctionCall &)>> &_function_call_map;
-
-        // call back 这个是为了统一客户端和服务端的接口
-        std::function<void()> _read_call_bacl;
 
         void _EpollOut();
 
