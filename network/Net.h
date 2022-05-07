@@ -47,6 +47,7 @@ namespace yi
         bool Bind(const std::string &ip, int port);
         bool Listen();
         void Accept();
+        thread::ThreadPool& GetTaskPool();
     };
 
 } // namespace yi

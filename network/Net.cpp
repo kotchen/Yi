@@ -54,7 +54,7 @@ ssize_t yi::Net::_Write(int fd, yi::Request &req)
 }
 
 #ifdef __RPC_CLIENT__
-yi::Net::Net(std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<void(const yi::FunctionRet &)>> &function_call_map)
+yi::Net::Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<void(const yi::FunctionRet &)>> &function_call_map);
 #else
 yi::Net::Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<yi::FunctionRet(const yi::FunctionCall &)>> &function_call_map)
 #endif
@@ -275,4 +275,9 @@ void yi::Net::Accept()
             }
         }
     }
+}
+
+thread::ThreadPool& yi::Net::GetTaskPool()
+{
+    return _task_pool;
 }
