@@ -109,7 +109,7 @@ namespace yi
      * @return constexpr yi::Request 
      */
     template <typename T>
-    constexpr yi::Request MakeRequest(yi::Request::RequestType request_type, T request)
+    constexpr yi::Request MakeRequest(yi::Request::RequestType request_type, T& request)
     {
         yi::Request req;
         switch (request_type)

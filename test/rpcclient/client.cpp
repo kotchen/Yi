@@ -50,9 +50,12 @@ void player_move_call_back(const yi::FunctionRet &ret)
 #include <netdb.h>
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <thread>
+#include <chrono>
 #include <arpa/inet.h>
 #include "serialization/Request.pb.h"
 #include "serialization/Parser.h"
+#include "RpcClient.h"
 
 int main(int argc, char *argv[])
 {
@@ -63,7 +66,7 @@ int main(int argc, char *argv[])
     // }
 
     const char* ip = "127.0.0.1";
-    const char* port = "5005";
+    const char* port = "5006";
 
     // 第1步：创建客户端的socket。
     int sockfd;
@@ -93,6 +96,10 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    yi::RpcClient client;
+    client.SetCallBack("PlayerMove", player_move_call_back);
+    
+
     // char buffer[1024];
     std::string buffer;//     YI_CREATE_FUNCTIONCALL(PlayerMoveReq, PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
     char recv_buffer[1024];
@@ -101,7 +108,7 @@ int main(int argc, char *argv[])
     YI_CREATE_FUNCTIONCALL(PlayerMoveReq, PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
     yi::Request req = yi::MakeRequest(yi::Request::FunctionCall, PlayerMoveReq);
 
-    for (int ii = 0; ii < 3; ii++)
+    for (;;)
     {
         int iret;
         // memset(buffer, 0, sizeof(buffer));
@@ -111,7 +118,7 @@ int main(int argc, char *argv[])
             perror("send");
             break;
         }
-        printf("发送：%s\n", buffer.c_str());
+        // printf("发送：%s\n", buffer.c_str());
 
         if ((iret = recv(sockfd, recv_buffer, sizeof(recv_buffer), 0)) <= 0) // 接收服务端的回应报文。
         {
@@ -120,6 +127,8 @@ int main(int argc, char *argv[])
         }
         auto ret = yi::Parse(recv_buffer);
         player_move_call_back(ret.function_ret());
+        // sleep 1 second
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
     // 第4步：关闭socket，释放资源。
