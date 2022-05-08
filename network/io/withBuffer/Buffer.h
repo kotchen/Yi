@@ -6,7 +6,7 @@
 #include <unistd.h>
 namespace yi
 {
-class io_t
+class Buffer
 {
 private:
     int _io_fd;
@@ -16,8 +16,8 @@ private:
     ssize_t _read(char* usrbuf, size_t n);
     ssize_t _write(const char* package, size_t n);
 public:
-    io_t() {}
-    ~io_t() {}
+    Buffer() {}
+    ~Buffer() {}
     void ioReadInit(int fd);
     ssize_t readn(std::any usrbuf, size_t n);
     ssize_t readLine(std::any usrbuf, size_t maxlen);
