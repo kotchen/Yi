@@ -26,16 +26,15 @@ int main(int argc, char const *argv[])
     YI_CREATE_FUNCTIONCALL(PlayerMoveReq, PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
     YI_CREATE_FUNCTIONCALL(AddIntReq, AddInt, add_int_params, left, 1, right, 2)
 
-    client.Connect("127.0.0.1", 5005);
+    client.Connect("127.0.0.1", 5007);
     client.Start();
-    while (true)
+    for (int i = 0; i<5; i++)
     {
         client.CallFunction("PlayerMove", PlayerMoveReq);
         client.CallFunction("AddInt", AddIntReq);
         // use chrono to sleep 1 second
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::seconds(2));
     }
-
-
+    client.Join();
     return 0;
 }

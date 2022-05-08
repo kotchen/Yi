@@ -8,7 +8,7 @@ else ()
 endif()
 
 
-file(GLOB proto_files proto/Request.proto)
+file(GLOB proto_files proto/Request.proto proto/Message.proto)
 PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${proto_files})
 
 message("PROTO_SRCS = ${PROTO_SRCS}")

@@ -2,13 +2,13 @@
 #include <iostream>
 #include "serialization/Parser.h"
 
-ssize_t yi::Net::_DoRead(int fd, struct epoll_event& ev, yi::Buffer& buffer)
-{
-}
+// ssize_t yi::Net::_DoRead(int fd, struct epoll_event& ev, yi::Buffer& buffer)
+// {
+// }
 
-ssize_t yi::Net::_DoWrite(int fd, struct epoll_event& ev, yi::Buffer& buffer)
-{
-}
+// ssize_t yi::Net::_DoWrite(int fd, struct epoll_event& ev, yi::Buffer& buffer)
+// {
+// }
 
 void yi::Net::_ServerRead(int fd, struct epoll_event &ev)
 {
@@ -20,7 +20,7 @@ void yi::Net::_ServerRead(int fd, struct epoll_event &ev)
 
     // 读取客户端的数据。
     ssize_t isize = read(fd, buffer, sizeof(buffer));
-
+    printf("read: %ld\n", isize);
     // 发生了错误或socket被对方关闭。
     if (isize <= 0)
     {
@@ -90,7 +90,7 @@ ssize_t yi::Net::_Write(int fd, const yi::Request &req)
     // 发送数据
     std::string out = yi::Serialize(req);
     auto size = write(fd, out.c_str(), out.size());
-    std::cout << "write 被调用了" << std::endl;
+    printf("write size: %ld\n", size);
     return size;
 }
 
