@@ -21,13 +21,14 @@ void yi::RpcClient::SetCallBack(const std::string &func_name, std::function<void
 
 void yi::RpcClient::CallFunction(const std::string &func_name, const yi::FunctionCall &func_call)
 {
-    auto req = yi::MakeRequest(yi::Request::FunctionCall, func_call);
-    auto package = yi::Serialize(req);
+    _net->GetTaskPool().enqueue([this, &func_call]() {
+        auto req = yi::MakeRequest(yi::Request::FunctionCall, func_call);
+        this->_net->Send(_listen_sock->GetSockFd(), req);
+    });
 }
 
 void yi::RpcClient::Start()
 {
-    _net->GetTaskPool().enqueue([this]() {
-        _net->Start();
-    });
+    _net->GetTaskPool().enqueue([this]()
+                                { _net->Start(); });
 }

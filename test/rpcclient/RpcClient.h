@@ -21,7 +21,7 @@ namespace yi
         RpcClient(size_t threads)
         {
             _listen_sock = std::make_shared<yi::Socket>(AF_INET, SOCK_STREAM);
-            _net = std::make_shared<yi::Net>(threads, _listen_sock, _function_call_back_map);
+            _net = std::make_shared<yi::Net>(threads, _listen_sock, &_function_call_back_map);
         }
         
         ~RpcClient();
