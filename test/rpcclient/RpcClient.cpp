@@ -32,3 +32,8 @@ void yi::RpcClient::Start()
     _net->GetTaskPool().enqueue([this]()
                                 { _net->Start(); });
 }
+
+void yi::RpcClient::Join()
+{
+    _net->GetTaskPool().Join();
+}

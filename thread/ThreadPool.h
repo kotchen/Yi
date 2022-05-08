@@ -92,6 +92,17 @@ namespace thread
             return res;
         }
 
+        void Join()
+        {
+            {
+                std::unique_lock<std::mutex> lock(queue_mutex);
+                stop = true;
+            }
+            condition.notify_all();
+            for (auto &worker : workers)
+                worker.join();
+        }
+
     private:
         // need to keep track of threads so we can join them
         std::vector<std::thread> workers;

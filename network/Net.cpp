@@ -2,6 +2,14 @@
 #include <iostream>
 #include "serialization/Parser.h"
 
+ssize_t yi::Net::_DoRead(int fd, struct epoll_event& ev, yi::Buffer& buffer)
+{
+}
+
+ssize_t yi::Net::_DoWrite(int fd, struct epoll_event& ev, yi::Buffer& buffer)
+{
+}
+
 void yi::Net::_ServerRead(int fd, struct epoll_event &ev)
 {
     // 客户端有数据过来或客户端的socket连接被断开。
@@ -36,11 +44,11 @@ void yi::Net::_ServerRead(int fd, struct epoll_event &ev)
     auto function_name = function_call.function_name();
     auto task = std::bind((*_function_call_map)[function_name], function_call);
     auto ret = task();
-    // printf("生成了ret\n");
+    printf("生成了ret\n");
     yi::Request req;
     req.set_call_type(yi::Request::FunctionRet);
     req.mutable_function_ret()->CopyFrom(ret);
-    // printf("准备发送ret\n");
+    printf("准备发送ret\n");
     this->_Write(fd, req);
 }
 
@@ -54,6 +62,7 @@ void yi::Net::_ClientRead(int fd, struct epoll_event &ev)
 
     // 读取客户端的数据。
     ssize_t isize = read(fd, buffer, sizeof(buffer));
+    std::cout << "client read isize: " << isize << std::endl;
     // 发生了错误或socket被对方关闭。
     if (isize <= 0)
     {
@@ -69,7 +78,6 @@ void yi::Net::_ClientRead(int fd, struct epoll_event &ev)
     }
 
     std::string test(buffer, isize);
-
     auto request = yi::Parse(test);
 
     auto function_ret = request.function_ret();
@@ -82,7 +90,7 @@ ssize_t yi::Net::_Write(int fd, const yi::Request &req)
     // 发送数据
     std::string out = yi::Serialize(req);
     auto size = write(fd, out.c_str(), out.size());
-    // std::cout << "size: " << size << std::endl;
+    std::cout << "write 被调用了" << std::endl;
     return size;
 }
 
@@ -146,7 +154,6 @@ void yi::Net::Start()
     {
         // 等待监视的socket有事件发生。
         int infds = epoll_wait(_epollfd, events, MAXEVENTS, -1);
-        printf("epoll_wait infds=%d\n", infds);
 
         // 返回失败。
         if (infds < 0)
@@ -155,6 +162,7 @@ void yi::Net::Start()
             {
                 printf("epoll_wait() failed.\n");
                 perror("epoll_wait()");
+                printf("%s\n", strerror(errno)); 
                 break;
             }
             continue;
@@ -170,13 +178,11 @@ void yi::Net::Start()
         // 遍历有事件发生的结构数组。
         for (int ii = 0; ii < infds; ii++)
         {
-            printf("ii=%d\n", ii);
-            printf("events[ii].data.fd=%d\n", events[ii].data.fd);
-            printf("events[ii].events=%d\n", events[ii].events);
             if (events[ii].events & EPOLLIN)
             {
                 int fd = events[ii].data.fd;
                 // yi::Singleton<thread::ThreadPool>::Get()->enqueue(&yi::Net::_Read, this, fd, ev);
+                yi::Buffer buffer;
                 _task_pool.enqueue(&yi::Net::_ClientRead, this, fd, ev);
             }
             else if (events[ii].events & EPOLLOUT)
@@ -285,6 +291,7 @@ void yi::Net::Accept()
             else if (events[ii].events & EPOLLIN)
             {
                 int fd = events[ii].data.fd;
+                yi::Buffer buffer;
                 // yi::Singleton<thread::ThreadPool>::Get()->enqueue(&yi::Net::_Read, this, fd, ev);
                 _task_pool.enqueue(&yi::Net::_ServerRead, this, fd, ev);
             }

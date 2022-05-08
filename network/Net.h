@@ -6,6 +6,7 @@
 #include "thread/ThreadPool.h"
 #include "util/Singleton.h"
 #include "serialization/Parser.h"
+#include "io/withBuffer/Buffer.h"
 namespace yi
 {
     class Net
@@ -28,6 +29,10 @@ namespace yi
 
         FunctionCallMap* _function_call_map;
         FunctionCallBackMap* _function_call_back_map;
+
+
+        ssize_t _DoRead(int fd, struct epoll_event& ev, yi::Buffer& buffer);
+        ssize_t _DoWrite(int fd, struct epoll_event& ev, yi::Buffer& buffer); 
 
         void _ServerRead(int fd, struct epoll_event &ev);
         void _ClientRead(int fd, struct epoll_event &ev);

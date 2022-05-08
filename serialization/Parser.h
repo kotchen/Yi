@@ -1,6 +1,7 @@
 ﻿#ifndef __YI_PARSER__
 #define __YI_PARSER__
 #include "Request.pb.h"
+#include "Message.pb.h"
 #include <string>
 
 

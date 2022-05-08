@@ -33,6 +33,7 @@ namespace yi
         void SetCallBack(const std::string &func_name, std::function<void(const yi::FunctionRet &)> func);
         void CallFunction(const std::string &func_name, const yi::FunctionCall &func_call);
         void Start();
+        void Join();
     };
 
 } // namespace yi
