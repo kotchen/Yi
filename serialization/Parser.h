@@ -146,7 +146,11 @@ namespace yi
     {
         std::string serialized;
         req.SerializeToString(&serialized);
-        return serialized;
+        yi::MsgHeader header;
+        header.set_msg_size(serialized.size());
+        std::string header_str;
+        header.SerializeToString(&header_str);
+        return header_str+serialized;
     }
 
     /**
