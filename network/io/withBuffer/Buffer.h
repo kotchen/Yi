@@ -1,27 +1,75 @@
-﻿#ifndef __NETWORK_IO_WITH_BUFFER
-#define __NETWORK_IO_WITH_BUFFER
+﻿#ifndef __YI_BUFFER__
+#define __YI_BUFFER__
 
-#define IO_BUFFER_SIZE (8*(1<<10))
-#include <any>
 #include <unistd.h>
+#include "util/RingBuffer.h"
+#include <mutex>
 namespace yi
 {
+template<typename T>
 class Buffer
 {
 private:
     int _io_fd;
-    size_t _io_cnt;
-    char* _io_buffer_cur_ptr;
-    char _io_buffer[IO_BUFFER_SIZE];
-    ssize_t _read(char* usrbuf, size_t n);
-    ssize_t _write(const char* package, size_t n);
+    RingBuffer<T> _ring_buffer; 
+    std::mutex _mutex;
 public:
-    Buffer() {}
+    Buffer(int fd, uint32_t capacity)
+        : _io_fd(fd), _ring_buffer(capacity)
+    {
+        
+    }
+    Buffer(Buffer&& other)
+    {
+        _io_fd = other._io_fd;
+        _ring_buffer = other._ring_buffer;
+        other._io_fd = -1;
+        other._ring_buffer = nullptr;
+    }
     ~Buffer() {}
-    void ioReadInit(int fd);
-    ssize_t readn(std::any usrbuf, size_t n);
-    ssize_t readLine(std::any usrbuf, size_t maxlen);
-    ssize_t sendn(std::any package, size_t n);
+
+    uint32_t ReadFromSocket()
+    {
+        std::unique_lock<std::mutex> lock(_mutex);
+        uint8_t buf[1024];
+        uint32_t read_size =  read(_io_fd, buf, sizeof(buf));
+        return _ring_buffer.Writen(buf, read_size);
+    }
+
+    // uint32_t WriteToSocket()
+    // {
+
+    // }
+
+    uint32_t Readn(T* buf, uint32_t n)
+    {
+        return _ring_buffer.Readn(buf, n);
+    }
+
+    uint32_t Writen(T* buf, uint32_t n)
+    {
+        return _ring_buffer.Writen(buf, n);
+    }
+
+    bool IsEmpty()
+    {
+        return _ring_buffer.IsEmpty();
+    }
+
+    uint32_t Remain()
+    {
+        return _ring_buffer.Remain();
+    }
+
+    void Retrive(uint32_t n)
+    {
+        _ring_buffer.Retrive(n);
+    }
+
+    std::mutex& GetMutex()
+    {
+        return _mutex;
+    }
 };
 
 };

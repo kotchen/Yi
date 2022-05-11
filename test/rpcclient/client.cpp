@@ -26,9 +26,9 @@ int main(int argc, char const *argv[])
     YI_CREATE_FUNCTIONCALL(PlayerMoveReq, PlayerMove, player_move_params, x, 1.0, y, 2.0, acceleration, 3.0, speed, 4.0, angle, 5.0, aspect, 6.0)
     YI_CREATE_FUNCTIONCALL(AddIntReq, AddInt, add_int_params, left, 1, right, 2)
 
-    client.Connect("127.0.0.1", 5007);
+    client.Connect("127.0.0.1", 5006);
     client.Start();
-    for (int i = 0; i<5; i++)
+    for (int i = 0;i<4;i++)
     {
         client.CallFunction("PlayerMove", PlayerMoveReq);
         client.CallFunction("AddInt", AddIntReq);

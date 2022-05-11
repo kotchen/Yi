@@ -94,10 +94,10 @@ namespace thread
 
         void Join()
         {
-            {
-                std::unique_lock<std::mutex> lock(queue_mutex);
-                stop = true;
-            }
+            // {
+            //     std::unique_lock<std::mutex> lock(queue_mutex);
+            //     stop = true;
+            // }
             condition.notify_all();
             for (auto &worker : workers)
                 worker.join();

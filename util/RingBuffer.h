@@ -1,6 +1,9 @@
 ﻿#ifndef __YI_RING_BUFFER_H__
 #define __YI_RING_BUFFER_H__
 #include <cstdint>
+#include <cmath>
+#include <atomic>
+#include <mutex>
 namespace yi
 {
     template <typename T>
@@ -11,7 +14,6 @@ namespace yi
         uint32_t _read_pos;
         uint32_t _write_pos;
         uint32_t _capacity;
-        uint32_t _size;
         /**
          * @brief 判断一个无符号整型是不是2的幂
          *        从2进制的角度来看，如果一个数是2的幂，那么它就只有一位是1，其余都是0
@@ -55,14 +57,15 @@ namespace yi
 
     public:
         RingBuffer(uint32_t capacity)
-            : _read_pos(0), _write_pos(0), _size(0), _capacity(capacity)
+            : _read_pos(0), _write_pos(0), _capacity(capacity)
         {
             _Round_Up_Power_Of_2(_capacity);
             _buffer = new T[_capacity];
         }
         ~RingBuffer()
         {
-            delete[] _buffer;
+            if (_buffer)
+                delete[] _buffer;
         }
         bool IsEmpty()
         {
@@ -76,7 +79,7 @@ namespace yi
         {
             return _write_pos - _read_pos;
         }
-        uint32_t Remian()
+        uint32_t Remain()
         {
             return _capacity - Size();
         }
@@ -101,7 +104,7 @@ namespace yi
 
         uint32_t Writen(T *buffer, uint32_t n)
         {
-            if (n > Remian())
+            if (n > Remain())
                 return 0;
             uint32_t first_round_write = std::min(n, _capacity - (_write_pos & (_capacity - 1)));
             for (uint32_t i = 0; i < first_round_write; i++)
@@ -114,6 +117,21 @@ namespace yi
                 _buffer[_write_pos++ & (_capacity - 1)] = buffer[first_round_write + i];
             }
             return n;
+        }
+
+        void Retrive(uint32_t n)
+        {
+            _read_pos -= n;
+        }
+        
+        T* WritePtr()
+        {
+            return _buffer + (_write_pos & (_capacity - 1));
+        }
+
+        T* ReadPtr()
+        {
+            return _buffer + (_read_pos & (_capacity - 1));
         }
     };
 

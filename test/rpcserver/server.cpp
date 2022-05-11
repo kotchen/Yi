@@ -58,7 +58,7 @@ int main(int argc, char const *argv[])
     server.register_function("PlayerMove", player_move);
     server.register_function("AddInt", add_int_ret);
     // 启动服务，给出port and ip
-    server.start("127.0.0.1", 5007);
+    server.start("127.0.0.1", 5006);
     return 0;
 
 
