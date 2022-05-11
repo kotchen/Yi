@@ -30,16 +30,19 @@ public:
 
     uint32_t ReadFromSocket()
     {
+        uint8_t buf[8192];
         std::unique_lock<std::mutex> lock(_mutex);
-        uint8_t buf[1024];
         uint32_t read_size =  read(_io_fd, buf, sizeof(buf));
         return _ring_buffer.Writen(buf, read_size);
     }
 
-    // uint32_t WriteToSocket()
-    // {
-
-    // }
+    uint32_t WriteToSocket(uint32_t n)
+    {
+        uint8_t buf[8192];
+        std::unique_lock<std::mutex> lock(_mutex);
+        _ring_buffer.Readn(buf, n);
+        return write(_io_fd, buf, n);
+    }
 
     uint32_t Readn(T* buf, uint32_t n)
     {

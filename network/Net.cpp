@@ -4,13 +4,11 @@
 
 std::pair<ssize_t, std::shared_ptr<yi::Buffer<uint8_t>>> yi::Net::_DoRead(int fd)
 {
-    char buffer[8 * (1 << 10)];
-    memset(buffer, 0, sizeof(buffer));
-
     // 读取客户端的数据。
     // 发生了错误或socket被对方关闭。
-
     auto read_buffer = this->_connection_buffer_pool[fd];
+    if (!read_buffer)
+        return {0, nullptr};
     auto isize = read_buffer->ReadFromSocket();
     // printf("read: %d\n", isize);
     return {isize, read_buffer};
@@ -105,6 +103,8 @@ void yi::Net::_ServerRead(int fd, struct epoll_event &ev)
     // 这里需要申请内存，大概是8K的内存，这个内存是用来接收客户端的数据的。
     // 为了效率以及稳定性，需要实现内存池
     auto [isize, read_buffer] = this->_DoRead(fd);
+    if (!read_buffer)
+        return ;
     if (isize <= 0)
     {
         auto last_function = std::bind(&yi::Net::_DoWriteFunctionCall, this, std::placeholders::_1, std::placeholders::_2);
@@ -168,10 +168,6 @@ yi::Net::Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, std::unord
 
     memset(&_server_addr, 0, sizeof(_server_addr));
     _epollfd = epoll_create(1);
-
-    int32_t cpu_nums = std::thread::hardware_concurrency();
-    // yi::Singleton<yi::LockFreeThreadPool>::New(cpu_nums, TASK_QUEUE_CAPACITY);
-    // yi::Singleton<thread::ThreadPool>::New(cpu_nums);
 }
 
 yi::Net::~Net()
@@ -204,7 +200,7 @@ void yi::Net::Start()
 {
     struct epoll_event ev;
     ev.data.fd = _listen_sock->GetSockFd();
-    ev.events = EPOLLIN;
+    ev.events = EPOLLIN|EPOLLET;
     epoll_ctl(_epollfd, EPOLL_CTL_ADD, _listen_sock->GetSockFd(), &ev);
 
     while (true)
@@ -318,6 +314,7 @@ void yi::Net::Accept()
                 // 如果发生事件的是listensock，表示有新的客户端连上来。
                 // 主线程只负责接受新的客户端连接，不负责处理客户端的数据。
                 // 因为如果主线程也负责IO的话，那么就会导致主线程阻塞，导致无法接受新的客户端连接。
+                printf("创建新的连接\n");
                 struct sockaddr_in client;
                 socklen_t len = sizeof(client);
                 int clientsock = accept(_listen_sock->GetSockFd(), (struct sockaddr *)&client, &len);
@@ -331,7 +328,7 @@ void yi::Net::Accept()
                 memset(&ev, 0, sizeof(struct epoll_event));
                 ev.data.fd = clientsock;
                 // ev.events = EPOLLIN | EPOLLOUT;
-                ev.events = EPOLLIN;
+                ev.events = EPOLLIN|EPOLLET;
                 epoll_ctl(_epollfd, EPOLL_CTL_ADD, clientsock, &ev);
                 {
                     std::lock_guard<std::mutex> lk(_mutex);
@@ -345,6 +342,7 @@ void yi::Net::Accept()
             }
             else if (events[ii].events & EPOLLIN)
             {
+                printf("启动server read\n");
                 int fd = events[ii].data.fd;
                 _task_pool.enqueue(&yi::Net::_ServerRead, this, fd, ev);
             }
