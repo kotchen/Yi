@@ -1,4 +1,6 @@
-﻿#include <arpa/inet.h>
+﻿#ifndef __YI_NET__
+#define __YI_NET__
+#include <arpa/inet.h>
 #include <sys/epoll.h>
 #include <cstring>
 #include <memory>
@@ -38,11 +40,11 @@ namespace yi
         void _ServerRead(int fd, struct epoll_event &ev);
         void _ClientRead(int fd, struct epoll_event &ev);
         ssize_t _Write(int fd, const yi::Request &req);
-        std::pair<ssize_t, std::shared_ptr<yi::Buffer<uint8_t>>>  _DoRead(int fd);
+        std::pair<ssize_t, std::shared_ptr<yi::Buffer<uint8_t>>> _DoRead(int fd);
 
     public:
-        Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<void(const yi::FunctionRet &)>> *function_call_map);
-        Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, std::unordered_map<std::string, std::function<yi::FunctionRet(const yi::FunctionCall &)>> *function_call_map);
+        Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, FunctionCallBackMap *function_call_map);
+        Net(size_t threads, std::shared_ptr<yi::Socket> listen_sock, FunctionCallMap *function_call_map);
         ~Net();
         // 客户端
         bool Connect(const std::string &ip, int port);
@@ -57,3 +59,4 @@ namespace yi
     };
 
 } // namespace yi
+#endif
