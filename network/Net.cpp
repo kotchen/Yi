@@ -122,7 +122,6 @@ void yi::Net::_ClientRead(int fd, struct epoll_event &ev)
     // 客户端有数据过来或客户端的socket连接被断开。
     // 这里需要申请内存，大概是8K的内存，这个内存是用来接收客户端的数据的。
     // 为了效率以及稳定性，需要实现内存池
-    char buffer[8 * (1 << 10)] = {0};
     auto [isize, read_buffer] = this->_DoRead(fd);
     if (isize <= 0)
     {
