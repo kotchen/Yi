@@ -123,13 +123,13 @@ namespace yi
         {
             _read_pos -= n;
         }
-        
-        T* WritePtr()
+
+        T *WritePtr()
         {
             return _buffer + (_write_pos & (_capacity - 1));
         }
 
-        T* ReadPtr()
+        T *ReadPtr()
         {
             return _buffer + (_read_pos & (_capacity - 1));
         }
