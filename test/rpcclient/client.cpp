@@ -28,13 +28,14 @@ int main(int argc, char const *argv[])
 
     client.Connect("127.0.0.1", 5005);
     client.Start();
-    for (;;)
+    for (int i=0;i<5;i++)
     {
         client.CallFunction("PlayerMove", PlayerMoveReq);
         client.CallFunction("AddInt", AddIntReq);
-        // use chrono to sleep 1 second
-        std::this_thread::sleep_for(std::chrono::seconds(2));
+        // use chrono to sleep for 100ms
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     client.Join();
     return 0;
 }
+

@@ -243,6 +243,13 @@ namespace yi
                 return false;
             }
         }
+
+        uint32_t Size()
+        {
+            size_t headCapture = _head.load(std::memory_order_relaxed);
+            size_t tailCapture = _tail.load(std::memory_order_relaxed);
+            return tailCapture - headCapture;
+        }
     };
 
 }
